@@ -1,0 +1,38 @@
+.lm 0
+.rm 80
+.c
+MAP OF LINDER PROPERTY
+.s 5
+.lit
+	/
+	----- NORTH
+	\
+
+X fence			  *  *	woods *				  	Xfence
+X									X
+X	rock		back						X
+X	garden		yard						X
+X					porch o o o o o o path o o o o 	 gate
+!----=D==----!---===--!----=D==----!----==D=----!-----------!		X
+!            ! tub+sh !            !            !           !		X
+!   Linder's !--- D --!  Monica's  !  office    ! workshop  !		X
+!   bedroom  D  bath  D  bedroom   !            !           !		X
+!	     !	      !		   !		!	    !		X
+!	     !--- D --!		   !	        !	    !		X
+!            ! toilet !            !            !	    !	 side	X str-
+!----- D -------------------- D -------- D ---------- D ----!	 yard	X eet
+!             hall-1	      -2  -3	 -4     D           !		X
+!            --- D ----------- D -   ---- D ----!           !		X
+!   living   !        ! bath D   !   !  storage !    2-car  !		X
+!            !        !-------   !   !		!   garage  !		X
+!	     ! kitch  !          !   !----------!           !		X
+!---- DD ----!        ! butler   !   !clos./shoe!           !		X
+!            !	      !          !              !           !		X
+!   dining   D        !          !     entry    !           !		X
+!	     !	      !          !              !           !		X
+!----==D==--------==--!---===----!--------! D !-!           ! - - - - - X
+X				 X	front
+X   front yard			 gate	porch		driveway      entrance
+X				 X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+.eli

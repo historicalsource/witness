@@ -1,0 +1,2207 @@
+MACROS for WITNESS
+Copyright (c) 1983 Infocom, Inc.  All rights reserved.
+SYNTAX for WITNESS
+Copyright (C) 1983 Infocom, Inc.  All rights reserved.
+SUBTITLE VOCABULARY
+PLACES for WITNESS
+Copyright (C) 1983 Infocom, Inc.  All rights reserved.
+Other possible generics: cabinet counter footprints hallway shelf
+The usual globals
+bathroom door
+bedroom door
+Grounds of Linder House
+You are in the front yard of the Linder property. Most of the space is
+occupied by a kitchen garden full of vegetables and herbs. A wooden
+fence surrounds the yard on the west and north sides. To the east is the
+house, with a French door and two windows. To the south is a gate that
+leads to the front porch.
+A wooden fence blocks your way.
+A wooden fence blocks your way.
+You can't go that way.
+You can't go that way.
+kitchen garden
+front porch
+A wooden fence blocks your way.
+The front porch is in an alcove, sheltered from the weather by the
+walls and overhanging roof. A yellowish electric light hangs near
+the 
+ front door to the east, giving you a
+dim view of the
+driveway to the south and the front yard behind a gate to the north.
+The gate is 
+. A door bell glows at you, almost daring you to ring it.
+The door bell rings, loud and clear.
+The front porch is in an alcove, sheltered from the weather by the
+walls and overhanging roof. A yellowish electric light hangs near
+the 
+ front door to the east, giving you a
+dim view of the
+driveway to the south and the front yard behind a gate to the north.
+The gate is 
+. A door bell glows at you, almost daring you to ring it.
+The driveway, paved with peastone, runs from the entrance at the south
+end in a curve to a two-car garage at the east end. North of you is the
+front porch, the entrance to the house.
+A wooden fence blocks your way.
+The driveway, paved with peastone, runs from the entrance at the south
+end in a curve to a two-car garage at the east end.
+driveway entrance
+You are standing at the foot of the driveway, the entrance to the
+Linder property. The entire lot is screened from the street and the
+neighbors by a wooden fence, except on the east
+side, which fronts on dense bamboo woods. The house looks like a mixture of
+a California bungalow and East Asian influences. From here you can
+see the driveway leading north and, beyond that, the front door.
+This is the entrance to the driveway from the street, which lies to the
+south. To the north is the driveway, and to the east is the side yard.
+A wooden fence blocks your way.
+You can't leave the property yet. It would mean your job.
+You can't enter the house from here.
+A wooden fence blocks your way.
+This is a little-used side yard, hidden from the street by the fence.
+The back yard lies to the east and the driveway to the west.
+set of footprints
+Fresh foot prints go here and there in the yard.
+You notice fresh foot prints going here and there in the yard.
+A fresh row of foot prints goes from the back yard to the driveway.
+You notice a fresh row of foot prints going from the back yard to the
+driveway.
+There are too many foot prints here now.
+The prints are lined up in an even row, as if made by a careful walker.
+You already did that!
+side-yard cast
+The two sets of foot prints don't seem to match up.
+Sgt. Duffy appears with his kit for casting with plaster of Paris.
+He quickly makes a cast of the foot prints and hands it to you,
+saying "I hope you find this as useful as it is heavy."
+office path
+You are on a path made of stepping stones, which leads from the back
+gate at the south to Linder's office at the north. In the east you
+can see a thick woods. To the west is the side yard.
+You would probably get lost in the woods.
+You can't leave the property yet. It would mean your job.
+bamboo woods
+Bamboo, thick and tall, screens the entire lot on the east side.
+office porch
+You would probably get lost in the woods.
+You are standing on a small concrete slab outside Linder's office. A sign
+between the door and the window reads "PACIFIC TRADE ASSOCIATES". To the
+north is a tidy lawn, extending east to the edge of the woods. A path of
+stepping stones leads south to the back gate.
+set of footprints
+You notice some fresh foot prints heading east.
+Fresh foot prints head east.
+<GLOBAL BACK-FOOTPRINTS-CONFUSED <>>
+The prints are uneven and widely spaced, as if made by someone running.
+You already did that!
+You would probably get lost in the woods.
+ Even with a path to follow.
+(You can't see any 
+foot prints
+back-yard cast
+office window
+green wire piece
+chunk of putty
+You are on a neatly manicured lawn, east of Monica's bedroom. The lawn
+extends east to the edge of the woods. From here you can go to a rock
+garden in the north or the entrance to Linder's office in the south.
+There's a door into the house, and a window.
+You would probably get lost in the woods.
+rock garden
+This is a rock garden in the Japanese style, east of Linder's bedroom.
+A few smooth round boulders lie partly buried in a bed of gravel,
+which is carefully raked to be reminiscent of flowing water.
+A sequence of smaller rocks forms a zig-zag path from the bedroom door to
+the south edge of the garden, where the lawn begins.
+There's a door into the house, and a couple of windows.
+A wooden fence blocks your way.
+You would probably get lost in the woods.
+? <OBJECT BENCH ...>
+Inside the house
+Monica's bedroom
+On one side is a modern-style bed, with piles of well-thumbed detective
+stories stacked on the table beside it. Opposite the bed is a long
+dressing table that seems to serve also as desk and workbench. In the
+corner sits a small table for a portable phonograph and records, and a
+book case with more books and pulps. Movie posters cover the walls. A
+handsome door with cedar veneer leads north, and a door and window face
+outside.
+dressing table
+Among make-up, letters, and tools, you find a medical report.
+This table is pretty messy. Anyone but Monica would have a tough time
+finding anything on it.
+stuff on the table
+bunch of movie posters
+These are posters for many of Clark Gable's movies.
+Good idea! But one important book isn't in the book case.
+record collection
+You pick a record at random and start it playing. It's "
+It's a large and varied record collection. Monica's not very
+choosy about her music.
+The record is over, and not too soon.
+Monica walks over to the phonograph and puts the record away. Then she
+chooses another one and starts it up. It's "
+Alexander's Ragtime Band
+I'm an Old Cowhand
+Mexicali Rose
+Pennies from Heaven
+Sweet Leilani
+When I Grow Too Old to Dream
+bedroom door
+This room has only a large cabinet with counter, sink and mirror.
+On the counter are a shaver, toothpaste, and so on.
+The tub and toilet must be in separate rooms.
+There are doors on all four walls: the one to the north looks like redwood,
+the one to the south like cedar, and the other two like ordinary doors.
+On the counter are a shaver, tooth paste, and so on.
+This is a separate room, completely lined with tile, for bathing in the
+Japanese style. On one side is a shower head and drain, where you could
+wash away surface dirt. On the other side is a deep tub, to be filled
+with steaming water up to your neck. Potted plants give the room a
+tropical air. A window looks over the rock garden outside, and a door
+leads west.
+bath window
+potted plants
+Anyone can see that you really need a shower. In fact, this is
+one of your better ideas so far on this case. But your clothes would get
+awful wet, and you must have better things to do.
+toilet door
+toilet room
+This is a separate room for a toilet only.
+redwood door
+Linder's bedroom
+The bedroom is elegant but not tidy. A four-poster bed, chair and
+dresser, made of teak and mahogany, look hand-crafted. There are doors
+on the west and south walls, and a door and window to the east look
+outside. Clothes and newspapers are scattered about. It seems that
+Linder misse
+ the woman's touch.
+Linder's window
+stuff in the room
+four-poster bed
+The dresser is a beautiful piece of cabinetry.
+You open all the drawers and find only shirts, socks, underwear, hankies,
+and so on. What a disappointment.
+bedroom door
+living room
+A huge fieldstone fireplace on the south wall holds a blazing fire,
+filling the living room with warmth and light. Grouped in front of the
+fire are a glass-topped coffee table and a rattan davenport and club
+chair, with cushions covered in a print showing bamboo plants in the
+style of Japanese brush-painting. A lamp with a printed shade and a
+telephone sit on the table.
+On the north wall are a liquor cabinet and a console radio made of
+light-colored wood. 
+The radio is playing. 
+A single door in the east wall is 
+,
+and at the west end of the room is a double door.
+fieldstone fireplace
+coffee table
+It's a Stromberg-Carlson triple-range console. The exit in the bottom
+is evidence of the Acoustical Labyrinth inside.
+an Amos 'n' Andy serial
+a Lum & Abner serial
+the Paul Whiteman orchestra
+the Paul Whiteman orchestra
+Nick Harris's "Camera Clue Murder"
+the March of Progress
+Kay Kyser's orchestra
+Kay Kyser's orchestra
+the L.A. Times news program
+Ozzie Nelson's orchestra
+the Montoya Orchestra
+Phil Harris's orchestra
+the Duchin orchestra
+a balalaika orchestra
+Ozzie Nelson's orchestra
+Ozzie Nelson's orchestra
+"Rhapsody in Wax"
+"Rhapsody in Wax"
+"Rhapsody in Wax"
+"Rhapsody in Wax"
+a revival meeting with Oral Roberts
+a revival meeting with Oral Roberts
+a revival meeting with Oral Roberts
+a revival meeting with Oral Roberts
+the Philadelphia Orchestra, conducted by Leopold Stokowski
+the Philadelphia Orchestra, conducted by Leopold Stokowski
+the Philadelphia Orchestra, conducted by Leopold Stokowski
+the Philadelphia Orchestra, conducted by Leopold Stokowski
+Lowell Thomas, Radio Commentator
+Lowell Thomas, Radio Commentator
+a program of classical music
+a program of classical music
+a revival meeting with Aimee Semple McPherson
+a revival meeting with Aimee Semple McPherson
+a revival meeting with Aimee Semple McPherson
+a revival meeting with Aimee Semple McPherson
+a program of classical music
+a program of classical music
+a program of classical music
+a program of classical music
+Boake Carter, Philco News Commentator
+Boake Carter, Philco News Commentator
+a program of classical music
+a program of classical music
+"Rise and Shine"
+"Rise and Shine"
+"Rise and Shine"
+"Rise and Shine"
+"Between You, Me, and the Fence Post"
+You can hardly avoid it. 
+ spin the dial and find 
+It's already on. You
+You turn on the radio,
+ spin the dial and find 
+Monica looks at you with disgust as you turn off the radio.
+The radio is now off.
+The radio is already pretty loud. Any louder would probably
+make the neighbors complain.
+It's not on!
+Monica stops you from turning down the volume. She seems strangely
+interested in the radio program.
+It's not on!
+liquor cabinet
+A single door in the east wall is 
+,
+and at the west end of the room is a double door.
+double door
+dining room
+A table and benches, built out of blond wood for six people, sit in the
+middle of the room. On the south wall is a swinging door that leads to
+the kitchen, and on the east wall a double door to the living room.
+Through a French door on the west wall you can see the front yard.
+dining table
+dining bench
+French door
+swinging door
+The Linder kitchen is full of electric appliances: range and hood,
+refrigerator, mixer, toaster, clock, and so on. Several white steel
+cabinets make for plenty of storage space. To the north is the dining
+room, to the east the hall.
+kitchen window
+set of silverware
+You could probably hock this stuff for a bundle, but you'd never get
+away with it, since the butler will no doubt count it again when
+you leave.
+glass collection
+set of china
+bunch of canned food
+Your parents must have taught you better manners than that.
+kitchen clock
+The time on the kitchen clock is 
+The clock is humming electrically.
+refrigerator
+bunch of cold food
+It's as modern as yesterday, like everything in the kitchen.
+The butler is probably very proud and jealous of these sparkling
+modern gadgets, and he wouldn't like you using them.
+kitchen door
+butler's door
+butler's room
+This is the bedroom of the butler, Mr. Phong, and is very simply
+furnished. A single bed, flanked by bare wooden end tables, sits below a
+closed window on the west end of the room. The floor is hardwood, with no
+rug. The only exit is a door to the east, which is 
+Another door, now 
+, must lead to a private bathroom.
+bathroom door
+bedroom window
+This is the bedroom of the butler, Mr. Phong, and is very simply
+furnished. A single bed, flanked by bare wooden end tables, sits below a
+closed window on the west end of the room. The floor is hardwood, with no
+rug. The only exit is a door to the east, which is 
+Another door, now 
+, must lead to a private bathroom.
+butler's bathroom
+This is Mr. Phong's bathroom, with the usual plumbing and not much
+else. The door at the south side of the room is 
+This is Mr. Phong's bathroom, with the usual plumbing and not much
+else. The door at the south side of the room is 
+This hallway seems to run the length of the house, from the garage
+at the south end to the living room at the north. There is enough warm yellow
+light flooding from the living room for you to see a few doors on each side
+of the hall.
+Here in the entry is a small Shinto shrine, with a hanging scroll and
+an arrangement of flowers, as well as a coat closet and a platform for
+storing shoes. You can see a hallway to the east. The front door, on the
+west wall, is 
+flower arrangement
+What? And spoil the arrangement?!
+Someone chose these flowers for looks, not aroma.
+A lovely calligraphed scroll hangs on the wall.
+The scroll is written with a fine brush. Freely translated, it reads:|
+|
+
+The WITNESS: An INTERLOGIC Mystery|
+        from Infocom, Inc.|
+          by Stu Galley|
+       based on an idea by|
+   Marc Blank and Dave Lebling|
+ Copyright (c) 1983 Infocom, Inc.|
+       All rights reserved.|
+      WITNESS and INTERLOGIC|
+  are trademarks of Infocom, Inc.|
+
+shoe platform
+Several pairs of shoes are in a row, ready for inspection.
+ One pair of boots would not pass.
+other shoes
+They're just ordinary shoes, nothing to get excited about.
+That wouldn't do you any good.
+Here in the entry is a small Shinto shrine, with a hanging scroll and
+an arrangement of flowers, as well as a coat closet and a platform for
+storing shoes. You can see a hallway to the east. The front door, on the
+west wall, is 
+storage closet
+This is a little-used storage closet containing odds and ends of no interest
+whatsoever. The exit is to the east.
+storage door
+You have no need for them.
+You go through
+ and find nothing of interest.
+This is the south end of a hallway that runs the length of the house.
+At the far end, to the north, you can see the living room; immediately
+to the south is a door. Other doors on both sides lead to other rooms.
+office door
+Linder says with frustration, "I wish you wouldn't try to go off while
+we're trying to talk."
+This is obviously the office of Mr. Linder's company, Pacific Trade
+Associates. 
+Behind it is a large ornately-carved chair, like a cruiser escorting a
+battle ship
+, where Linder sits imperiously
+. A simple wooden chair, polished smooth by visitors,
+flanks the desk on the other side. On the north wall is a lounge,
+upholstered in green velvet and a bit lumpy, with a framed wood-block
+picture hanging over it. On the outside wall, next to a door and window,
+stands a grandfather clock, ticking relentlessly. A file cabinet stands
+in the corner.
+The door to the interior hallway is open.
+The door leading outside is open.
+The window facing the back yard is open.
+At the west end of the office, a massive desk of teak and mahogany
+faces toward the window. It has no drawers, but the top is covered with
+piles of letters, some newspapers, a telephone, and various souvenirs
+from the Far East.
+ Monica is fastened to the desk with a 
+You can see dirt and grime, old chewing gum in various colors, and a pair of
+black wires going from a button into the floor.
+You can't. It doesn't have drawers.
+stuff on the desk
+You have no need for them.
+Today's L.A. Times has the usual sort of stories: secret records of the
+police intelligence squad were seized in connection with an attempt to
+assassinate private detective Harry Raymond; "Two Officers Die in Battle
+With Maniac"; "Slayer of Tijuana Girl Executed under Fugitive Law"; and
+"Austria Near Hitler Yoke."
+carved chair
+The chair looks like teak, covered with carvings of vines and slithery
+creatures that you wouldn't like to meet in a jungle.
+Linder glares at you. 
+"I meant that you should sit in the customer's chair, not my lap!" 
+"That's my chair. You take the other one." 
+You are on your own feet again.
+wooden chair
+You are now sitting on the 
+(You can't see any 
+file cabinet
+lot of business papers
+The cabinet is filled with a lot of business papers.
+more thoroughly through the files and still
+quickly through the files but
+ find nothing suspicious, so you decide to leave them alone.
+grandfather clock
+(You can't see any 
+This is a full-blown "grandfather" clock, seven feet tall, run by
+weights and regulated by a pendulum, whose dial shows day, date, and
+phase of the moon besides the time. According to the dial, today is 
+Friday the 18
+Saturday the 19
+th, the moon is just past full, and the time is now 
+ There is some kind of powder around the keyhole.
+ And you notice that the keyhole looks darker than normal.
+The clock is ticking relentlessly.
+You'll have to open it first.
+As you'd expect, the case holds a long pendulum.
+ The surprise is a hand gun, pointing out into the room.
+ You can also see some relays and things.
+All you see is a pair of green wires going from the case into
+the floor.
+The door of the clock is now locked.
+You don't have the right key.
+The door of the clock is now unlocked.
+You don't have the right key.
+It seems to be bolted to the floor.
+It's an impressive keyhole, wrapped in a fine brass escutcheon.
+ There is some kind of powder around it.
+You can't see anything in there but darkness.
+Linder says, "I wish you'd pay attention to me instead of that clock."
+sample of powder
+It looks like cheap gunpowder.
+It has a pungent smell, like cheap gunpowder.
+pair of green wires
+The wires go into the floor and disappear.
+ They're stuck tight.
+butler's button
+It's on the edge of the desk.
+You hear a clicking sound from the direction of the clock.
+Linder grabs your wrist and looks you hard in the eye.
+Then a wide smile breaks out on his face as he lets go.
+"Sorry if I'm rough, but I don't want any interruptions right now."
+garage door
+The garage, like a car port, has no door to keep the cars in.
+Doors lead north and east.
+The walls are decorated with spare tires and things. 
+The red MG is gone.
+Oil spots on the floor show that a car is often parked here.
+The red MG is parked here.
+One car is a sporty red MG convertible.
+ The other car is a dark blue Bentley 3.5-liter sedan.
+red sport car
+It's not here.
+The hood is still warm from driving.
+You can barely see a plush interior through the tinted glass, but nothing
+else of interest.
+You don't have the right key.
+The doors are locked.
+(You can't see any 
+You can barely see a plush interior through the tinted glass, but nothing
+else of interest.
+Vandalism is for private 
+s, not famous police detectives!
+(You can't see any 
+workshop door
+This room is a well-equipped workshop. Besides the usual sort of tools,
+the place is full of mechanical and electrical parts and supplies:
+switches, relays, spools of colored wire, and so on. One wall holds the
+main electric board and a home-made junction box with more wires going
+in and out than you can shake a stick at. The only door is the one you
+came in.
+It looks just like ordinary wire.
+You can find wire here in almost any color you like.
+It just goes around and around the supply spool.
+green wire spool
+The piece of green wire and the green spool fit together
+perfectly.
+The piece of green wire and the green spool appear to be
+similar.
+(You can't see any 
+junction box
+There's a snarl of colored wires, relays, pilot lights, and stuff that only
+an engineer could admire.
+The tools are standard gardening and carpentry tools, in excellent
+condition.
+You have no use for them, unless you are looking for
+a new profession.
+Other stuff
+Routines to do looking down corridors
+Knocking on the walls reveals nothing unusual.
+(You'd do better to examine or search one thing at a time. Searching a whole room or area thoroughly would take hours. A cursory search would take about 
+ minutes, and it might not reveal much. Would you like to do it anyway?)
+Your cursory search revealed nothing new.
+You didn't get a chance to finish looking over the place.
+The window is clean enough without your interference.
+The window is a simple wooden sash, locked tight against the cold.
+ There's some sort of electric relay on one edge, with white wires attached.
+The window is damp and foggy, but you can see
+ someone in
+ some people in
+The window is too foggy to see through.
+There's no answer.
+Vandalism is for private 
+s, not famous police detectives!
+It's really broken. 
+(You can't see any 
+Someone looks up at you inquisitively.
+You have stooped to a new low by snooping around toilet bowls.
+(You can't see any 
+bathroom door
+(You can't see any 
+(You can't see any 
+bedroom door
+(You can't see any 
+(You can't see any 
+There's nobody else here.
+The door bell rings, loud and clear.
+It's not clear which direction you mean.
+This is a little-used side yard, hidden from the street by the fence. The back yard lies to the east and the driveway to the west.
+Fresh foot prints go here and there in the yard.
+You notice fresh foot prints going here and there in the yard.
+A fresh row of foot prints goes from the back yard to the driveway.
+You notice a fresh row of foot prints going from the back yard to the driveway.
+There are too many foot prints here now.
+The prints are lined up in an even row, as if made by a careful walker.
+You already did that!
+The two sets of foot prints don't seem to match up.
+Sgt. Duffy appears with his kit for casting with plaster of Paris. He quickly makes a cast of the foot prints and hands it to you, saying "I hope you find this as useful as it is heavy."
+You are standing on a small concrete slab outside Linder's office. A sign between the door and the window reads "PACIFIC TRADE ASSOCIATES". To the north is a tidy lawn, extending east to the edge of the woods. A path of stepping stones leads south to the back gate.
+The prints are uneven and widely spaced, as if made by someone running.
+You already did that!
+You would probably get lost in the woods.
+ Even with a path to follow.
+(You can't see any 
+foot prints
+All the panes of the window are cracked, and many are in pieces on the 
+ A chunk of putty dangles like a wax bean.
+ Along one edge of the window you can see the end of a piece of green wire.
+There's also a piece of green wire running from the frame to the putty.
+Through the broken window you can see
+You would probably cut yourself on the broken glass.
+Someone peeks through the window at you, then disappears and
+ shouts "Go away!"
+The wire goes into the window frame and disappears.
+ It's stuck tight.
+ It's stuck tight.
+It's too late to give Linder anything.
+The lawn is well manicured.
+On one side is a modern-style bed, with piles of well-thumbed detective stories stacked on the table beside it. Opposite the bed is a long dressing table that seems to serve also as desk and workbench. In the corner sits a small table for a portable phonograph and records, and a book case with more books and pulps. Movie posters cover the walls. A handsome door with cedar veneer leads north, and a door and window face outside.
+Among make-up, letters, and tools, you find a medical report.
+This table is pretty messy. Anyone but Monica would have a tough time finding anything on it.
+You pick a record at random and start it playing. It's "
+It's a large and varied record collection. Monica's not very choosy about her music.
+The record is over, and not too soon.
+Monica walks over to the phonograph and puts the record away. Then she chooses another one and starts it up. It's "
+On the counter are a shaver, tooth paste, and so on.
+Anyone can see that you really need a shower. In fact, this is one of your better ideas so far on this case. But your clothes would get awful wet, and you must have better things to do.
+The bedroom is elegant but not tidy. A four-poster bed, chair and dresser, made of teak and mahogany, look hand-crafted. There are doors on the west and south walls, and a door and window to the east look outside. Clothes and newspapers are scattered about. It seems that Linder misse
+ the woman's touch.
+The dresser is a beautiful piece of cabinetry.
+You open all the drawers and find only shirts, socks, underwear, hankies, and so on. What a disappointment.
+A huge fieldstone fireplace on the south wall holds a blazing fire, filling the living room with warmth and light. Grouped in front of the fire are a glass-topped coffee table and a rattan davenport and club chair, with cushions covered in a print showing bamboo plants in the style of Japanese brush-painting. A lamp with a printed shade and a telephone sit on the table.
+On the north wall are a liquor cabinet and a console radio made of light-colored wood. 
+The radio is playing. 
+You can hardly avoid it. 
+ spin the dial and find 
+It's already on. You
+You turn on the radio,
+ spin the dial and find 
+Monica looks at you with disgust as you turn off the radio.
+The radio is now off.
+The radio is already pretty loud. Any louder would probably make the neighbors complain.
+It's not on!
+Monica stops you from turning down the volume. She seems strangely interested in the radio program.
+It's not on!
+You could probably hock this stuff for a bundle, but you'd never get away with it, since the butler will no doubt count it again when you leave.
+Your parents must have taught you better manners than that.
+The time on the kitchen clock is 
+The clock is humming electrically.
+It's as modern as yesterday, like everything in the kitchen.
+The butler is probably very proud and jealous of these sparkling modern gadgets, and he wouldn't like you using them.
+This is the north end of the central hallway. Just to the north, you can see warm yellow light in the living room.
+ You can hear voices talking excitedly.
+This is near the middle of the central hallway. At the north end, you can see the living room; to the east and west are bedroom doors. 
+Both doors are open.
+The door to the east is open.
+The door to the west is open.
+Both doors are closed.
+What? And spoil the arrangement?!
+Someone chose these flowers for looks, not aroma.
+The scroll is written with a fine brush. Freely translated, it reads:
+
+
+The WITNESS: An INTERLOGIC Mystery
+        from Infocom, Inc.
+          by Stu Galley
+       based on an idea by
+   Marc Blank and Dave Lebling
+ Copyright (c) 1983 Infocom, Inc.
+       All rights reserved.
+      WITNESS and INTERLOGIC
+  are trademarks of Infocom, Inc.
+
+Several pairs of shoes are in a row, ready for inspection.
+ One pair of boots would not pass.
+They're just ordinary shoes, nothing to get excited about.
+That wouldn't do you any good.
+You can't reach the front door.
+A muffled voice says, "Come in!"
+There is no answer at the door.
+You have no need for them.
+You go through
+ and find nothing of interest.
+Linder says with frustration, "I wish you wouldn't try to go off while we're trying to talk."
+This is obviously the office of Mr. Linder's company, Pacific Trade Associates. 
+Behind it is a large ornately-carved chair, like a cruiser escorting a battle ship
+, where Linder sits imperiously
+. A simple wooden chair, polished smooth by visitors, flanks the desk on the other side. On the north wall is a lounge, upholstered in green velvet and a bit lumpy, with a framed wood-block picture hanging over it. On the outside wall, next to a door and window, stands a grandfather clock, ticking relentlessly. A file cabinet stands in the corner.
+The door to the interior hallway is open.
+The door leading outside is open.
+The window facing the back yard is open.
+At the west end of the office, a massive desk of teak and mahogany faces toward the window. It has no drawers, but the top is covered with piles of letters, some newspapers, a telephone, and various souvenirs from the Far East.
+ Monica is fastened to the desk with a 
+You can see dirt and grime, old chewing gum in various colors, and a pair of black wires going from a button into the floor.
+You can't. It doesn't have drawers.
+You have no need for them.
+Today's L.A. Times has the usual sort of stories: secret records of the police intelligence squad were seized in connection with an attempt to assassinate private detective Harry Raymond; "Two Officers Die in Battle With Maniac"; "Slayer of Tijuana Girl Executed under Fugitive Law"; and "Austria Near Hitler Yoke."
+The chair looks like teak, covered with carvings of vines and slithery creatures that you wouldn't like to meet in a jungle.
+Linder glares at you. 
+"I meant that you should sit in the customer's chair, not my lap!" 
+"That's my chair. You take the other one." 
+You are on your own feet again.
+You are now sitting on the 
+(You can't see any 
+more thoroughly through the files and still
+quickly through the files but
+ find nothing suspicious, so you decide to leave them alone.
+(You can't see any 
+This is a full-blown "grandfather" clock, seven feet tall, run by weights and regulated by a pendulum, whose dial shows day, date, and phase of the moon besides the time. According to the dial, today is 
+Friday the 18
+Saturday the 19
+th, the moon is just past full, and the time is now 
+ There is some kind of powder around the keyhole.
+ And you notice that the keyhole looks darker than normal.
+The clock is ticking relentlessly.
+You'll have to open it first.
+As you'd expect, the case holds a long pendulum.
+ The surprise is a hand gun, pointing out into the room.
+ You can also see some relays and things.
+All you see is a pair of green wires going from the case into the floor.
+The door of the clock is now locked.
+You don't have the right key.
+The door of the clock is now unlocked.
+You don't have the right key.
+It seems to be bolted to the floor.
+It's an impressive keyhole, wrapped in a fine brass escutcheon.
+ There is some kind of powder around it.
+You can't see anything in there but darkness.
+Linder says, "I wish you'd pay attention to me instead of that clock."
+It looks like cheap gunpowder.
+It has a pungent smell, like cheap gunpowder.
+The wires go into the floor and disappear.
+ They're stuck tight.
+It's on the edge of the desk.
+You hear a clicking sound from the direction of the clock.
+Linder grabs your wrist and looks you hard in the eye. Then a wide smile breaks out on his face as he lets go. "Sorry if I'm rough, but I don't want any interruptions right now."
+The garage, like a car port, has no door to keep the cars in. Doors lead north and east. The walls are decorated with spare tires and things. 
+The red MG is gone.
+Oil spots on the floor show that a car is often parked here.
+The red MG is parked here.
+One car is a sporty red MG convertible.
+ The other car is a dark blue Bentley 3.5-liter sedan.
+It's not here.
+The hood is still warm from driving.
+You can barely see a plush interior through the tinted glass, but nothing else of interest.
+You don't have the right key.
+The doors are locked.
+(You can't see any 
+You can barely see a plush interior through the tinted glass, but nothing else of interest.
+Vandalism is for private 
+s, not famous police detectives!
+(You can't see any 
+It looks just like ordinary wire.
+You can find wire here in almost any color you like.
+It just goes around and around the supply spool.
+The piece of green wire and the green spool fit together perfectly.
+The piece of green wire and the green spool appear to be similar.
+(You can't see any 
+There's a snarl of colored wires, relays, pilot lights, and stuff that only an engineer could admire.
+The tools are standard gardening and carpentry tools, in excellent condition.
+You have no use for them, unless you are looking for a new profession.
+The smell of herbs permeates everything.
+A breeze carries the faint smell of herbs through the air.
+The air is clear and fresh here.
+The air is rather musty here.
+There is a pleasant breeze coming through the 
+Sgt. Duffy, with 
+down the hall
+PEOPLE for WITNESS
+Copyright (C) 1983 Infocom, Inc.  All rights reserved.
+Necessary Flags
+himself or herself
+such things
+Constants used as table offsets for each character, including the player:
+Phong's straight black hair and folded eyelids make him obviously
+Asian, but no definite nationality. His open, almost gentle face holds a
+quick smile and eyes that seem to miss nothing. He carries his stout
+body lightly, but you can see great strength under his light shirt and
+dark trousers. You guess his age at about fifty, but who knows how many
+lifetimes of experience he carries?
+pair of Phong's shoes
+looking imperturbable
+washing dishes
+opening a can of worms
+smoking a cigarette
+making pickles
+Linder stands at least six foot, with a powerful frame but quick actions,
+like a cat. His eyeglasses sit on top of his head, where thin strands
+of long black hair go here and there, mostly combed backward. His
+wide-set hazel eyes size you up quickly from within their pouches in his
+ruddy face. He wears a silk peach-colored Mandarin shirt and chocolate
+trousers, impeccably tailored and laundered, but sweat gleams on his
+high forehead, and he looks as though he hasn't slept much lately.
+pair of Linder's shoes
+"I can't help you there."
+"That has nothing to do with why I asked you here."
+The young man looks you straight in the eye but says nothing. He looks like a
+gigolo trying to imitate a university professor. His blond wavy hair
+almost sparkles, like Pacific surf at night, but his recent panic has
+left it dangling to one side. His hot blue eyes reveal his curiosity and
+uncertainty about you.
+"I couldn't help you if I wanted to."
+"That has nothing to do with me."
+pair of Stiles's shoes
+young woman
+She is a woman in her mid-twenties. Her grey eyes flash, emphasizing
+her dark waved hair and light but effective make-up. She wears a navy
+Rayon blouse, tan slacks, and tan pumps with Cuban heels. She acts as
+though you were a masher who just gave her a whistle.
+pair of Monica's shoes
+ She seems to remember who you are, then clams up.
+me a medical report 
+A cat is sleeping in the corner.
+The cat is a brown tabby, more bulgy than sleek.
+late Mrs. Linder
+Sergeant Duffy
+People Functions
+"You can do that yourself."
+"Do it yourself!"
+"Why not do it yourself?"
+You think it over. You realize that this arrest is pretty far-fetched. It could only mean humiliation for you.
+That's too many things to compare all at once!
+What, and let down the Police Department track-and-field team?!
+You'd do a much better job if you stood up, but let's see...
+You're already sitting down.
+You'd do a much better job if you stood up.
+You're already hiding.
+You can't do that while you're hiding.
+"Excuse me, sir," says Phong, "but the detective has arrived."
+Phong is lying on the bed, 
+reading a book.
+meditating.
+Phong is here, 
+Phong is gazing out the window.
+Phong is waiting for you to do something.
+Phong is here, 
+"No, I must be careful about that."
+"You'll have to ask Mr. Linder about that."
+"I don't have the key for the clock."
+"What are you talking about?" He looks frightened.
+"It's true I helped set you up for deception with the guns. But only because Mr. Linder asked me to! He said he wanted to frighten Stiles. He wasn't supposed to be killed! Monica must have muffed it. Or else ... could she ...?" He looks confused and angry.
+"I don't see why you're accusing me!
+ Sure, I was in the yard, because 
+I thought I heard a noise outside and went out to investigate.
+ It's part of my job, you know."
+"I don't see why you're accusing me!
+ You should ask Monica about those guns."
+"You haven't a clue, and you know it!"
+"That's my butler's button, of course."
+"I didn't think you had any interest in gardening! Those little babies are the best thing for the clay soil around here. You can just order them by mail and open them up when they arrive."
+"I don't have one, if that's what you mean."
+"Oh, Monica wired the house for butler's buttons."
+"Oh, Monica wired the windows with burglar alarms."
+"There's wire all over the house. You'll have to ask Monica."
+"I have the keys for all the doors in the house."
+"Don't you remember? I gave you all the keys I have."
+"That looks like the key to Mr. Linder's clock."
+"There's only one key to Mr. Linder's clock. I think he keeps it in the office somewhere."
+"That man is a marvel. Always seems to have several deals going at once. I don't know how he does it." Linder beams with self-pride.
+"Frankly, Detective, I can't say I
+'m sorry he's dead
+. He always promised me wealth here in America, but I've never seen it. I could 
+have managed
+ the Asian branch of his business if he'd let me. If I had any money, I'd quit on the spot and return home."
+"Frankly, Detective, I can't say I
+ like him much
+. He always promised me wealth here in America, but I've never seen it. I could 
+ the Asian branch of his business if he'd let me. If I had any money, I'd quit on the spot and return home."
+"She's an intelligent girl. Mr. Linder is very proud of her, but I think she acts too much like a man.
+ She really muffed it this time.
+"If only Mr. Linder had been home more, he could have kept her in line."
+"Mr. Linder brought me here from Asia, to help manage his business and run his house. I guess I do more running than managing. If I can help you, just push the button anywhere in the house."
+"I was in the kitchen and heard a sound like a gunshot, so I ran to the office and found you and Mr. Linder. You were closer to it than I was."
+"He used to come around here now and then, when Mr. Linder was away. I never thought much about it until the fighting between Mr. and Mrs. got bad, just before Mrs. Linder passed on." He pauses. "I think Mr. Linder has been calling him on the telephone a lot lately."
+"Everyone was sad about that. Mr. Linder just threw himself into his work, as usual. Monica was terribly depressed, didn't even come out of her room for a long time. I doubt she'll ever get over it."
+"Mr. Linder probably kept it in his bank safe. I've never seen it."
+"You'll have to ask Mr. Linder about that."
+"What can I tell you? That's a 'flathead broom,' invented by your American Shakers, I believe."
+He seems surprised. "Uh, that was just some door-to-door salesman."
+"Yes, I think Monica bought those, using some other name."
+"I've heard Mr. Linder mention that restaurant.
+ But I don't recognize the phone number."
+"I've heard Mr. Linder mention that restaurant.
+Phong looks surprised but not alarmed. "This is the first I've heard of this."
+"Those are my gardening boots. They're muddy because, while you were in the office, 
+I thought I heard a noise outside and went out to investigate.
+"I might as well tell you: Mr. Linder concocted this scheme to frighten Stiles, and he got Monica and me to help him. But he was supposed to be only wounded, not killed!"
+Phong seems shaken, but all he says is, 
+"That's my butler's button, of course."
+"Mr. Linder has a certain fondness for elaborate things like that."
+"If it's dust you're after, I plead guilty to plenty of it."
+"Oh, I guess that's part of the burglar alarm."
+"It's a mystery called 'Deadline.' Monica recommended it to me."
+"Yes, that's the telegram Mr. Linder sent this morning."
+"Yes, now you know that Mr. Linder forged that note. Stiles didn't send it to him."
+"Yes, that's the note that Stiles sent to Mr. Linder."
+"I'm sorry, Detective, but I can't help you."
+Phong looks offended. "I'm quite capable by myself, you know."
+You find a 
+ in Phong's pocket and take it.
+Phong's smile disappears and his body shifts subtly toward a fighting stance. "I don't think you really want to try that, Detective."
+"Here, you may as well take them. I don't see how Mr. Linder can object now."
+"I don't think Mr. Linder would like that."
+Linder is pacing back and forth.
+Linder is sitting on the 
+"I don't need Phong yet."
+Linder looks at his wrist watch and says, "I have 
+"Don't tell me what to do!"
+"That's the butler's button, of course."
+"Yes, Monica wired 
+the whole house for butler's buttons.
+ With all modesty, I think she's quite a mechanic."
+"Yes, Monica wired 
+all the windows for burglars.
+ With all modesty, I think she's quite a mechanic."
+"That's Monica's territory. I don't interfere."
+"What phone call? I haven't talked with Stiles since my wife's death. I'm really afraid he wants to do me in."
+"Phong keeps the house keys for me."
+"You've probably read about me in the papers. In fact they just published something about me when I won that award. And I've heard lots about you. That's why I asked you here."
+"It's still too painful for me to talk about, I'm afraid."
+"Money?! I asked you here to prevent a crime. I hope you're not thinking of some outlandish fee!"
+"She's a loyal and intelligent girl. I'm very proud of her."
+"He and I go back a long time. Met in Asia, you know. And since I spend as much time there as here, he takes care of the house for me. A fine fellow, and I trust him implicitly."
+"All I know about Stiles is that he's a writer of some kind, and sometimes he plays bit parts in films. I've never really met the man."
+"I'll explain all that shortly, after I finish this drink."
+"My friend Klutz, the Police Chief, recommended you to me."
+"That has nothing to do with why I asked you here."
+"Oh, Phong must have left it there after cleaning up."
+"I found that in an obscure but wealthy estate in Asia during the war and brought it home as booty. Sitting in it makes me feel like an 'Oriental Potentate.'"
+"She's Monica's cat. You'd do better to ask her."
+"I've always admired elaborate machines, and that's the finest example I could hope to own."
+"I didn't ask you here so you could search the house!"
+"I think Phong goes there sometimes. I've never been there myself." He almost flinched before answering, but now he's as smooth as ever.
+"I already told you that I haven't seen it before."
+Linder looks surprised and a bit alarmed. "This is the first I've heard of this. I don't know why my doctor didn't tell me about it."
+"That's the butler's button, of course."
+"I wish you wouldn't meddle in my files while we're trying to talk."
+"Oh, uh, that's part of the burglar alarm."
+"Yes, that's the telegram I sent this morning."
+"Yes, that's the note that Stiles sent to me."
+Linder looks bewildered, almost alarmed. "Whatever do you have in mind?"
+Many have tried, but none has succeeded.
+Many have tried, but none has succeeded.
+Stiles is waiting for you to say something.
+The visitor is in a hurry.
+Sgt. Duffy is leading Stiles by the handcuffs.
+Stiles is fastened to the davenport, 
+looking sullen.
+Stiles is fastened to the davenport, 
+yawning and trying not to doze off.
+Sgt. Duffy is holding a prisoner by the arm.
+"I wouldn't tell you even if I knew."
+"I've never seen you before."
+"Linder phoned me today and almost commanded me to come here tonight to talk about our deal. Last time, he at least was decent enough to buy me lunch. He
+ said he wanted to pay me a bundle to leave town."
+"Is that your man? When I came running out of the woods, he grabbed me as if I was some kind of criminal. He wouldn't let me go! So here I am."
+"Don't ask me. I never touch them."
+"What about them? They're muddy because I had to run through the yard and woods to get away from the shooting."
+"I don't get it. I think he's more dangerous than I am!"
+"Yeah, Linder
+ said he wanted to pay me a bundle to leave town."
+"She's probably just another dizzy dame, but I don't really know her well enough to say."
+"Virginia was a special woman. Repressed for years. I think that, if only ... Say, I don't have to answer your questions!"
+"He's a smooth operator. I can think of many people who'd like to plug him. Not me, of course. I still don't understand why he sounded so urgent when he called me today and asked me to come here tonight."
+"He seems straight, but I don't really trust 
+"I was just walking up to Linder's office when there was this explosion and the window fell apart. 'Holy jumping catfish!' I thought, 'Someone took a shot at me!' So I ran to the gate, but it was locked. The only way out I could see was through the woods."
+"There's not much to tell. I'm a writer, but that doesn't take you far these days. So I do some film work on the side. Some day my agent will wise up and find me a decent publisher."
+"I've never seen it before. Anyhow, I don't like guns."
+"That's my phone number! Linder must have jotted it down the day we had lunch at that restaurant,
+ when he first offered me money to leave town."
+"I think that's the name of the restaurant where Linder took me to lunch,
+ when he first offered me money to leave town."
+"So the old man was on the way out, eh? Wish I'd known that." He pauses. "I mean, I could have taken his money and blown town until he kicked the bucket, then come back. Too late now."
+"Holy smoke! That sort of looks like my writing, but I didn't write it."
+When you try it, he whirls around in a fighting stance. "Don't mess around with me, buddy. I've handled thieves before."
+'s eyes are full of hate, and 
+he says something unprintable.
+There's no need. Duffy's cuffs are secure enough.
+Your key won't fit the cuffs.
+Your key won't fit the cuffs.
+The shoes don't seem to match 
+the foot prints that you found in the 
+The shoes and the foot prints match each other perfectly.
+The shoes look similar to 
+the foot prints that you found in the 
+Monica is fastened to the 
+Monica is lying on her bed, softly sobbing.
+Monica is leaning over the toilet, gasping.
+Monica is here, biting her nails.
+stops talking and 
+looks at you sharply. 
+"Why should I?"
+"What murder? What are you talking about?" Her cheeks quiver like jelly.
+"You were there when it happened. Isn't it obvious that Stiles did it?"
+"It's true I helped set up the gun mechanism. But Dad was already dying! You can find the medical report on the desk 
+in my room. He was ... dying ..." She breaks down in tears.
+"I've told you already: he was dying!" Tears dribble down her cheeks.
+"I don't understand! I believed that medical report, and I don't know why the doctor lied to me about the tumor. You think I wanted to murder my own father? I thought he was dying already!" Her eyes are pleading with you now, begging you to believe her.
+"That has nothing to do with why Dad asked you here."
+"That's the butler's button, you cheesehead."
+"I have nothing to say to you about that."
+"That bell system is just one of the features I've put in this house. Beyond your imagination, probably."
+"That alarm system is another of the features I've put in this house. You probably know the kind of low-life that would try to break in here."
+"You want wire? You can find all kinds 
+in the workshop."
+"I have no secrets. Anyone can see what I am."
+"Phong keeps the house keys. Ask him."
+"What can I say? He
+s my father, a hard-working, clever man."
+She rambles a bit, as if dreaming. "To be honest, I feel relieved ... that he's met his Maker. Now I won't feel as if I'm under his thumb when he's home. He really treated all of us like ... his property, even Mother. I guess I'm an orphan now, but ... "
+"Oh, I can tell you lots about him. Do you want to know if he was a good husband? A good father? Anything but a selfish ..."
+"That's between Mother and me."
+"She was the most noble woman I've ever known. Did her best to be a 'good wife' even though she was alone so much. No one understood her as I did, certainly not Father. Sometimes I feel I could just ..." She slams a clenched fist into her palm.
+"What do you think this is, a cheap whodunit?"
+"Isn't it obvious? That 
+ Stiles squibbed him off!"
+"He's a right gee, no matter what some people say about his 
+"That poor 
+. First he fell in love with Mother, a married woman; then he actually trusted her husband. I don't know what he uses for brains."
+ who killed Dad? I'd spit in his face if it was worth the trouble."
+"Oh, that lover boy thinks he's a smooth apple, all right. If you ask me, he's just a harmless grifter."
+"I don't know anything about you, but I 
+had hoped you could
+hope you can
+ help Dad."
+"I don't want to talk about it."
+"Terry's a good friend of mine, that's all."
+"Dad kept it in his bank safe. I'll bet Phong would like to see it."
+"You'll have to ask Dad about that."
+"That has nothing to do with why Dad asked you here."
+"She's my cat. I named her Asta, because she's at least as smart as the dog in 'The Thin Man.'"
+"I don't know where Dad keeps it."
+"That's the only key for the clock. So what?"
+"What about it? It's no crime to get a little heat for self-protection."
+Monica has the wild look of a trapped animal. "I can't understand why that heater was inside the clock."
+"I don't know what you're talking about."
+"I already told you: Dad was about to kick the bucket anyway."
+so I could try to understand what was wrong and what his chances were. Now I guess Stiles has ended Dad's pain."
+"I already told you: Dad's about to kick the bucket."
+"How did you find that? Dad gave it to me so I could try to understand what's wrong and what his chances are. They don't look good." She looks alarmed.
+"Oh, uh, that's part of a timed lock I set up for the office."
+"You seem to have discovered Dad's little plot to frighten Stiles. Sure, I helped set it up for him. But I don't know what went wrong. He wasn't supposed to die!" Her lower lip is quivering.
+"That's the butler's button, you cheesehead."
+"Phong really ought to do a better job of cleaning around here."
+"That gat you found? Phong planted it so it would look as if Stiles used it."
+"That gat you found? It must belong to Stiles."
+"I've never seen it before. It looks as if you don't take good care of it."
+"It's a swell mystery called 'Deadline.' I haven't figured it out yet."
+"That must be the telegram Dad sent this morning."
+"That looks like my ticket stub. I didn't know I dropped it."
+"It was called 'Dead End'. I don't think this Bogart guy is pretty enough to make it big."
+"I think we'll see 'Dead End'. Terry wants to check out this guy named Bogart."
+"I don't know anything about it, shamus.
+ And I'm really getting tired of your questions.
+"If I never see you again, it's jake with me."
+Monica writhes away from your touch and manages to kick you in the shin.
+"How can I give you anything when I'm tied up?"
+You find a single key in Monica's pocket and take it.
+You find a hand gun in Monica's pocket and take it.
+Monica screams, "Leave me alone! I'll get over it! Please!"
+Monica's eyes are full of hate, and she says something unprintable.
+She's already fastened to the 
+(with your handcuffs)
+She puts up a struggle, but you manage to do it.
+There's nothing to tie her 
+She's already fastened with the 
+She puts up a struggle, but you manage to do it.
+There's nothing to 
+She's not even tied up!
+She's not fastened to the 
+Monica rubs her wrists as you take the 
+ Her eyes dart from door to door, then she bolts for the hallway. But, within seconds, Sgt. Duffy brings her back.
+ She refuses to look at you.
+You can't take her and the 
+Monica pushes you away with surprising strength. "I don't know what game you're playing, Detective, but count me out. If you think I'm just a dumb twi
+t, think again." Her eyes burn like polished gems.
+Like a fly, the cat springs up just in time, then goes to a different corner to settle down.
+The cat purrs a little louder and curls one paw.
+You can't speak to someone who isn't here.
+ can't hear you.
+ isn't here!
+You will eventually, shamus, you will.
+You're not with her yet.
+You'll have to be more specific.
+Duffy must be around here somewhere. There's no point in trying to phone him.
+The night clerk at the station says he'll give Duffy your message.
+Sergeant Duffy is probably at the station, working late as usual.
+You'd wait quite a while, since Sergeant Duffy is always nearby but never approaches you without a good reason.
+Oh, come on now! Not trusty 
+Like a lurking grue in the dark places of the earth, Sergeant Duffy is never far from the scene of a crime. If you witness a crime, you can be sure he'll show up soon. Then, if you ANALYZE something, he will appear in an instant to take it to the lab. When the results are available, he will rush them back to you. If you ARREST someone, he will be there with the handcuffs. You can't find a more dedicated civil servant.
+Duffy is too quick to follow.
+It looks as though Duffy didn't hear you.
+ appears for an instant but
+ politely declines your offer.
+"I will, as soon as I case the joint."
+"Oh, I called the coroner as soon as I saw the body. They'll be here as soon as they have time."
+"What?? I won't release a suspect!"
+"With all respect, I think you should do that yourself."
+Duffy appears for a moment. 
+Oh, I called the coroner as soon as I saw the body. They'll be here as soon as they have time.
+Oh, I called the coroner as soon as I saw the body. They'll be here as soon as they have time.
+I thought I told you already. The coroner 
+found no evidence of the alleged stomach tumor. In fact, he could find no organic disease that would either explain the death or support the theory that Linder wanted to die. He 
+concluded that Linder died of a single small-caliber bullet through the heart. And here's something peculiar: there were no traceable rifle marks on the bullet.
+Come off it, Detective. We've worked together before. You sure you didn't stop at a bar tonight?
+Ah, that's where the late Mrs. Linder did herself in. A messy business, Detective.
+She shot herself in the bathtub.
+Oh, I know that place, Fritzi's. Untidy, but clean.
+Fascinating! It could have been a suicide, then.
+Ah, Connecticut! I have relations there, you know. In fact, one young one wants to be a detective some day.
+I wish I could help you, Detective.
+ He scurries off again.
+ appears for an instant but
+ politely declines your offer.
+"You can't leave yet, Detective. Think of your reputation!"
+"Hello again, Detective."
+Duffy peeks around a corner, tips his hat to you, and disappears again.
+"I would rather not."
+"I don't need your help."
+You're the detective!
+"I'm sure you can find it, Detective."
+ looks briefly toward 
+ and then speaks in a whisper.
+ looks briefly toward 
+ and then speaks in a whisper.
+ looks briefly toward 
+ and then speaks in a whisper.
+Monica writhes away from your touch and manages to kick you in the shin.
+"Please don't take them! I'm cold enough as it is!"
+"I'm beginning to wonder if I got a decent detective or not!"
+You can't be that desperate!
+Necrophilia went out with raccoon coats!
+The shoes don't seem to match 
+the foot prints that you found in the 
+They're straw slippers with thongs, clean and obviously comfortable.
+They're pointed wing tips with sensational welt features, but a bit shabby and more than a bit muddy.
+They're tan pumps with Cuban heels, clean and stylish.
+THINGS for WITNESS
+Copyright (C) 1983 Infocom, Inc.  All rights reserved.
+mystery book
+A book is sitting on the bed-side table.
+gun receipt
+(You'll find the telegram in your game package.)
+(You'll find the match book in your game package.)
+snub-nosed Colt
+pair of handcuffs
+Brass Lantern
+bottle of Scotch
+A half-filled bottle of Teacher's "Highland Cream" Scotch Whisky is
+in the cabinet.
+bottle of Bourbon
+A nearly-empty bottle of "Jack Daniels" Bourbon Whisky is in the
+cabinet.
+threatening note
+The note is written in a spidery hand on fine rag paper. It says:|
+"Linder --|
+Since Virginia died, I've lost too much sleep because of you and
+your harrassments. The time has come to put this matter to rest
+once and for all. I'll be seeing you sooner than you imagine.|
+              -- Stiles"
+pile of broken glass
+A broom is standing in the corner.
+hidden handgun
+muddy handgun
+medical report
+After sifting through the medical officialese, you realize that the
+report says that Linder has an advanced stomach tumor, and
+that his death will come slowly and painfully.
+set of house keys
+handwriting
+fingerprints
+Global objects
+other crime
+Pacific Trade Associates
+butler's button
+love affair
+pair of muddy boots
+telephone call
+Linder's will
+body of Mr. Linder
+search warrant
+ticket stub
+Lying on the ground is what appears to be a ticket stub.
+can of worms
+You can't do anything useful with that.
+(Those things aren't here!)
+(You can't see any
+[Moby-found 
+ looks confused. "I don't know anything about any
+You wouldn't find any
+"I'm not sure what you're talking about."
+Phong picks up the book and starts to read.
+This is a mystery story called 'Deadline,' just now published as a book.
+The book is a novel-length version of 'Deadline,' a whodunit set in the future in Connecticut. You start to read it, and it seems oddly familiar, as if you might live through it yourself some day.
+ A receipt of some kind is being used as a bookmark.
+"            FRITZI'S
+   fine merchandise - quick loans
+        Cabeza Plana, Calif.
+                        Number: 69105
+                        Date: 12/1/37
+Sold to: Nemo Newbourne
+Address: 137 E. Second Street
+
+Two handguns - - - - - - - - - $ 8.00
+
+[PAID]"
+The matches don't seem to work.
+(You'll find the match book in your game package.)
+The listing for Stiles in the phone book is the same as the number written in the match book.
+It's right here. Some detective you are.
+You might try the front door.
+The house looks like a mixture of a California bungalow and East Asian influences.
+You can't leave the property yet. It would mean your job.
+It's too dark to see anything.
+It's right here. Some detective you are.
+This is a Japanese-style "shadow fence" made of wooden slats, opaque from most angles but designed to let breezes through.
+(You can't see any
+You don't find anything new there.
+(You can't see any
+You don't find anything new there.
+You're too far away to make out what it is.
+You'd enjoy it more if you turned on the radio.
+Linder is drinking something that looks like whisky, straight up.
+"So you want to dip your beak? Go ahead."
+"I think we both need one."  And so you both have one.
+You take a belt of the stuff and roll it on your tongue before swallowing. It's good whisky.
+You could drink this stuff all night, but you have work to do.
+Like any hard-boiled police detective, you must have a pack on you somewhere.
+Phong's cigarettes are Lucky Strikes.
+All you can see is an ashtray full of butts.
+You light up a Camel, take a deep drag, and watch the smoke drift through the air. A few more puffs, and you're ready to go to work again.
+"I think we both need one." And so you both have one.
+You'd probably cut yourself on the sharp edges.
+The two guns are virtually identical,
+ except that one has a very short barrel.
+The two guns appear to be very similar,
+ except that one has a very short barrel.
+ou can see it's just a cheap low-quality handgun.
+ The barrel is very short, as if someone sawed it off.
+You open the gun, find no spare bullets inside, and close it again.
+It smells as though it's recently been fired.
+The gun is muddy from the ground, but y
+ou can see it's just a cheap low-quality handgun.
+You open the gun, find no spare bullets inside, and close it again.
+It smells as though it's recently been fired.
+(You can't see any 
+"Here, you may as well take them. I don't see how Mr. Linder can object now."
+"I don't think Mr. Linder would like that."
+(You can't see any 
+You didn't say what to analyze the handwriting on.
+You didn't say what to take the fingerprints from.
+"She shot herself in the bathtub."
+You should type what number to call, for example "DIAL HYACINTH 1031."
+Don't bother unless it rings.
+You lift the receiver and get a dial tone. Well done!
+You dial the number and wait a long time for someone to answer. Finally you hear a voice: "We're awful busy here. Call back in ten minutes." He hangs up before you can say a word.
+You dial the number and get a busy signal.
+There's no button here.
+Phong looks annoyed. "You needn't ring for me. I'm right here."
+You barely hear a bell ring in the distance.
+There's no wire here.
+There's no white wire here.
+You can see several kinds of 
+ wire on spools, not to mention the snarl in the junction box.
+A pair of black wires goes from the butler's button into the floor.
+You can see several kinds of 
+ wire on spools, not to mention the snarl in the junction box.
+A pair of white wires goes from some sort of electric switch on the 
+ into the frame.
+The wire goes into the floor and disappears.
+It just goes around and around the spools.
+The wire goes into the wall and disappears.
+You don't really want to do that.
+The boots don't seem to match 
+the foot prints that you found in the 
+The boots and the foot prints match each other perfectly.
+The boots appear to be similar to 
+the foot prints that you found in the 
+They're just ordinary gardening boots, with some fresh adobe mud around the bottom.
+Monica is lying on her bed, softly sobbing.
+If you wanted to find the bogey man, you're out of luck.
+(Use compass directions to move around here.)
+The body of Mr. Linder is still crumpled in a heap on the floor.
+Only the coroner can do that.
+Talking to corpses will get you nowhere.
+You can't move
+Don't tell me you think the body's going to run away!
+The blood is still spreading on Linder's shirt.
+The blood on Linder's shirt has clotted and turned dark.
+Linder's body is getting stiff.
+The corpse is pretty stiff now.
+Knowing the courts, it would probably take days to get one.
+
+   #570716
+
+BIJOU THEATRE
+
+  ADMIT ONE
+
+   25 CENTS
+
+-^-^-^-^-^-^-
+
+According to superstition, it's bad luck to break mirrors.
+A harried and weary police detective looks back at you, with a look that seems to say, "Look what the cat dragged in."
+(You can't see any 
+You open the closet and find a bunch of stylish clothes, but nothing in your size.
+The closet's too crowded to get in.
+In a sense, they're all around you!
+That would be telling!
+This case is tangled enough already.
+The blue-plate special at the diner was enough for you.
+What a strange notion!
+(Use compass directions to move around here.)
+CLOCK for WITNESS
+Copyright (C) 1983 Infocom, Inc.  All rights reserved.
+MAIN for WITNESS
+Copyright (C) 1983 Infocom, Inc.  All rights reserved.
+<GLOBAL L-PRSA <>>  
+ 
+<GLOBAL L-PRSO <>>  
+ 
+<GLOBAL L-PRSI <>>
+Room (M-BEG)
+Room (M-END)
+(There isn't anything to 
+The other object
+ that you mentioned 
+(Be specific: what object do you want to 
+ isn't here!)
+[in case last clause changed PRSx]
+Not handled]
+PARSER for WITNESS
+Copyright (C) 1983 Infocom, Inc.  All rights reserved.
+Parser global variable convention:  All parser globals will 
+  begin with 'P-'.  Local variables are not restricted in any
+  way.
+
+<GLOBAL GWIM-DISABLE <>>
+ Grovel down the input finding the verb, prepositions, and noun clauses.
+   If the input is <direction> or <walk> <direction>, fall out immediately
+   setting PRSA to ,V?WALK and PRSO to <direction>.  Otherwise, perform
+   all required orphaning, syntax checking, and noun clause lookup.
+What should you, the detective, do now?
+(I don't know the word "
+(Sorry, but the word "
+" is not in the vocabulary that you can use.)
+(You don't need to use the word "
+" to solve this mystery.)
+(Sorry, but the program doesn't recognize the word "
+(Aren't you getting tired of seeing 
+"(... is listening.)" and 
+"What next?" and "You are now in the ...."? From here on, the prompt will be much shorter.)
+ is listening.)
+(Sorry, but this program can't handle questions like that. You should stick to questions like "WHAT IS ..." and "WHERE IS ...." Maybe you'd like to review your instruction manual.)
+(I found more than two nouns in that sentence!)
+(Sorry, but you can't use the word "
+" in that sense.)
+(I couldn't find a verb in that sentence!)
+(Sorry, but English is my second language. Please rephrase that.)
+(Sorry, but I can't answer that question.)
+(What do you want to 
+(Your request was incomplete. Next time, say what you want 
+(I couldn't find enough nouns in that sentence!)
+(How about the 
+(I couldn't find enough nouns in that sentence!)
+(It's too dark to see!)
+ do you mean,
+(You don't have
+(You can't use multiple 
+direct objects with "
+VERBS for WITNESS
+Copyright (C) 1983 Infocom, Inc.  All rights reserved.
+
+<ROUTINE V-$WHEN ('AUX' (CNT 0) O L NUM RM)
+ <REPEAT ()
+  <COND (<G? <SET CNT <+ .CNT 1>> ,CHARACTER-MAX>
+	 <RETURN>)
+	(<SET O <GET ,CHARACTER-TABLE .CNT>>
+	 <SET L <GET ,MOVEMENT-GOALS .CNT>>
+	 <REPEAT ()
+	  <COND (<0? <SET NUM <GET .L ,MG-TIME>>> <RETURN>)
+		(<SET RM <GET .L 3>>
+		 <TELL D .O ' will go in ' N .NUM ' minutes to'>
+		 <THE? .RM>
+		 <TELL ' ' D .RM '.' CR>
+		 <SET L <REST .L ,MG-LENGTH>>)>>)>>>
+
+ZORK game commands
+
+<ROUTINE V-EASIER ()
+ <COND (<0? ,DIFFICULTY>
+	<TELL 'If this were any easier, there'd be no mystery!' CR>)
+       (T <SETG DIFFICULTY <- ,DIFFICULTY 1>>
+	<TELL 'O.K., let's see if you can handle it now.' CR>)>
+ <COND (<0? ,DIFFICULTY>
+	<COND (<IN? ,BROOM ,STORAGE-CLOSET> <MOVE ,BROOM ,OFFICE>)>
+	<MOVE ,BROKEN-GLASS ,OFFICE-PORCH>)
+       (<1? ,DIFFICULTY> <MOVE ,BROKEN-GLASS ,LOCAL-GLOBALS>)
+       (<RTRUE>)>>
+
+<ROUTINE V-HARDER ()
+ <COND (<==? ,DIFFICULTY ,DIFFICULTY-MAX>
+	<TELL 'If this were any harder, you'd never solve it!' CR>)
+       (T <SETG DIFFICULTY <+ ,DIFFICULTY 1>>
+	<TELL 'O.K., let's see how you handle it now.' CR>)>
+ <COND (<NOT <0? ,DIFFICULTY>>
+	<COND (<IN? ,BROOM ,OFFICE> <MOVE ,BROOM ,STORAGE-CLOSET>)>)
+       (<1? ,DIFFICULTY> <MOVE ,BROKEN-GLASS ,LOCAL-GLOBALS>)
+       (<==? ,DIFFICULTY ,DIFFICULTY-MAX> <MOVE ,BROKEN-GLASS ,OFFICE>)
+       (<RTRUE>)>>
+
+SUBTITLE SETTINGS FOR VARIOUS LEVELS OF DESCRIPTION
+SUBTITLE - GENERALLY USEFUL ROUTINES & CONSTANTS
+DESCRIBE-OBJECT -- takes object and flag.  if flag is true will print a
+long description (fdesc or ldesc), otherwise will print short.
+Uncondl EXIT:(dir TO rm)		 = rm
+Non EXIT:	(dir string)		 = str-ing
+Fcnl EXIT:  (dir PER rtn)		 = rou-tine, 0
+Condl EXIT:	(dir TO rm IF f)	 = rm, f, str-ing
+Door EXIT: (dir TO rm IF dr IS OPEN) = rm, dr, str-ing, 0
+ doesn't help.
+ has no effect.
+WEIGHT:  Get sum of SIZEs of supplied object, recursing to the nth level.
+ doesn't appear interested
+ doesn't care
+ lets out a loud yawn
+ seems to be getting impatient
+That's ridiculous!
+That's wacky!
+What a fruitcake!
+What a screwball!
+You're off your rocker!
+You're crazy in the head!
+You can't be serious!
+SUBTITLE REAL VERBS
+You ought to be ashamed of yourself!
+Hey, save that talk for the locker room!
+Step outside and say that!
+And so's your grandmother!
+Trying to destroy
+Playing in this way with
+Trying to revive
+Fiddling with
+V-WAIT has three modes, depending on the arguments:
+1) If only one argument is given, it will wait for that many moves.
+2) If a second argument is given, it will wait the least of the first
+   argument number of moves and the time at which the second argument
+   (an object) is in the room with the player.
+3) If the third argument is given, the second should be FALSE.  It will
+   wait <first argument> number of moves (or at least try to).  The
+   third argument means that an 'internal wait' is happening (e.g. for
+   a 'careful' search).
+part of the yard.
+part of the hall.
+Here begins
+ a transcript of interaction with 
+ a transcript of interaction with 
+Verifying disk...
+The disk is correct.
+** Disk Failure **
+Find them bugs, boss!
+No bugs left, eh?
+(O.K., you will get 
+ descriptions.)
+(O.K., you will get 
+super-brief descriptions. Remember that objects and people won't be described, only the name of the place you are entering.)
+(O.K., you will get 
+ descriptions.)
+(O.K., you will now see a space before each input line.)
+(O.K., you will not see a space before each input line.)
+You are empty-handed.
+(If you want to continue from this point at another time, you must "SUSPEND" first.) Do you want to 
+stop your investigation now?
+Do you wish to restart your investigation?
+Your original
+ status couldn't be restored.
+ Consult your instruction manual
+ if necessary.
+Your previous
+ status couldn't be restored.
+ Consult your instruction manual
+ or Reference Card
+ if necessary.
+Your story couldn't be suspended.
+ Consult your instruction manual
+ or Reference Card
+ if necessary.
+The WITNESS: An INTERLOGIC Mystery
+Copyright (c) 1983 Infocom, Inc. All rights reserved.
+
+Licensed to Tandy Corporation.
+
+WITNESS and INTERLOGIC are trademarks of Infocom, Inc.
+Revision number 
+ / Serial number 
+ (Answer YES or NO.) >
+You can't see anything in the dark.
+You are now 
+(You are hiding behind
+You are carrying:
+ can be seen:
+ is holding:
+You vaguely hear screaming and yelling through a haze of confusion and the tugs of your conscience asking "How could you have done it?" Before you can answer, you hear police sirens come near. Sergeant Duffy and two others enter and grab you by the arms. They take you to a waiting car, where, forlorn and disgusted, you think about being sent up for life. "Maybe," you think, "I shouldn't have done that."
+(You can't see any
+ wouldn't enjoy that.
+You're not carrying
+Too bad, but
+ is closed.
+You can't take
+Your load's too heavy
+, especially in light of your condition.
+Too bad, but
+ slips from your arms while you are taking
+, and both tumble to the 
+(You can't see
+[ndescbit] 
+[ndescbit] 
+You aren't in that place!
+(You can't see any 
+Nothing's dead here but your head!
+Duffy appears for a moment. 
+"So you believe that Linder's death was suicide? I'm not convinced. But if you'll 
+just "arrest Mr. Linder," we can go on from there." He disappears again.
+Everybody knows that!
+What an accusation!
+What a detective! "Quick, Sergeant! Arrest that 
+ shrugs off your accusation.
+[Foo!! This is a bug!!]
+You haven't met Sergeant Duffy yet tonight.
+ You'll need his help to do that.
+You'd better wait until Duffy takes care of his prisoner.
+Duffy appears in an instant. "Well, I might be able to analyze
+, but you don't even have it with you!"  With that, he discreetly leaves.
+Sergeant Duffy appears with a puzzled look on his face.
+ "With all respect, I don't think I can take THAT to the laboratory! I'll be nearby if you need me."
+ He leaves, shaking his head slowly.
+Nobody seems to be waiting for your answer.
+No one's knocking at
+Too bad, but
+ doesn't care.
+For what? You have no evidence of a crime yet.
+You haven't met Sergeant Duffy yet tonight.
+ You'll need his help to do that.
+Sergeant Duffy isn't around right now. You'll have to wait for him to help you make the arrest.
+Your Chief would probably want you to be sure there's no bigger fish here, like an honest-to-Pete murderer.
+What a detective! "Quick, Sergeant! Arrest that 
+ gets away!"
+You realize that you don't have enough evidence to convict 
+, so you decide to continue the investigation.
+Sergeant Duffy enters, strokes his chin, and in a puzzled voice says, "With all respect, I think we'd be laughed out of the station if we tried to charge
+ with murder!" He leaves quietly.
+It's been a long week, but talking to yourself won't end it any sooner.
+Hey, Duffy! Look at your boss talking to 
+ doesn't seem to know about that.
+You aren't talking to anyone!
+ doesn't have that.
+You aren't talking to anyone!
+You shouldn't try to clean a piece of evidence.
+"Cleanliness is next to Godliness," but in this case it seems to be next to Impossible.
+(You must use a verb!)
+ stops and turns toward you.
+ is listening.
+ ignores you.
+(You don't see 
+Too bad, but
+ isn't wired for phoning.
+There's no phone here.
+You dial the operator, who doesn't go for any of your cute lines, but does connect you with the police station. 
+The night clerk at the station says he'll give Duffy your message.
+You dial the number. A voice with a thick Oriental accent answers and says, "Sorry, Brass Lantern off tonight. Private party. Thank you." Then the line goes dead.
+You dial the number. It rings several times with no answer.
+There's no point in calling that number.
+You don't know the number.
+Too bad, but
+ has no phone.
+ is right here!
+There's no sense in phoning 
+You are now sitting on
+This isn't the kind of thing to sit on!
+You can't climb onto
+You can't go that way.
+Climbing the walls is no help.
+You'd have to be more clever to do that to
+It won't stay closed. The latch is broken.
+ is now closed.
+It's already closed.
+It's already closed.
+You can't close
+Oops! Try typing "COMPARE IT TO (something)."
+They're the same thing!
+They're not a bit alike.
+You aren't talking to anyone!
+That ought to put a scare into
+Insults like that won't help you solve the case.
+You'd fly through the open door if you tried.
+Oof! All you get is a sore shoulder.
+Why don't you just open it instead?
+Trying to destroy 
+ with your bare hands is suicidal.
+Trying to destroy 
+ is quite self-destructive.
+ is now on the 
+Seems that you've had too much to drink already!
+Mmm. That really hit the spot.
+Mmm. That really hit the spot.
+You can't get to it.
+The blue-plate special at the diner was enough for you.
+You're already there!
+You can't go from here to there, at least not directly.
+Sorry, but the "
+" must be somewhere else.
+You could mess up valuable evidence that way.
+You hit your head against
+ as you try it.
+You can't do that!
+You must think you're a contortionist!
+You never got to finish looking over
+There's nothing special about
+You're already here!
+You should know - you've been there!
+You're the detective!
+What do you mean? He's dead!
+What do you mean? He's dead!
+It sounds as though you need your vision checked.
+You haven't seen 
+"I haven't seen 
+You last saw 
+"I last saw 
+a few hours
+an hour or two
+about an hour
+about half an hour
+about 15 minutes
+less than 10 minutes
+just a few minutes
+ ago. I don't know where 
+You're right here, 
+You're the detective!
+You're the detective!
+You have it.
+It's right here.
+You're the detective!
+You can't find prints on a person!
+You don't find any good prints on
+It's not clear who you're talking to.
+How tragic to see a formerly great detective stalking 
+You're in the same place as 
+ has left the grounds.
+You seem to have lost track of 
+You seem to have lost track of 
+That's easy for you to say, since you don't even have it.
+You can't give 
+ refuses your offer.
+[Foo!! This is a bug!!]
+You don't have the 
+ nods at you.
+"Don't tell me you're leaving already!"
+Only nuts say "
+It's not clear who you're talking to.
+(You'll find plenty of help in your instruction manual.)
+You'll have to be more specific.
+You could hide behind the lounge.
+There's no good hiding place here.
+You can't hide when people are watching you!
+Okeh, you're now crouching down behind the lounge.
+There's no room to hide behind
+ from shampoo..." -- Cole Flathead
+There's nothing here to 
+You didn't say what to 
+There must be an easier way to do what you want.
+Hey, this isn't a 
+-em-up Western!
+ You just broke the lock beyond repair.
+Sure, you probably need to sharpen your eye, but 
+ is a lousy target.
+You think it over. It's not worth the trouble.
+With your expert ability, you 
+ in no time.
+You think it over. It's not worth the trouble.
+A shot rings out and
+ crumples to the ground, dead. Good shot.
+You think it over. It's not worth the trouble.
+With a lethal blow of
+ falls dead.
+Section 204D, Paragraph 7.6 of the California Police Code of Conduct specifically prohibits kissing potential suspects or witnesses.
+What a (ahem!) strange idea!
+ shouts "Go away!"
+ shouts "Go to the front door!"
+There's no answer.
+Why knock on 
+You can't do that!
+You are no longer hiding behind
+ looks startled to find you here.
+You are on your own feet again.
+You're already standing up!
+Through the door you can hear a 
+Through the door you can hear a 
+Too bad, but
+ makes no sound.
+You'd have to be more clever to do that to
+You'll have to close it first.
+It's already locked.
+You can't lock it. The lock is broken.
+ is now locked.
+You can't lock
+There's nothing behind 
+ there, mostly.
+Nothing's interesting about the floor.
+It has been a long week, hasn't it?
+ is open, but you can't tell what's beyond it.
+Too bad, but
+ is closed.
+You can't tell what's beyond
+There's nothing on
+Too bad, but
+Too bad, but
+ is closed.
+You forgot to bring your X-ray glasses.
+You can't look inside
+You can't look outside
+You take a quick peek into
+You can't see anything interesting.
+You can't seem to find that room.
+The door to that room is closed.
+You can't seem to find that room.
+There's no good surface on
+You twist your head to look under
+ but find nothing.
+Nope. Nothing hiding under 
+There's nothing there but dust.
+That's not a bit useful.
+What a pervert!
+It has been a long week, hasn't it?
+You can see the ceiling. It's not Union Station, but it's nicely painted.
+"Eat, drink, and make merry, for tomorrow we shall die!"
+Juggling isn't one of your talents.
+ reveals nothing.
+You can't move
+You'd have to be more clever to do that to
+It's already open.
+You'll have to unlock it first.
+You can't open it. The latch is broken.
+ is now open.
+You can't open
+You can't pick that.
+(Speaking of playing, you ought to try Infocom's other products.)
+There's not enough room.
+That would be a mistake.
+You could mess up valuable evidence that way.
+You can't do that.
+Too bad, but
+ isn't open.
+Too bad, but
+ is already in
+There's no room.
+Section 29A of the United States Criminal Code, whose provisions come to your unhealthy mind, forbids it.
+What a (ahem!) strange idea!
+It's impossible to read in the dark.
+You must have a swell method of looking through
+You never got to finish reading
+You can't read
+ doesn't need reviving.
+"DING-DONG!"
+You really can't expect that to help.
+To talk to someone, try 'SAY TO someone "something"'.
+ grudgingly allows you to search. You find nothing whatsoever of interest.
+You'll have to open it first.
+You find nothing unusual.
+You can find only pocket change. "I could have told you that."
+ resignedly allows you to perform the search.
+ doesn't have 
+ doesn't have
+You'll have to open
+How observant you are! There 
+You don't find
+You don't have anything to shoot with.
+[Foo!! This is a bug!!]
+Do you often talk to yourself?
+Don't wait for
+ to applaud.
+You are now sitting on
+That isn't something to sit on!
+ slaps you right back. Wow, is your face red!
+You should see Phong. He breaks boards with the edge of his hand!
+ smells just like 
+ smells just like 
+You can't burn
+You already have it.
+You can't reach that.
+It's not in that!
+She doesn't have it!
+He doesn't have it!
+She's not in that!
+She doesn't have her!
+He doesn't have her!
+He's not in that!
+She doesn't have him!
+He doesn't have him!
+You're in it, nitwit!
+You are now carrying
+(If you want to go outside, simply type "OUT.")
+(Sorry, but English is my second language. Please rephrase that.)
+[Foo!! This is a bug!!]
+You don't need to take out
+ to use it.
+You're not in that!
+You are on your own feet again.
+Talking to yourself is a sign of impending looniness.
+ is listening.
+You can't talk to
+You aren't talking to anyone!
+You aren't talking to anyone!
+ acknowledges your thanks.
+You're more than welcome.
+, puzzled by your unusual methods, ducks as
+Maybe you aren't feeling well.
+Let's not resort to violence, please.
+That won't do any good.
+You can't tie
+That won't do any good.
+"If you don't formally arrest me first, I'll sue!"
+ with that.
+This has no effect.
+You turn the handle and lo! The water starts to run. Impressed with yourself, you turn the handle again, and the water stops running! You try it again, just to make sure. Bravo!
+You can't turn on
+Your vulgar ways would turn anyone off.
+You can't turn off
+That's silly.
+That's silly.
+You don't have the right key.
+Linder says, "Don't leave yet. We're just getting started."
+You don't have the right key.
+You'd have to be more clever to do that to
+You'll have to close it first.
+It's already unlocked.
+You can't unlock it. The lock is broken.
+ is now unlocked.
+You can't unlock
+You can't tie it, so you can't untie it!
+You should be more specific about what you want to do.
+Time passes...
+, for whom you are waiting, has arrived.
+Do you want to continue what you were doing?
+Do you want to keep waiting?
+, for whom you are waiting, has arrived.
+ still hasn't arrived. Do you want to keep waiting?
+That's too long to wait.
+That person's already here!
+You're already here!
+Not a good idea. You might wait all night.
+You are clearly ahead of your time.
+It has been a long week, hasn't it?
+The cat yawns, licks its lips, and settles down again.
+You wouldn't like that.
+He's wide awake, or haven't you noticed?
+Too bad, but
+ isn't asleep.
+You can't go that way.
+You can't go that way.
+[invisible] 
+You can't go that way.
+Too bad, but
+ is closed.
+(What compass direction do you want to go in?)
+You can't go that way.
+(Use compass directions to move around here.)
+You don't need to walk around within a 
+You can't go from here to there, at least not directly.
+That doesn't make much sense.
+"Isn't it obvious?"
+Try asking that person.
+Are you talking to yourself again?
+ ignores you completely.
+That deserves to be ignored.
+EVENTS for WITNESS
+Copyright (C) 1983 Infocom, Inc.  All rights reserved.
+Ideas:	insurance policy - fraud?
+	nosy neighbor?
+	fingerprint two-color picture
+SCORE INDICATES HOURS / MOVES = MINUTES
+There's dark, cloudy sky above you.
+from L.A. Times of 1938-02-18
+sun crosses horizon at Pasadena on 1938-02-19
+The sky is clear now, with stars shining coldly.
+The moon, just past full, lights up the whole yard.
+The morning sunshine lights up the whole yard.
+Object functions
+Here is the code for goal motivation for the various characters.
+Each character has a tendency to move from one place to another
+at certain times. They all converge on the living room at about
+noon.
+Goal tables for the 6 characters (including PLAYER), offset
+by the preceding constants, which, for a given character,
+is the P?CHARACTER property of the object.
+Offsets into GOAL-TABLEs
+Goal-function constants, similar to M-xxx in MAIN
+Here's how the movement goals are done:  For each player is
+a table which consists of triplets, a number of minutes until
+the next movement (an clock interrupt number), a number of
+minutes allowed variation (for a bit of randomness), and a
+room toward which to start. All movement is controlled by
+the GOAL-ENABLE flag in the GOAL-TABLE for a character.
+Time starts at 8AM. Characters are at that point in their
+starting positions, as reflected in DUNGEON.
+This routine does the interrupt-driven goal establishment
+for the various characters, using the MOVEMENT-GOALS table.
+Movement etc.
+People functions
+Evidence: hints and conclusions
+Other clues: INSIDE-GUN, GUN-RECEIPT, OFFICE-BUTTON, BROKEN-GLASS,
+HOLE, and MEDICAL-REPORT.
+February 28
+on your fine detective work.|
+on the fine teamwork between you and Sergeant Duffy.|
+to you, but even more to Detective Duffy on his promotion.|
+Somewhere near Los Angeles. A cold Friday evening in February 1938. In this climate, cold is anywhere below about fifty degrees. Storm clouds are swimming across the sky, their bottoms glowing faintly from the city lights in the distance. A search light pans slowly under the clouds, heralding another film premiere. The air seems expectant, waiting for the rain to begin, like a cat waiting for the ineffable moment to ambush.
+
+The taxi has just dropped you off at the entrance to the Linders' driveway. The driver didn't seem to like venturing into this maze of twisty streets any more than you did. But the house windows are full of light, and radio music drifts toward you. Your favorite pistol, a snub-nosed Colt .32, is snug in its holster. You just picked up a match book off the curb. It might come in handy. Good thing you looked up the police file on Mrs. Linder's death. Her suicide note and the newspaper story told you all you know about the family. The long week is finished, except for this appointment. But why does an ominous feeling grip you?
+
+Police Chief Klutz walks up to you, from out of nowhere. "I'm sorry, Detective, but you can't spend any more time here. We need you at the Coliseum for the all-day Police Department track-and-field meet. I hope you had a restful night!" He escorts you to a waiting police car, and you go off into the sunrise.
+(Use figures for numbers, for example "10.")
+Suddenly, a clap of thunder rolls across the hills
+Without warning, lightning flashes
+, and a few seconds later thunder rattles the house.
+Rain begins to fall
+ in a sprinkle.
+ is falling heavily now.
+ begins to taper off.
+The rain storm
+ has passed now.
+Suddenly it dawns on you that the sky is getting light
+The sun has appeared over the hills
+The clock chimes 
+ to mark the hour.
+The clock chimes once to mark the half hour.
+Someone enters through the back gate and rushes past you.
+Someone enters the property through the back gate.
+Suddenly, your assistant, Sgt. Duffy, appears from out of nowhere. "Hello, Detective!
+ I thought I should come here on the streetcar, in case you needed help. 
+I'll be nearby if you want me." He disappears just as quickly.
+ "Detective, I'm glad you're safe!
+ Don't worry, I won't tell anyone you're hiding.
+ I thought I should come here on the streetcar, in case you needed help. 
+I'm familiar with the house, since I was here to help investigate Mrs. Linder's death. Just as I walked up tonight, I heard a shot! The next thing I knew, this man, who calls himself Stiles, burst out of the woods behind the house. Naturally, I put the nippers on him and brought him along.
+Your assistant, Sgt. Duffy, sees you.
+ I'll just stow him in the living room and stand by to help you."
+Don't you remember? Duffy went in the ambulance to the Coroner's office. 
+You'll have to wait for him to return.
+Sergeant Duffy ran off to the lab on an errand for you. 
+You'll have to wait for him to return.
+You haven't met Sergeant Duffy yet tonight.
+ You'll need his help to do that.
+You look at the 
+ closely. It appears to have good fingerprints on it, so you call for Sergeant Duffy.
+Sergeant Duffy, quiet as a mouse, walks up and takes the 
+ from you. "I'll return soon with the results," he says, and leaves as silently as he came.
+Sergeant Duffy appears with a puzzled look on his face.
+ "I don't see how you expect the lab to analyze something for itself!"
+ He leaves, shaking his head slowly.
+Suddenly, Sergeant Duffy 
+appears, holding the 
+ carefully in his hands. His quiet efficiency is impressive. 
+seems to arrive from nowhere, holding the 
+ in his hands. 
+returns with the 
+. For a moment you muse on his almost magical appearances. 
+"The gun has recently been fired, and it contains traces of cheap gun powder
+, the same kind of powder that you found on the clock
+"The ink is ordinary Waterman blue-black. The lab can't tell much else without a certified handwriting sample on file.
+ doesn't contain any 
+"The wire is ordinary 16-gauge bell wire.
+"The putty contained traces of the explosive cordite.
+"The gun has recently been fired, and it contains traces of cheap gun powder
+ And the barrel has indeed been sawed off.
+"The powder is gun powder, as I suspected. I put it in a cellophane envelope for you.
+"The ink is ordinary Waterman blue-black. The lab can't tell much else without a certified handwriting sample on file.
+"I took the ticket stub to the movie theater, where they told me that it looked authentic to them, and the serial number proves that it was bought tonight.
+"I tried to call the doctor, but there's no listing in the phone book. The lab people couldn't see anything unusual about the report.
+"I'm sorry," he begins, "but the lab found nothing interesting.
+" With that, he leaves, handing you the 
+ as he whisks away.
+Today is Friday, February 18, 1938.
+Today is Saturday, February 19, 1938.
+No one answers the door, but a police car races in the driveway and stops. Two officers jump out, grab you roughly, and haul you off as a trespasser.
+Someone turns off the radio. 
+You hear footsteps inside the house. Then the door swings open.
+The butler isn't smiling now. "I told you Mr. Linder will be in touch. Please leave before I call the police!" He slams the door in your face.
+"Good evening," says a smiling face, "I am Phong. I'm sorry, but you're too late arriving here. Mr. Linder has other business now. But he thanks you for coming and says he'll be in touch. Good night!" He closes the door in your face.
+"Good evening," says a smiling face, "I am Phong. Please come in." He leads you into the house and closes the door behind you.
+
+"I've been told that detectives are sneaky, but this is too much!"
+Phong says, "I believe 
+the Linders are
+Mr. Linder is
+ in the living room. Please follow me."
+ He leads you into a hallway and turns left. 
+ He leads you north along the hallway. 
+ As you get near the living room, you hear voices talking, half-loud and fast.
+Linder turns to you and says, "Detective, am I glad to see you! 
+I was afraid you'd met with an accident. I'm afraid I don't have time for you now, since I have another appointment. But thank you for coming. I'll be in touch. Phong, please show the Detective out."
+This is my daughter, Monica, and of course 
+you've met Phong already." He looks at a wrist watch with a gleaming silver bracelet. "I see you're
+ right on time.
+ a little late.
+ rather late.
+ I'll be with you as soon as I finish my drink."
+Phong grabs you by the arm and guides you to the front door. It's obvious that you have no choice. "Thank you for coming, Detective. Good night!" He closes the door in your face.
+Linder follows you 
+ He looks out the window and checks the lock.
+The lights go on in Linder's office.
+Linder gulps down the rest of his drink. "Well, Detective," he says, "I'm anxious to get on with our business. Let's you and I go to my office so we can talk undisturbed." 
+He takes you by the arm, opens a door to the east and leads you through it.
+He takes you by the arm and leads you through the hallway. Just south of the entry, he opens a door to the east and leads you through it.
+Linder sits down in the carved chair.
+f you'll just take a chair, I'll explain what this is all about."
+Linder says, "I repeat: i
+f you'll just take a chair, I'll explain what this is all about."
+Linder begins his story. "My late wife, may she rest in peace, got involved with a young man named Stiles. Naturally I tried to stop this affair, but without much success. Since my wife passed away, this Stiles fellow has gone off the deep end, I'm afraid, and blamed me for her death. I tried my best to ignore him, but he seems to have lost his senses. This morning I received this note and decided to ask your help." He hands the note to you.
+ Suddenly there is a flash of light and an explosion, and 
+everything goes black. What a lousy way to step off, poking around like a two-bit shamus!
+mortal pain radiates from your heart. As blood fills your lungs and a scream fills your brain, you feel sure of only one thing: you should have taken a chair when Linder asked you to.
+the window falls into dozens of shiny shards.
+ The cat bolts and disappears somewhere.
+The lights go out, one by one, all over the house.
+The lights go off in Linder's office and then in the bedroom at the other end of the house.
+ is acting impatient.
+ out of the room.
+ leaves the room.
+ opens the 
+ into another room
+ goes into another room
+, locking the door again
+ opens the 
+ heads off to 
+, locking the door again
+Someone walks past you.
+ walks past you.
+ opens a door and
+ leaves your view
+ ducks into a room
+, locking the door again
+Sgt. Duffy, with 
+, disappears from sight to 
+Sgt. Duffy, with 
+, heading toward 
+ Sgt. Duffy, with 
+ comes into view from 
+ enters the hallway from 
+ stops here.
+ steps into the room.
+ just went into
+Inscrutably, Phong turns to leave.
+ "If you need me again, just ring."
+Suddenly Phong appears and 
+looks around to see who pushed the button.
+Suddenly Phong appears and 
+says, "You rang?"
+Monica says, "Yes, Phong, I was testing a new twist on the household wiring that I thought of during the film.
+ Can't you talk this copper into letting me loose?" Phong opens his eyes wide for a moment but says nothing.
+Suddenly Phong enters the office. "I believe you called for me, Detective."
+Suddenly Phong enters the office. When he sees that Linder has cashed in his chips, he turns away for a minute and bows his head.
+The butler comes up to you, looking agitated.
+You hear the door bell ring.
+Phong arrives and lets Sergeant Duffy in.
+Suddenly Phong comes in, lies down, and starts reading a book.
+Linder looks toward the window and says, "I don't think Phong has answered the door bell yet." He reaches toward the butler's button and at the same instant shouts "Stiles!" You turn around and dimly see a figure outside.
+ The figure outside turns and runs before you can see the face. When you turn back around, you see Linder slumping down in his chair, with a bloody stain spreading across his silk shirt. He teeters on the edge of the seat, then falls onto the floor, quite dead.
+The visitor
+ comes up to Linder's office entrance. A tall man opens the office door and steps out. They speak briefly, then the tall man counts out some money and sends 
+The visitor
+ pushes you out of the way and
+ knocks on the door of Linder's office. A tall man opens it, speaks to him briefly, hands him some money, and sends him away.
+The visitor
+ knocks on the door of Linder's office. A tall man opens it, speaks to him briefly, hands him some money, and sends him away.
+The visitor
+ disappears out the back gate.
+You hear the door bell ring.
+Duffy brings a prisoner into the room and fastens him to the davenport.
+ He goes quickly to work, disappearing down the hall.
+Duffy brings a prisoner into the room and fastens him to the davenport.
+ Then he notices you.
+ He goes quickly to work, disappearing down the hall.
+Suddenly your assistant, Sgt. Duffy, 
+runs up to you.
+appears from out of nowhere.
+ I've stowed him in the living room. I'll stand by to help you." He scurries off to go about his work.
+Duffy goes quickly to work, disappearing down the hall.
+A young woman
+ bursts into the office, wearing a felt hat and wool coat, and struggling to get her driving gloves on. 
+She glances icily in your direction and then back to her father. "I'm off to the pictures with Terry, Dad. Good-bye." She hugs him briefly but firmly, burying her head in his shoulder. He pushes her away and says, "You're leaving now?! I thought you'd be talking to the detective here. What about the threat on my life?" He has the hurt look of an orphan pup. She answers, "You don't need me here. I need to get away now and then. I'm not like Mother, you know." Tears well up in her eyes but she brushes them away before they drop. She turns to leave.
+She glances quickly around the room, then turns to leave.
+ jumps into her car, starts it up, and races out the driveway, leaving a wake of peastone behind her.
+Without warning, a car roars to life and speeds out of the driveway.
+Outside somewhere, a car roars to life and speeds away.
+Suddenly Monica rushes in, goes to the junction box, and fiddles with the wires for a minute. Then she turns, sees you, gasps and grabs her throat. "My
+, you gave me a start!" Her face is ashen.
+ walks gingerly into the office, 
+opens her eyes wide in horror, and then puts her hand over her mouth and
+looks around quickly, and then
+ rushes toward the door.
+Monica rushes in. "Stand aside, flatfoot, I'm going to be sick." She leans over the toilet and gives in to an attack of dry heaves.
+The door to the toilet room slams shut. You hear sounds of dry heaving inside.
+Monica comes in, sits down on her bed, and buries her face in her hands. "Leave me alone for a while. I'm really not well." She begins to sob.
+Monica slams shut her bedroom doors.
+Monica comes into the office quietly and, seeing you, steps over to the desk and shuffles some papers. Then she sighs, rubs her eyes, and turns to leave without saying a word.
+ quietly sticks her head in the door, looks quickly around the room, and then steps over to the desk. She pushes the butler's button and seems to listen for the bell. She takes another look around, then crosses the room to the clock. Looking well rehearsed, she produces a key, opens the door of the case, takes something out and puts it in the pocket of her slacks, and then shuts and locks the case.
+You barely hear a bell ring in the distance.
+The lights go out in the middle bedroom.
+Monica comes in and sits down at her dressing table. Her eyes are red from crying. "Go peddle your cookies somewhere else. I'm going to have some Ovaltine and go to bed."
+Monica slams shut her bedroom doors.
+Monica looks more nervous. "I really must go now, or I'll be late for the film." She hugs her father again and dashes out the door.
+ drives into the garage, stops her car, jumps out, and slams the door.
+Suddenly you hear a car drive into the garage and stop. Its door slams.
+Out of the blue, 
+ of the coroner's men run
+ in to the office with a stretcher and carry Linder's body out.
+Out of the blue, 
+ of the coroner's men run
+ in to the office with a stretcher and carry Linder's body out. 
+One of them shouts to you, "
+Out of the blue, 
+ of the coroner's men run
+s up to you and says, "We just removed the body. 
+Haven't time to chat. Busy night at the morgue! Carry on, Detective."
+ Then Duffy appears, saying, "I'm glad they finally showed up! When I called, they seemed very busy. I think I should go along and make sure they give this autopsy top priority.
+ Don't worry, I won't tell anyone you're hiding.
+ See you later!"
+ They head for the street.
+Without warning, Duffy comes running up to you and says, "I just got back from the morgue. The coroner 
+found no evidence of the alleged stomach tumor. In fact, he could find no organic disease that would either explain the death or support the theory that Linder wanted to die. He 
+concluded that Linder died of a single small-caliber bullet through the heart. And here's something peculiar: there were no traceable rifle marks on the bullet.
+You'd better wait until Duffy 
+You'd better wait until Duffy 
+stows his prisoner.
+Duffy appears and says, 
+"If I were you, I'd wait until some crime occurred."
+"I don't know if it means anything, Detective, but I noticed 
+a piece of green wire on the broken office window."
+a green spool in the workshop."
+that the butler's button in the office wasn't working right."
+something funny about the clock in the office."
+a very interesting book in Phong's room."
+some kind of medical report in Monica's room."
+Monica's reaction when I asked her about her mother."
+that Monica went in the workshop right when she got home."
+that I've run out of ideas on this case."
+You think it over. You realize that this arrest is pretty far-fetched. It could only mean humiliation for you.
+Duffy appears with a solemn look.
+ He says, "I can't find Monica around here anywhere. I guess you'll have to wait for her to return." He disappears again.
+(If you want to continue from this point at another time, you must "SUSPEND" first.) Do you want to 
+make an arrest and 
+stop your investigation now?
+Duffy appears, to escort you from the grounds. 
+"So you believe that Linder's death was suicide? I'm not convinced. But if you'll 
+file a deposition, we can see what the D.A. and coroner think."
+
+Duffy appears with a solemn look.
+ He unfastens Monica from the 
+ He puts nippers on the wrists of both 
+, who stand stiff and quiet.
+Duffy appears with 
+ He unfastens Monica from the 
+ He puts nippers on the wrists of 
+, who stands stiff and quiet.
+Duffy appears with 
+ He puts nippers on the wrists of 
+, who stands stiff and quiet.
+Duffy seems to read your thoughts, as he appears with 
+ in handcuffs.
+Duffy appears with a solemn look.
+ He unfastens his nippers from the davenport and pulls Stiles to his feet.
+ He unfastens Monica from the 
+, pulls her to her feet, and puts his own nippers on her wrists.
+ He puts nippers on the wrists of 
+, who stands stiff and quiet.
+Duffy seems to read your thoughts, as he appears with 
+ in handcuffs.
+ "Let's not have any trouble, now," says Duffy, in his unique way. They head for the driveway, where a police car waits with engine purring.
+
+The elaborate set-up in Mr. Linder's office was ingenious. You deserve congratulations for your work in detecting it.
+
+I am sorry to report that the trial jury acquitted Ralph Stiles of the murder of his rival, Freeman Linder. In view of the available evidence, they apparently believed that his lack of access to the Linder house made it doubtful that he could construct the hidden gun mechanism.
+At the inquest, the coroner ruled that 
+Mr. Linder's death was suicide, based on all the available evidence. However, my knowledge of Linder's personality makes me doubt that, knowing he would be killed, he would devise such an elaborate scheme to try to punish Mr. Stiles for the affair with Mrs. Linder. 
+At the inquest, the coroner ruled that 
+the available evidence was inconclusive, in that Linder appears to have had no motive for suicide. 
+I think that, if you had been more careful in observing the people in Linder's household, you would have discovered that he had an accomplice, at least.
+
+The web of evidence certainly seems to implicate both Monica Linder and Mr. Phong. During interrogation, Phong admitted helping Mr. Linder carry out the plan to frame Mr. Stiles for attempted murder, but he repeatedly denied that Linder's death was intended. He bargained with the District Attorney and entered a plea of guilty to charges of conspiracy and extortion. After a short trial, the judge gave him a suspended sentence and recommended him for deportation to his home country.
+
+Monica turned out to be a tougher nut to crack. She refused to talk during interrogation, and she was awaiting trial when she heard about Phong's suspended sentence. She then made a plea like his, and the judge had little choice but to give her the same sentence. Instead of deportation, she will be on probation for five years.
+
+I can't help thinking that everyone in the Linder household conspired in the original plan, but that Monica acted alone in turning the plan into murder. I suppose we'll never know the real truth now.
+I am sorry to report that the trial jury acquitted Mr. Phong of the murder of his employer. Apparently they believed that 
+the available evidence against him was circumstantial, since there was no definite link between him and the murder weapon. In addition, it seems that 
+he lacks the mechanical skills necessary to construct the hidden gun mechanism.
+
+While Monica could have conspired with him and aided him, she too was acquitted of conspiracy, because 
+he was. If only we had tried her for plain murder instead of conspiracy!
+
+the available evidence against her was circumstantial, since there was no definite link between her and the hidden gun mechanism.
+
+she had no apparent motive.
+
+I am glad to report that the trial jury, based on your testimony and her confession in court, convicted Monica Linder of the murder of her father in revenge for the death of her mother. Congratulations 
+Which reminds me of another fascinating case I would like to assign you to...
+
+Coming soon: Another INTERLOGIC Mystery from Infocom.
+
+I am sorry to report that the trial jury acquitted Monica Linder of the murder of her father. Apparently they believed that 
+the available evidence against her was circumstantial, since there was no definite link between her and the hidden gun mechanism.
+
+I am sorry to report that the trial jury acquitted Monica Linder of the murder of her father, because 
+she had no apparent motive.
+
+According to your report and deposition and the available physical evidence, you seem to believe that Mr. Linder shot himself through the window of his office. If you continue to come up with such odd conclusions, I will be forced to transfer you to the traffic-control department.
+
+According to your report and deposition, the only question in this case is who shot Mr. Linder through the window of his office. However, I believe that the real story is not so simple.
+
+In fact, in view of the flimsy evidence available, the District Attorney has decided not to indict 
+ in this case.
+But, despite my reservations, the trial jury did convict Mr. Stiles of the murder. Through plea-bargaining, his sentence was reduced from execution to twenty years.
+ In his opinion, Phong's foot prints outside are not incriminating, even though they were apparently made at the time of the shooting. After all, Phong's household duties could easily have taken him there for any number of reasons. In Phong's own deposition, he claimed to have heard noises outside, which could have been made by Mr. Stiles.
+ There is no evidence that 
+ was at the scene of the shooting.
+ Monica's actions in the workshop may be suspicious, but she claimed that she thought of a new twist on the household wiring during the film, and she seems to be enough of a tinkerer to make that believable.
+ There is no evidence that 
+ was at the scene of the shooting.
+ There is no evidence that 
+ was at the scene of the shooting.
+ Monica's actions in the workshop may be suspicious, but she claimed that she thought of a new twist on the household wiring during the film, and she seems to be enough of a tinkerer to make that believable.
+ In his opinion, Phong's foot prints outside are not incriminating, even though they were apparently made at the time of the shooting. After all, Phong's household duties could easily have taken him there for any number of reasons. In Phong's own deposition, he claimed to have heard noises outside, which could have been made by Mr. Stiles.
+ There is no evidence that 
+ was at the scene of the shooting.
+Text of a letter from Police Chief Klutz dated 
+:
+
+Dear Detective:
+
+    
+
+
+Post script: A few months later, after you are transferred to another department, you get a memo from your former boss. It says that new evidence was discovered in the Linder case, causing the court to reverse Stiles's conviction and set him free. Let's hope he doesn't come around bent on revenge!
+
+
+The case has come to an end. Would you like to start your investigation over from scratch?
+
+You have reached a complete solution to the story. If you like, you may see the author's summary of the case. Of course, you should come up with your own first! Would you like to see the author's summary?
+
+Freeman Linder discovered about a year ago that his wife had taken a lover, Ralph Stiles. This discovery made their marriage deteriorate, with growing bitterness and belligerence, until Mrs. Linder recently took her own life with a gun. Linder planned to take revenge on Stiles by framing him for attempted murder. He enlisted the help of his butler, Phong, and his daughter, Monica.
+
+Linder simultaneously sent two messages, a telegram to you and a phone call to Stiles. He wanted you to come to the house, witness the alleged crime, and then arrest Stiles. In the phone call he told Stiles to come discreetly to the office door at 9:00 to get some pay-off money.
+
+Linder planned an elaborate set-up inside the office. A gun was put in the clock, aiming through the keyhole toward him, who would be sitting behind his desk on the opposite side of the room. Using the butler's button, he would trigger both the gun and the detonation of some explosive attached to the window, thus simulating a shot fired through the window at him.
+
+Monica bought two identical small handguns for this plan. She hid one in the clock, and Phong planted the other, which was fired in secret beforehand, in the back yard just before 9:00, where you could find it later.
+
+When Stiles's car appeared, Phong went to the front door, rang the door bell as a signal to Linder, and sneaked into the house. Linder kept an eye on the window and, when Stiles appeared, pushed the button to fire the shot. Stiles panicked and fled out the back of the yard but was brought back inside by Sgt. Duffy.
+
+The plot thickened, however, because Monica decided to take this opportunity to murder her father. Her mother and she were very close. Mr. Linder was often away on business during Monica's childhood, and Mrs. Linder imbued her daughter with a love/hatred for him, saying that he abandoned them. Monica helped her father construct the remote-controlled gun, but she also blamed him for her mother's death and had lost all love for him. She therefore aimed the gun to kill her father when fired. Her idea was to convict Stiles of the murder and go free herself.
+
+Phong had no idea of Monica's plan until he saw Linder's corpse. He did not spill the beans on Linder's plan, since he also had reason to want Linder removed from the scene. Monica, as a last resort, may have attempted to convince you that her father was dying of a stomach tumor and had planned his own death. But Monica is the only one who could have twisted Linder's plan into murder: the key to the clock was hidden on her person, so she had final control of the gun's aim.
+
+
+A few days pass, and you don't hear from Linder. But a small item in the newspaper catches your eye: a grifter named Stiles was found dead on the beach one morning, with a cheap handgun lying near and a single small bullet wound through his heart. Does this death have anything to do with Linder and your visit? Well, no need to lose sleep over it. Everyone sleeps the big sleep sooner or later.
+

@@ -1,0 +1,1971 @@
+
+
+	.FUNCT	INTRO
+	PRINTI	"Somewhere near Los Angeles. A cold Friday evening in February 1938. In this climate, cold is anywhere below about fifty degrees. Storm clouds are swimming across the sky, their bottoms glowing faintly from the city lights in the distance. A search light pans slowly under the clouds, heralding another film premiere. The air seems expectant, waiting for the rain to begin, like a cat waiting for the ineffable moment to ambush.
+"
+	CRLF	
+	PRINTR	"The taxi has just dropped you off at the entrance to the Linders' driveway. The driver didn't seem to like venturing into this maze of twisty streets any more than you did. But the house windows are full of light, and radio music drifts toward you. Your favorite pistol, a snub-nosed Colt .32, is snug in its holster. You just picked up a match book off the curb. It might come in handy. Good thing you looked up the police file on Mrs. Linder's death. Her suicide note and the newspaper story told you all you know about the family. The long week is finished, except for this appointment. But why does an ominous feeling grip you?
+"
+
+
+	.FUNCT	TIMES-UP
+	PRINTI	"Police Chief Klutz walks up to you, from out of nowhere. ""I'm sorry, Detective, but you can't spend any more time here. We need you at the Coliseum for the all-day Police Department track-and-field meet. I hope you had a restful night!"" He escorts you to a waiting police car, and you go off into the sunrise."
+	CRLF	
+	ZERO?	TOO-LATE /?CND3
+	CALL	TOO-LATE-F
+?CND3:	QUIT	
+	RTRUE	
+
+
+	.FUNCT	INTEGER-F
+	PRINTR	"(Use figures for numbers, for example ""10."")"
+
+
+	.FUNCT	QUEUE-MAIN-EVENTS
+	CALL	QUEUE,I-LINDER-TO-OFFICE,52
+	PUT	STACK,0,1
+	CALL	QUEUE,I-LINDER-RETIRES,290
+	PUT	STACK,0,1
+	CALL	QUEUE,I-PHONG-RETIRES,320
+	PUT	STACK,0,1
+	CALL	QUEUE,I-STILES-ARRIVE,60
+	PUT	STACK,0,1
+	CALL	QUEUE,I-PROMPT-1,1
+	PUT	STACK,0,1
+	CALL	QUEUE,I-PROMPT-2,10
+	PUT	STACK,0,1
+	CALL	QUEUE,I-WEATHER,6
+	PUT	STACK,0,1
+	CALL	QUEUE,I-CHIMES,30
+	PUT	STACK,0,1
+	RTRUE	
+
+
+	.FUNCT	I-WEATHER,OUT?
+	GETP	HERE,P?LINE
+	EQUAL?	STACK,OUTSIDE-LINE-C /?PRD1
+	PUSH	0
+	JUMP	?PRD2
+?PRD1:	PUSH	1
+?PRD2:	SET	'OUT?,STACK
+	INC	'I-WEATHER-NUM
+	EQUAL?	1,I-WEATHER-NUM \?ELS5
+	PRINTI	"Suddenly, a clap of thunder rolls across the hills"
+	ZERO?	OUT? /?ELS10
+	PRINTI	" nearby"
+	JUMP	?CND8
+?ELS10:	PRINTI	" outside"
+?CND8:	PRINTI	"."
+	CRLF	
+	CALL	QUEUE,I-WEATHER,3
+	PUT	STACK,0,1
+	RFALSE	
+?ELS5:	EQUAL?	2,I-WEATHER-NUM \?ELS21
+	PRINTI	"Without warning, lightning flashes"
+	ZERO?	OUT? /?ELS26
+	PRINTI	" above"
+	JUMP	?CND24
+?ELS26:	PRINTI	" outside"
+?CND24:	PRINTI	", and a few seconds later thunder rattles the house."
+	CRLF	
+	CALL	QUEUE,I-WEATHER,3
+	PUT	STACK,0,1
+	RFALSE	
+?ELS21:	EQUAL?	3,I-WEATHER-NUM \?ELS37
+	PRINTI	"Rain begins to fall"
+	ZERO?	OUT? \?CND40
+	PRINTI	" outside"
+?CND40:	PRINTI	" in a sprinkle."
+	CRLF	
+	CALL	QUEUE,I-WEATHER,2
+	PUT	STACK,0,1
+	RFALSE	
+?ELS37:	EQUAL?	4,I-WEATHER-NUM \?ELS48
+	SET	'GROUND-MUDDY,TRUE-VALUE
+	PRINTI	"The rain"
+	ZERO?	OUT? \?CND51
+	PRINTI	" outside"
+?CND51:	PRINTI	" is falling heavily now."
+	CRLF	
+	CALL	QUEUE,I-WEATHER,9
+	PUT	STACK,0,1
+	RFALSE	
+?ELS48:	EQUAL?	5,I-WEATHER-NUM \?ELS59
+	PRINTI	"The rain"
+	ZERO?	OUT? \?CND62
+	PRINTI	" outside"
+?CND62:	PRINTI	" begins to taper off."
+	CRLF	
+	CALL	QUEUE,I-WEATHER,5
+	PUT	STACK,0,1
+	RFALSE	
+?ELS59:	EQUAL?	6,I-WEATHER-NUM \?ELS70
+	PRINTI	"The rain storm"
+	ZERO?	OUT? \?CND73
+	PRINTI	" outside"
+?CND73:	PRINTI	" has passed now."
+	CRLF	
+	SUB	CLOUDS-GONE,PRESENT-TIME
+	CALL	QUEUE,I-WEATHER,STACK
+	PUT	STACK,0,1
+	RFALSE	
+?ELS70:	EQUAL?	7,I-WEATHER-NUM \?ELS81
+	SET	'SKY-DESC,STR?196
+	SUB	MOONRISE,PRESENT-TIME
+	CALL	QUEUE,I-WEATHER,STACK
+	PUT	STACK,0,1
+	RFALSE	
+?ELS81:	EQUAL?	8,I-WEATHER-NUM \?ELS83
+	SET	'SKY-DESC,STR?197
+	SUB	SUNRISE,PRESENT-TIME
+	SUB	STACK,15 >STACK
+	CALL	QUEUE,I-WEATHER,STACK
+	PUT	STACK,0,1
+	RFALSE	
+?ELS83:	EQUAL?	9,I-WEATHER-NUM \?ELS87
+	PRINTI	"Suddenly it dawns on you that the sky is getting light"
+	ZERO?	OUT? \?CND90
+	PRINTI	" outside"
+?CND90:	PRINTI	"."
+	CRLF	
+	SET	'SKY-DESC,STR?198
+	CALL	QUEUE,I-WEATHER,25
+	PUT	STACK,0,1
+	RFALSE	
+?ELS87:	EQUAL?	10,I-WEATHER-NUM \FALSE
+	PRINTI	"The sun has appeared over the hills"
+	ZERO?	OUT? \?CND101
+	PRINTI	" outside"
+?CND101:	PRINTI	"."
+	CRLF	
+	RFALSE	
+
+
+	.FUNCT	I-CHIMES,HALF-HR,HR
+	CALL	QUEUE,I-CHIMES,30
+	PUT	STACK,0,1
+	DIV	PRESENT-TIME,30 >HALF-HR
+	DIV	HALF-HR,2 >HR
+	EQUAL?	HERE,OFFICE \FALSE
+	MUL	2,HR
+	EQUAL?	HALF-HR,STACK \?ELS6
+	LESS?	12,HR \?CND7
+	SUB	HR,12 >HR
+?CND7:	PRINTI	"The clock chimes "
+	EQUAL?	1,HR \?ELS14
+	PRINTI	"once"
+	JUMP	?CND12
+?ELS14:	EQUAL?	2,HR \?ELS18
+	PRINTI	"twice"
+	JUMP	?CND12
+?ELS18:	PRINTN	HR
+	PRINTI	" times"
+?CND12:	PRINTI	" to mark the hour."
+	CRLF	
+	RFALSE	
+?ELS6:	PRINTI	"The clock chimes once to mark the half hour."
+	CRLF	
+	RFALSE	
+
+
+	.FUNCT	I-STILES-ARRIVE
+	MOVE	STILES,OFFICE-PATH
+	FSET	BACK-GATE,LOCKED
+	CALL	ESTABLISH-GOAL,STILES,OFFICE-PORCH
+	EQUAL?	HERE,OFFICE-PATH \?ELS5
+	PRINTR	"Someone enters through the back gate and rushes past you."
+?ELS5:	GETP	HERE,P?CORRIDOR
+	ZERO?	STACK /FALSE
+	GETP	HERE,P?CORRIDOR
+	BAND	STACK,3
+	ZERO?	STACK /FALSE
+	PRINTR	"Someone enters the property through the back gate."
+
+
+	.FUNCT	I-DUFFY-ARRIVE
+	ZERO?	WELCOMED /?ELS3
+	CALL	QUEUE,I-MEET-DUFFY?,-1
+	PUT	STACK,0,1
+	SET	'DUFFY-WITH-STILES,TRUE-VALUE
+	FCLEAR	STILES,INVISIBLE
+	CALL	ESTABLISH-GOAL,STILES,FRONT-PORCH
+	RFALSE	
+?ELS3:	SET	'SEEN-DUFFY?,TRUE-VALUE
+	SET	'MET-DUFFY?,TRUE-VALUE
+	PRINTI	"Suddenly, your assistant, Sgt. Duffy, appears from out of nowhere. ""Hello, Detective!"
+	PRINTI	" I thought I should come here on the streetcar, in case you needed help. "
+	PRINTI	"I'll be nearby if you want me."" He disappears just as quickly."
+	CRLF	
+	RFALSE	
+
+
+	.FUNCT	DUFFY-GREETING
+	SET	'MET-STILES?,TRUE-VALUE
+	SET	'SEEN-DUFFY?,TRUE-VALUE
+	SET	'MET-DUFFY?,TRUE-VALUE
+	FSET	STILES,TOUCHBIT
+	PRINTI	" ""Detective, I'm glad you're safe!"
+	ZERO?	PLAYER-HIDING /?CND3
+	PRINTI	" Don't worry, I won't tell anyone you're hiding."
+?CND3:	PRINTI	" I thought I should come here on the streetcar, in case you needed help. "
+	PRINTI	"I'm familiar with the house, since I was here to help investigate Mrs. Linder's death. Just as I walked up tonight, I heard a shot! The next thing I knew, this man, who calls himself Stiles, burst out of the woods behind the house. Naturally, I put the nippers on him and brought him along."
+	RTRUE	
+
+
+	.FUNCT	I-MEET-DUFFY?,ARG=0,L,?TMP1
+	LOC	STILES >L
+	ZERO?	WELCOMED /FALSE
+	ZERO?	MET-DUFFY? \FALSE
+	EQUAL?	L,HERE /?THN8
+	GETP	L,P?CORRIDOR >?TMP1
+	GETP	HERE,P?CORRIDOR
+	BAND	?TMP1,STACK
+	ZERO?	STACK /FALSE
+?THN8:	PRINTI	"Your assistant, Sgt. Duffy, sees you."
+	CALL	DUFFY-GREETING
+	PRINTI	" I'll just stow him in the living room and stand by to help you."""
+	CRLF	
+	CALL	ESTABLISH-GOAL,STILES,LIVING-ROOM
+	CALL	INT,I-MEET-DUFFY?
+	PUT	STACK,0,0
+	RTRUE	
+
+
+	.FUNCT	DO-FINGERPRINT,AN=0
+	ZERO?	DUFFY-AT-CORONER /?ELS3
+	PRINTI	"Don't you remember? Duffy went in the ambulance to the Coroner's office. "
+	PRINTR	"You'll have to wait for him to return."
+?ELS3:	ZERO?	FINGERPRINT-OBJ /?CND1
+	PRINTI	"Sergeant Duffy ran off to the lab on an errand for you. "
+	PRINTR	"You'll have to wait for him to return."
+?CND1:	ZERO?	MET-DUFFY? \?CND12
+	PRINTI	"You haven't met Sergeant Duffy yet tonight."
+	PRINTR	" You'll need his help to do that."
+?CND12:	ZERO?	AN \?CND17
+	PRINTI	"You look at the "
+	PRINTD	PRSO
+	PRINTI	" closely. It appears to have good fingerprints on it, so you call for Sergeant Duffy."
+	CRLF	
+?CND17:	ZERO?	AN /?ELS24
+	ZERO?	PRSI /?ELS24
+	SET	'ANALYSIS-GOAL,PRSI
+	JUMP	?CND22
+?ELS24:	SET	'ANALYSIS-GOAL,FALSE-VALUE
+?CND22:	SET	'FINGERPRINT-OBJ,PRSO
+	SET	'ANALYSIS-OBJ,AN
+	RANDOM	15
+	ADD	15,STACK
+	CALL	QUEUE,I-FINGERPRINT,STACK
+	PUT	STACK,0,1
+	FSET	PRSO,TOUCHBIT
+	REMOVE	PRSO
+	PRINTI	"Sergeant Duffy, quiet as a mouse, walks up and takes the "
+	PRINTD	PRSO
+	PRINTR	" from you. ""I'll return soon with the results,"" he says, and leaves as silently as he came."
+
+
+	.FUNCT	DO-ANALYZE
+	EQUAL?	PRSO,PRSI \?CND1
+	PRINTI	"Sergeant Duffy appears with a puzzled look on his face."
+	PRINTI	" ""I don't see how you expect the lab to analyze something for itself!"""
+	PRINTR	" He leaves, shaking his head slowly."
+?CND1:	CALL	DO-FINGERPRINT,TRUE-VALUE
+	RSTACK	
+
+
+	.FUNCT	I-FINGERPRINT
+	PRINTI	"Suddenly, Sergeant Duffy "
+	RANDOM	100
+	GRTR?	30,STACK \?ELS5
+	PRINTI	"appears, holding the "
+	PRINTD	FINGERPRINT-OBJ
+	PRINTI	" carefully in his hands. His quiet efficiency is impressive. "
+	JUMP	?CND3
+?ELS5:	RANDOM	100
+	GRTR?	50,STACK \?ELS9
+	PRINTI	"seems to arrive from nowhere, holding the "
+	PRINTD	FINGERPRINT-OBJ
+	PRINTI	" in his hands. "
+	JUMP	?CND3
+?ELS9:	PRINTI	"returns with the "
+	PRINTD	FINGERPRINT-OBJ
+	PRINTI	". For a moment you muse on his almost magical appearances. "
+?CND3:	ZERO?	ANALYSIS-GOAL /?ELS18
+	EQUAL?	FINGERPRINT-OBJ,INSIDE-GUN,OUTSIDE-GUN \?ELS22
+	EQUAL?	ANALYSIS-GOAL,POWDER,CLOCK-POWDER \?ELS22
+	PRINTI	"""The gun has recently been fired, and it contains traces of cheap gun powder"
+	ZERO?	POWDER-ANALYZED /?CND27
+	PRINTI	", the same kind of powder that you found on the clock"
+?CND27:	PRINTI	"."
+	JUMP	?CND16
+?ELS22:	EQUAL?	FINGERPRINT-OBJ,MATCHBOOK,THREAT-NOTE \?ELS36
+	EQUAL?	ANALYSIS-GOAL,HANDWRITING \?ELS36
+	PRINTI	"""The ink is ordinary Waterman blue-black. The lab can't tell much else without a certified handwriting sample on file."
+	JUMP	?CND16
+?ELS36:	EQUAL?	FINGERPRINT-OBJ,ANALYSIS-GOAL /?CND16
+	PRINTI	"""The "
+	PRINTD	FINGERPRINT-OBJ
+	PRINTI	" doesn't contain any "
+	CALL	ANALYSIS-PRINT,ANALYSIS-GOAL
+	JUMP	?CND16
+?ELS18:	EQUAL?	FINGERPRINT-OBJ,PIECE-OF-WIRE,SPOOL-OF-WIRE /?THN47
+	EQUAL?	FINGERPRINT-OBJ,WHITE-WIRE,BLACK-WIRE \?ELS46
+?THN47:	PRINTI	"""The wire is ordinary 16-gauge bell wire."
+	JUMP	?CND16
+?ELS46:	EQUAL?	FINGERPRINT-OBJ,PIECE-OF-PUTTY \?ELS52
+	PRINTI	"""The putty contained traces of the explosive cordite."
+	JUMP	?CND16
+?ELS52:	EQUAL?	FINGERPRINT-OBJ,INSIDE-GUN,OUTSIDE-GUN \?ELS56
+	PRINTI	"""The gun has recently been fired, and it contains traces of cheap gun powder"
+	PRINTI	"."
+	EQUAL?	FINGERPRINT-OBJ,INSIDE-GUN \?CND16
+	PRINTI	" And the barrel has indeed been sawed off."
+	JUMP	?CND16
+?ELS56:	EQUAL?	FINGERPRINT-OBJ,CLOCK-POWDER \?ELS67
+	SET	'POWDER-ANALYZED,TRUE-VALUE
+	PRINTI	"""The powder is gun powder, as I suspected. I put it in a cellophane envelope for you."
+	JUMP	?CND16
+?ELS67:	EQUAL?	FINGERPRINT-OBJ,MATCHBOOK,THREAT-NOTE \?ELS71
+	PRINTI	"""The ink is ordinary Waterman blue-black. The lab can't tell much else without a certified handwriting sample on file."
+	JUMP	?CND16
+?ELS71:	EQUAL?	FINGERPRINT-OBJ,STUB \?ELS75
+	PRINTI	"""I took the ticket stub to the movie theater, where they told me that it looked authentic to them, and the serial number proves that it was bought tonight."
+	JUMP	?CND16
+?ELS75:	EQUAL?	FINGERPRINT-OBJ,MEDICAL-REPORT \?ELS79
+	SET	'DUFFY-SAW-MEDICAL-REPORT,TRUE-VALUE
+	PRINTI	"""I tried to call the doctor, but there's no listing in the phone book. The lab people couldn't see anything unusual about the report."
+	JUMP	?CND16
+?ELS79:	PRINTI	"""I'm sorry,"" he begins, ""but the lab found nothing interesting."
+?CND16:	PRINTI	""" With that, he leaves, handing you the "
+	PRINTD	FINGERPRINT-OBJ
+	PRINTI	" as he whisks away."
+	CRLF	
+	MOVE	FINGERPRINT-OBJ,PLAYER
+	SET	'FINGERPRINT-OBJ,FALSE-VALUE
+	RTRUE	
+
+
+	.FUNCT	ANALYSIS-PRINT,OBJ
+	PRINTD	OBJ
+	PRINTI	"."
+	RTRUE	
+
+
+	.FUNCT	TODAY-F
+	EQUAL?	PRSA,V?WHAT \FALSE
+	LESS?	PRESENT-TIME,720 \?ELS10
+	PRINTR	"Today is Friday, February 18, 1938."
+?ELS10:	PRINTR	"Today is Saturday, February 19, 1938."
+
+
+	.FUNCT	WELCOME
+	EQUAL?	2,TOO-LATE-KNOCKED \?CND1
+	PRINTI	"No one answers the door, but a police car races in the driveway and stops. Two officers jump out, grab you roughly, and haul you off as a trespasser."
+	CRLF	
+	CALL	TOO-LATE-F
+	QUIT	
+?CND1:	ZERO?	RADIO-ON /?CND6
+	PRINTI	"Someone turns off the radio. "
+	SET	'RADIO-ON,FALSE-VALUE
+?CND6:	PRINTI	"You hear footsteps inside the house. Then the door swings open."
+	CRLF	
+	EQUAL?	TOO-LATE-KNOCKED,1 \?ELS18
+	SET	'TOO-LATE-KNOCKED,2
+	PRINTR	"The butler isn't smiling now. ""I told you Mr. Linder will be in touch. Please leave before I call the police!"" He slams the door in your face."
+?ELS18:	ZERO?	TOO-LATE /?ELS22
+	SET	'TOO-LATE-KNOCKED,1
+	PRINTR	"""Good evening,"" says a smiling face, ""I am Phong. I'm sorry, but you're too late arriving here. Mr. Linder has other business now. But he thanks you for coming and says he'll be in touch. Good night!"" He closes the door in your face."
+?ELS22:	EQUAL?	HERE,FRONT-PORCH \?ELS30
+	MOVE	PHONG,ENTRY
+	PRINTI	"""Good evening,"" says a smiling face, ""I am Phong. Please come in."" He leads you into the house and closes the door behind you.
+"
+	CRLF	
+	FCLEAR	FRONT-DOOR,OPENBIT
+	CALL	GOTO,ENTRY
+	JUMP	?CND28
+?ELS30:	PRINTI	"""I've been told that detectives are sneaky, but this is too much!"""
+	CRLF	
+?CND28:	CALL	QUEUE,I-GOTO-LIVING-ROOM,2
+	PUT	STACK,0,1
+	RTRUE	
+
+
+	.FUNCT	I-GOTO-LIVING-ROOM
+	PRINTI	"Phong says, ""I believe "
+	IN?	MONICA,LIVING-ROOM \?ELS5
+	PRINTI	"the Linders are"
+	JUMP	?CND3
+?ELS5:	PRINTI	"Mr. Linder is"
+?CND3:	PRINTI	" in the living room. Please follow me."""
+	GETP	HERE,P?CORRIDOR
+	BAND	16,STACK
+	ZERO?	STACK \?ELS16
+	FSET	HALL-3,TOUCHBIT
+	PRINTI	" He leads you into a hallway and turns left. "
+	GETP	HALL-3,P?LDESC
+	PRINT	STACK
+	JUMP	?CND14
+?ELS16:	PRINTI	" He leads you north along the hallway. "
+?CND14:	IN?	MONICA,LIVING-ROOM \?CND23
+	PRINTI	" As you get near the living room, you hear voices talking, half-loud and fast."
+?CND23:	CRLF	
+	CRLF	
+	MOVE	PHONG,LIVING-ROOM
+	CALL	GOTO,LIVING-ROOM
+	CALL	FIX-PHONG-MOVEMENT
+	ZERO?	STACK /?CND28
+	CALL	QUEUE,I-PHONG,1
+	PUT	STACK,0,1
+	SET	'WELCOMED,TRUE-VALUE
+?CND28:	CALL	I-LINDER-WELCOME
+	RSTACK	
+
+
+	.FUNCT	I-LINDER-WELCOME
+	CRLF	
+	PRINTI	"Linder turns to you and says, ""Detective, am I glad to see you! "
+	ZERO?	TOO-LATE /?ELS5
+	PRINTI	"I was afraid you'd met with an accident. I'm afraid I don't have time for you now, since I have another appointment. But thank you for coming. I'll be in touch. Phong, please show the Detective out."""
+	CALL	SAID-TO,LINDER
+	CALL	ESTABLISH-GOAL,LINDER,OFFICE
+	CALL	INT,I-LINDER-TO-OFFICE
+	PUT	STACK,0,0
+	CALL	QUEUE,I-PHONG-EJECTS,3
+	PUT	STACK,0,1
+	JUMP	?CND3
+?ELS5:	CALL	ESTABLISH-GOAL,PHONG,KITCHEN
+	SET	'OHERE,HERE
+	SET	'LINDER-FOLLOWS-YOU,TRUE-VALUE
+	CALL	QUEUE,I-LINDER-FOLLOWS-YOU,-1
+	PUT	STACK,0,1
+	IN?	MONICA,HERE \?ELS13
+	PRINTI	"This is my daughter, Monica, and of course "
+	JUMP	?CND11
+?ELS13:	PRINTI	"I see "
+?CND11:	PRINTI	"you've met Phong already."" He looks at a wrist watch with a gleaming silver bracelet. ""I see you're"
+	CALL	SAID-TO,LINDER
+	LESS?	PRESENT-TIME,490 \?ELS24
+	PRINTI	" right on time."
+	CALL	QUEUE,I-LINDER-TO-OFFICE,10
+	PUT	STACK,0,1
+	JUMP	?CND22
+?ELS24:	LESS?	PRESENT-TIME,500 \?ELS28
+	PRINTI	" a little late."
+	CALL	QUEUE,I-LINDER-TO-OFFICE,5
+	PUT	STACK,0,1
+	JUMP	?CND22
+?ELS28:	PRINTI	" rather late."
+	CALL	QUEUE,I-LINDER-TO-OFFICE,1
+	PUT	STACK,0,1
+?CND22:	PRINTI	" I'll be with you as soon as I finish my drink."""
+?CND3:	CRLF	
+	RTRUE	
+
+
+	.FUNCT	I-PHONG-EJECTS
+	FCLEAR	FRONT-DOOR,OPENBIT
+	FSET	FRONT-DOOR,LOCKED
+	PRINTI	"Phong grabs you by the arm and guides you to the front door. It's obvious that you have no choice. ""Thank you for coming, Detective. Good night!"" He closes the door in your face."
+	CRLF	
+	SET	'TOO-LATE-KNOCKED,1
+	CALL	GOTO,FRONT-PORCH
+	RTRUE	
+
+
+	.FUNCT	I-LINDER-FOLLOWS-YOU
+	EQUAL?	OHERE,HERE /FALSE
+	CALL	WHERE-UPDATE,LINDER
+	MOVE	LINDER,HERE
+	PRINTI	"Linder follows you "
+	EQUAL?	OHERE,HALL-1,HALL-2 /?THN13
+	EQUAL?	OHERE,HALL-3,HALL-4 \?ELS10
+?THN13:	EQUAL?	HERE,HALL-1,HALL-2 /?THN15
+	EQUAL?	HERE,HALL-3,HALL-4 \?ELS10
+?THN15:	PRINTI	"along"
+	JUMP	?CND8
+?ELS10:	PRINTI	"into"
+?CND8:	CALL	THE?,HERE
+	PRINTI	" "
+	PRINTD	HERE
+	PRINTI	"."
+	RANDOM	100
+	GRTR?	50,STACK \?CND25
+	CALL	WINDOW-IN?,HERE
+	ZERO?	STACK /?CND25
+	PRINTI	" He looks out the window and checks the lock."
+?CND25:	CRLF	
+	SET	'OHERE,HERE
+	RETURN	OHERE
+
+
+	.FUNCT	I-LINDER-TO-OFFICE,VAL=0
+	CALL	INT,I-LINDER-FOLLOWS-YOU
+	PUT	STACK,0,0
+	EQUAL?	HERE,WORKSHOP /?THN4
+	CALL	OUTSIDE?,HERE
+	ZERO?	STACK /?ELS3
+?THN4:	MOVE	LINDER,CARVED-CHAIR
+	SET	'TOO-LATE,TRUE-VALUE
+	EQUAL?	HERE,BACK-YARD,OFFICE-PORCH,OFFICE-PATH \FALSE
+	PRINTI	"The lights go on in Linder's office."
+	CRLF	
+	RFALSE	
+?ELS3:	LOC	PLAYER
+	EQUAL?	OFFICE,HERE,STACK /?CND1
+	SET	'VAL,M-FATAL
+	PRINTI	"Linder gulps down the rest of his drink. ""Well, Detective,"" he says, ""I'm anxious to get on with our business. Let's you and I go to my office so we can talk undisturbed."" "
+	LOC	PLAYER
+	FSET?	STACK,FURNITURE \?CND15
+	SET	'WINNER,PLAYER
+	CALL	PERFORM,V?STAND
+?CND15:	EQUAL?	HERE,HALL-4 \?ELS20
+	PRINTI	"He takes you by the arm, opens a door to the east and leads you through it."
+	CRLF	
+	JUMP	?CND18
+?ELS20:	PRINTI	"He takes you by the arm and leads you through the hallway. Just south of the entry, he opens a door to the east and leads you through it."
+	CRLF	
+?CND18:	FSET	OFFICE-DOOR,OPENBIT
+	CALL	GOTO,OFFICE
+	CALL	WHERE-UPDATE,LINDER
+	CALL	SAID-TO,LINDER
+?CND1:	CALL	QUEUE,I-LINDER-IN-OFFICE,1
+	PUT	STACK,0,1
+	FSET	LINDER,NDESCBIT
+	MOVE	LINDER,CARVED-CHAIR
+	PRINTI	"Linder sits down in the carved chair."
+	CRLF	
+	RETURN	VAL
+
+
+	.FUNCT	I-LINDER-IN-OFFICE
+	ZERO?	LINDER-EXPLAINED \FALSE
+	LOC	PLAYER
+	IN?	STACK,ROOMS \?ELS8
+	CALL	QUEUE,I-LINDER-IN-OFFICE,5
+	PUT	STACK,0,1
+	CALL	SAID-TO,LINDER
+	ZERO?	LINDER-ASKED-YOU-TO-SIT \?ELS11
+	PRINTI	"""I"
+	PRINTI	"f you'll just take a chair, I'll explain what this is all about."""
+	CRLF	
+	JUMP	?CND9
+?ELS11:	PRINTI	"Linder says, ""I repeat: i"
+	PRINTI	"f you'll just take a chair, I'll explain what this is all about."""
+	CRLF	
+?CND9:	INC	'LINDER-ASKED-YOU-TO-SIT
+	RTRUE	
+?ELS8:	CALL	QUEUE,I-LINDER-EXPLAIN,1
+	PUT	STACK,0,1
+	RTRUE	
+
+
+	.FUNCT	I-LINDER-EXPLAIN
+	ZERO?	LINDER-EXPLAINED \FALSE
+	SET	'LINDER-EXPLAINED,TRUE-VALUE
+	PRINTI	"Linder begins his story. ""My late wife, may she rest in peace, got involved with a young man named Stiles. Naturally I tried to stop this affair, but without much success. Since my wife passed away, this Stiles fellow has gone off the deep end, I'm afraid, and blamed me for her death. I tried my best to ignore him, but he seems to have lost his senses. This morning I received this note and decided to ask your help."" He hands the note to you."
+	CRLF	
+	CALL	SAID-TO,LINDER
+	CALL	THIS-IS-IT,THREAT-NOTE
+	MOVE	THREAT-NOTE,PLAYER
+	FSET	THREAT-NOTE,TOUCHBIT
+	FCLEAR	THREAT-NOTE,INVISIBLE
+	RTRUE	
+
+
+	.FUNCT	FIRE-SHOT
+	PRINTI	" Suddenly there is a flash of light and an explosion, and "
+	ZERO?	PLAYER-NEAR-SHOT /?ELS5
+	SUB	PRESENT-TIME,PLAYER-NEAR-SHOT
+	GRTR?	2,STACK \?ELS5
+	PRINTI	"everything goes black. What a lousy way to step off, poking around like a two-bit shamus!"
+	CRLF	
+	QUIT	
+	JUMP	?CND3
+?ELS5:	RANDOM	100
+	GRTR?	50,STACK \?CND3
+	ZERO?	PLAYER-HIDING \?CND3
+	LOC	PLAYER
+	EQUAL?	STACK,WOODEN-CHAIR,LOUNGE /?CND3
+	PRINTI	"mortal pain radiates from your heart. As blood fills your lungs and a scream fills your brain, you feel sure of only one thing: you should have taken a chair when Linder asked you to."
+	CRLF	
+	QUIT	
+?CND3:	PRINTI	"the window falls into dozens of shiny shards."
+	PRINTI	" The cat bolts and disappears somewhere."
+	REMOVE	CAT
+	SET	'SHOT-FIRED,TRUE-VALUE
+	FCLEAR	PIECE-OF-WIRE,TRYTAKEBIT
+	FSET	PIECE-OF-WIRE,TAKEBIT
+	FCLEAR	PIECE-OF-PUTTY,TRYTAKEBIT
+	FSET	PIECE-OF-PUTTY,TAKEBIT
+	FCLEAR	GLOBAL-SHOT,INVISIBLE
+	FSET	OFFICE-WINDOW,RMUNGBIT
+	FCLEAR	BROKEN-GLASS,INVISIBLE
+	RTRUE	
+
+
+	.FUNCT	I-PHONG-RETIRES
+	CALL	WHERE-UPDATE,PHONG
+	MOVE	PHONG,BUTLER-ROOM
+	GETP	HERE,P?LINE
+	EQUAL?	STACK,OUTSIDE-LINE-C \FALSE
+	PRINTR	"The lights go out, one by one, all over the house."
+
+
+	.FUNCT	I-LINDER-RETIRES
+	CALL	WHERE-UPDATE,LINDER
+	MOVE	LINDER,LINDER-ROOM
+	EQUAL?	HERE,ROCK-GARDEN,BACK-YARD,OFFICE-PORCH \FALSE
+	PRINTR	"The lights go off in Linder's office and then in the bedroom at the other end of the house."
+
+
+	.FUNCT	FIX-PHONG-MOVEMENT,MG,ELAPSED,OT
+	GET	MOVEMENT-GOALS,PHONG-C >MG
+	SUB	PRESENT-TIME,480 >ELAPSED
+?PRG1:	GET	MG,MG-TIME >OT
+	ZERO?	OT /TRUE
+	SUB	OT,ELAPSED >OT
+	GRTR?	1,OT \?CND6
+	SET	'TOO-LATE,TRUE-VALUE
+	RFALSE	
+?CND6:	PUT	MG,MG-TIME,OT
+	ADD	MG,MG-LENGTH >MG
+	JUMP	?PRG1
+
+
+	.FUNCT	IN-MOTION?,PERSON,GT,?TMP1
+	GETP	PERSON,P?CHARACTER
+	GET	GOAL-TABLES,STACK >GT
+	GET	GT,GOAL-ENABLE
+	ZERO?	STACK /FALSE
+	GET	GT,GOAL-S
+	ZERO?	STACK /FALSE
+	LOC	PERSON >?TMP1
+	GET	GT,GOAL-F
+	EQUAL?	?TMP1,STACK /FALSE
+	RTRUE	
+
+
+	.FUNCT	START-MOVEMENT
+	CALL	QUEUE,I-MONICA,1
+	PUT	STACK,0,1
+	CALL	QUEUE,I-FOLLOW,-1
+	PUT	STACK,0,1
+	CALL	QUEUE,I-ATTENTION,-1
+	PUT	STACK,0,1
+	RTRUE	
+
+
+	.FUNCT	IMOVEMENT,PERSON,INT,TB,VAR,DIS,TIM,ID,RM,GT,?TMP1
+	GETP	PERSON,P?CHARACTER >ID
+	GET	MOVEMENT-GOALS,ID >TB
+	GET	GOAL-TABLES,ID >GT
+	GET	TB,MG-ROOM >RM
+	EQUAL?	0,RM /?CND1
+	GET	GT,GOAL-PRIORITY
+	ZERO?	STACK /?ELS6
+	PUT	GT,GOAL-QUEUED,RM
+	JUMP	?CND1
+?ELS6:	CALL	ESTABLISH-GOAL,PERSON,RM
+?CND1:	GET	TB,MG-TIME >TIM
+	EQUAL?	0,TIM /FALSE
+	GET	TB,MG-VARIATION >VAR
+	MUL	VAR,2
+	RANDOM	STACK >DIS
+	SUB	DIS,VAR
+	ADD	TIM,STACK
+	CALL	QUEUE,INT,STACK
+	ADD	TB,MG-LENGTH
+	PUT	MOVEMENT-GOALS,ID,STACK
+	GET	TB,MG-NEXT
+	EQUAL?	0,STACK /FALSE
+	GET	TB,MG-NEXT >?TMP1
+	SUB	VAR,DIS
+	ADD	?TMP1,STACK
+	PUT	TB,MG-NEXT,STACK
+	RFALSE	
+
+
+	.FUNCT	I-FOLLOW,FLG=0,CNT=0,GT,VAL
+?PRG1:	IGRTR?	'CNT,CHARACTER-MAX \?ELS5
+	RETURN	FLG
+?ELS5:	GET	GOAL-TABLES,CNT >GT
+	GET	GT,GOAL-S
+	ZERO?	STACK /?PRG1
+	GET	GT,GOAL-ENABLE
+	ZERO?	STACK \?THN10
+	GET	GT,ATTENTION
+	ZERO?	STACK \?PRG1
+?THN10:	PUT	GT,GOAL-ENABLE,TRUE-VALUE
+	GET	CHARACTER-TABLE,CNT
+	CALL	FOLLOW-GOAL,STACK >VAL
+	ZERO?	VAL /?PRG1
+	EQUAL?	FLG,M-FATAL /?PRG1
+	SET	'FLG,VAL
+	JUMP	?PRG1
+
+
+	.FUNCT	I-ATTENTION,FLG=0,CNT=0,ATT
+?PRG1:	IGRTR?	'CNT,CHARACTER-MAX \?ELS5
+	RETURN	FLG
+?ELS5:	GET	ATTENTION-TABLE,CNT
+	SUB	STACK,1 >ATT
+	EQUAL?	ATT,1 \?ELS7
+	GET	CHARACTER-TABLE,CNT
+	IN?	STACK,HERE \?CND3
+	EQUAL?	CNT,MONICA-C \?ELS13
+	ZERO?	MONICA-DASHED-OUT-DOOR /?ELS13
+	SET	'MONICA-DASHED-OUT-DOOR,FALSE-VALUE
+	JUMP	?CND11
+?ELS13:	GET	CHARACTER-TABLE,CNT
+	PRINTD	STACK
+	PRINTI	" is acting impatient."
+	CRLF	
+?CND11:	SET	'FLG,TRUE-VALUE
+	JUMP	?CND3
+?ELS7:	ZERO?	ATT \?CND3
+	GET	GOAL-TABLES,CNT
+	PUT	STACK,GOAL-ENABLE,TRUE-VALUE
+?CND3:	PUT	ATTENTION-TABLE,CNT,ATT
+	JUMP	?PRG1
+
+
+	.FUNCT	GRAB-ATTENTION,PERSON,CHR,GT,ATT
+	GETP	PERSON,P?CHARACTER >CHR
+	GET	GOAL-TABLES,CHR >GT
+	GET	GT,GOAL-S
+	ZERO?	STACK /?CND1
+	GET	GT,ATTENTION-SPAN >ATT
+	PUT	ATTENTION-TABLE,CHR,ATT
+	ZERO?	ATT \?ELS6
+	PUT	GT,GOAL-ENABLE,TRUE-VALUE
+	RFALSE	
+?ELS6:	GET	GT,GOAL-ENABLE
+	ZERO?	STACK /?CND1
+	PUT	GT,GOAL-ENABLE,FALSE-VALUE
+?CND1:	SET	'QCONTEXT,PERSON
+	SET	'QCONTEXT-ROOM,HERE
+	RTRUE	
+
+
+	.FUNCT	UNPRIORITIZE,PERSON,GT
+	GETP	PERSON,P?CHARACTER
+	GET	GOAL-TABLES,STACK >GT
+	PUT	GT,GOAL-PRIORITY,FALSE-VALUE
+	GET	GT,GOAL-QUEUED
+	ZERO?	STACK /FALSE
+	GET	GT,GOAL-QUEUED
+	CALL	ESTABLISH-GOAL,PERSON,STACK
+	PUT	GT,GOAL-QUEUED,FALSE-VALUE
+	RTRUE	
+
+
+	.FUNCT	ESTABLISH-GOAL,PERSON,GOAL,PRIORITY=0,HERE,HL,GL,GT,?TMP1
+	LOC	PERSON >HERE
+	GETP	PERSON,P?CHARACTER
+	GET	GOAL-TABLES,STACK >GT
+	ZERO?	PRIORITY /?CND1
+	PUT	GT,GOAL-ENABLE,TRUE-VALUE
+	PUT	GT,GOAL-PRIORITY,TRUE-VALUE
+	PUT	GT,GOAL-QUEUED,HERE
+?CND1:	GETP	HERE,P?LINE >HL
+	GETP	GOAL,P?LINE >GL
+	EQUAL?	HL,GL \?ELS7
+	PUT	GT,GOAL-I,FALSE-VALUE
+	JUMP	?CND5
+?ELS7:	EQUAL?	HL,OUTSIDE-LINE-C \?ELS9
+	PUT	GT,GOAL-I,FRONT-PORCH
+	JUMP	?CND5
+?ELS9:	EQUAL?	HL,OFFICE-LINE-C \?ELS11
+	PUT	GT,GOAL-I,HALL-4
+	JUMP	?CND5
+?ELS11:	EQUAL?	HL,MONICA-LINE-C \?ELS13
+	PUT	GT,GOAL-I,MONICA-ROOM
+	JUMP	?CND5
+?ELS13:	EQUAL?	GL,OUTSIDE-LINE-C \?ELS15
+	PUT	GT,GOAL-I,ENTRY
+	JUMP	?CND5
+?ELS15:	EQUAL?	GL,MONICA-LINE-C \?ELS17
+	PUT	GT,GOAL-I,HALL-2
+	JUMP	?CND5
+?ELS17:	PUT	GT,GOAL-I,HALL-3
+?CND5:	GETP	GOAL,P?STATION
+	PUT	GT,GOAL-S,STACK
+	PUT	GT,GOAL-F,GOAL
+	LOC	PERSON
+	RSTACK	
+
+
+	.FUNCT	FOLLOW-GOAL,PERSON,HERE,LINE,LN,RM,GT,GOAL,FLG,GOAL-FLAG=0,IGOAL=0,LOC,CNT=1,DIR
+	LOC	PERSON >HERE
+	GETP	PERSON,P?CHARACTER
+	GET	GOAL-TABLES,STACK >GT
+	GET	GT,GOAL-F
+	EQUAL?	HERE,STACK \?ELS3
+	PUT	GT,GOAL-S,FALSE-VALUE
+	RETURN	FALSE-VALUE
+?ELS3:	GET	GT,GOAL-ENABLE
+	ZERO?	STACK /FALSE
+?CND1:	GETP	HERE,P?STATION >LOC
+	EQUAL?	HERE,LOC /?CND6
+	CALL	MOVE-PERSON,PERSON,LOC >FLG
+	RETURN	FLG
+?CND6:	GET	GT,GOAL-I >GOAL
+	ZERO?	GOAL /?ELS11
+	SET	'IGOAL,TRUE-VALUE
+	JUMP	?CND9
+?ELS11:	GET	GT,GOAL-S >GOAL
+?CND9:	ZERO?	GOAL /FALSE
+	EQUAL?	HERE,GOAL \?CND14
+	ZERO?	IGOAL /?ELS21
+	GET	GT,GOAL-F
+	CALL	TRANSFER,PERSON,GOAL,STACK
+	RSTACK	
+?ELS21:	GET	GT,GOAL-F
+	EQUAL?	HERE,STACK /?ELS24
+	GET	GT,GOAL-F
+	CALL	MOVE-PERSON,PERSON,STACK >FLG
+	PUT	GT,GOAL-S,FALSE-VALUE
+	RETURN	FLG
+?ELS24:	PUT	GT,GOAL-S,FALSE-VALUE
+	RETURN	FALSE-VALUE
+?CND14:	GETP	GOAL,P?LINE >LN
+	EQUAL?	LN,OUTSIDE-LINE-C \?ELS31
+	PUSH	OUTSIDE-LINE
+	JUMP	?CND27
+?ELS31:	EQUAL?	LN,INSIDE-LINE-C \?ELS33
+	PUSH	INSIDE-LINE
+	JUMP	?CND27
+?ELS33:	EQUAL?	LN,OFFICE-LINE-C \?ELS35
+	PUSH	OFFICE-LINE
+	JUMP	?CND27
+?ELS35:	EQUAL?	LN,MONICA-LINE-C \?PRD29
+	PUSH	MONICA-LINE
+	JUMP	?CND27
+?PRD29:	PUSH	0
+?CND27:	SET	'LINE,STACK
+?PRG38:	GET	LINE,CNT >RM
+	EQUAL?	RM,HERE \?ELS42
+	ZERO?	GOAL-FLAG /?ELS45
+	SUB	CNT,3
+	GET	LINE,STACK >LOC
+	JUMP	?CND43
+?ELS45:	ADD	CNT,3
+	GET	LINE,STACK >LOC
+?CND43:	CALL	MOVE-PERSON,PERSON,LOC
+	RETURN	STACK
+?ELS42:	EQUAL?	RM,GOAL \?CND40
+	SET	'GOAL-FLAG,TRUE-VALUE
+?CND40:	ADD	CNT,3 >CNT
+	JUMP	?PRG38
+
+
+	.FUNCT	GOAL-REACHED,PERSON
+	GETP	PERSON,P?CHARACTER
+	GET	GOAL-TABLES,STACK
+	GET	STACK,GOAL-FUNCTION
+	CALL	STACK,G-REACHED
+	RSTACK	
+
+
+	.FUNCT	MOVE-PERSON,PERSON,WHERE,DIR,GT,OL,COR,PCOR,CHR,FLG=0,DR,VAL=0,STI
+	ZERO?	MET-STILES? /?ELS5
+	PUSH	STR?199
+	JUMP	?CND1
+?ELS5:	PUSH	STR?200
+?CND1:	SET	'STI,STACK
+	GETP	PERSON,P?CHARACTER >CHR
+	GET	GOAL-TABLES,CHR >GT
+	LOC	PERSON >OL
+	CALL	DIR-FROM,OL,WHERE >DIR
+	GETPT	OL,DIR >DR
+	PTSIZE	DR
+	EQUAL?	STACK,DEXIT \?ELS11
+	GETB	DR,DEXITOBJ >DR
+	FSET?	DR,OPENBIT /?ELS14
+	FSET?	DR,LOCKED /?CND9
+	FSET	DR,OPENBIT
+	JUMP	?CND9
+?ELS14:	SET	'DR,FALSE-VALUE
+	JUMP	?CND9
+?ELS11:	SET	'DR,FALSE-VALUE
+?CND9:	PUT	GT,GOAL-LDIR,DIR
+	EQUAL?	OL,HERE \?ELS24
+	FSET?	PERSON,INVISIBLE /?ELS24
+	SET	'FLG,TRUE-VALUE
+	CALL	THIS-IS-S-HE,PERSON
+	EQUAL?	PERSON,STILES \?ELS29
+	ZERO?	DUFFY-WITH-STILES /?ELS29
+	SET	'SEEN-DUFFY?,TRUE-VALUE
+	PRINTI	"Sgt. Duffy"
+	JUMP	?CND27
+?ELS29:	FSET?	PERSON,TOUCHBIT /?ELS35
+	PRINTI	"Someone"
+	JUMP	?CND27
+?ELS35:	PRINTD	PERSON
+?CND27:	EQUAL?	DIR,P?OUT \?ELS44
+	EQUAL?	PERSON,STILES \?ELS47
+	ZERO?	DUFFY-WITH-STILES /?ELS47
+	PRINTI	" leads "
+	PRINT	STI
+	PRINTI	" out of the room."
+	CRLF	
+	JUMP	?CND22
+?ELS47:	PRINTI	" leaves the room."
+	CRLF	
+	JUMP	?CND22
+?ELS44:	EQUAL?	DIR,P?IN \?ELS57
+	ZERO?	DR /?CND58
+	EQUAL?	PERSON,STILES /?CND58
+	PRINTI	" opens the "
+	PRINTD	DR
+	PRINTI	" and"
+?CND58:	EQUAL?	PERSON,STILES \?ELS67
+	ZERO?	DUFFY-WITH-STILES /?ELS67
+	PRINTI	" leads "
+	PRINT	STI
+	PRINTI	" into another room"
+	JUMP	?CND65
+?ELS67:	PRINTI	" goes into another room"
+?CND65:	ZERO?	DR /?CND76
+	FSET?	DR,LOCKED \?CND76
+	EQUAL?	PERSON,STILES /?CND76
+	PRINTI	", locking the door again"
+?CND76:	PRINTI	"."
+	CRLF	
+	JUMP	?CND22
+?ELS57:	ZERO?	DR /?CND87
+	EQUAL?	PERSON,STILES /?CND87
+	PRINTI	" opens the "
+	PRINTD	DR
+	PRINTI	" and"
+?CND87:	EQUAL?	PERSON,STILES \?ELS96
+	ZERO?	DUFFY-WITH-STILES /?ELS96
+	PRINTI	" leads "
+	PRINT	STI
+	PRINTI	" off to "
+	JUMP	?CND94
+?ELS96:	PRINTI	" heads off to "
+?CND94:	CALL	DIR-PRINT,DIR
+	ZERO?	DR /?CND105
+	FSET?	DR,LOCKED \?CND105
+	EQUAL?	PERSON,STILES /?CND105
+	PRINTI	", locking the door again"
+?CND105:	PRINTI	"."
+	CRLF	
+	JUMP	?CND22
+?ELS24:	EQUAL?	WHERE,HERE \?ELS115
+	FSET?	PERSON,INVISIBLE /?ELS115
+	SET	'FLG,TRUE-VALUE
+	CALL	THIS-IS-S-HE,PERSON
+	GET	GT,GOAL-F
+	EQUAL?	HERE,STACK /?CND22
+	EQUAL?	PERSON,STILES \?ELS123
+	ZERO?	DUFFY-WITH-STILES /?ELS123
+	SET	'SEEN-DUFFY?,TRUE-VALUE
+	PRINTI	"Sgt. Duffy"
+	PRINTI	" leads "
+	PRINT	STI
+	PRINTI	" past you."
+	CRLF	
+	JUMP	?CND22
+?ELS123:	FSET?	PERSON,TOUCHBIT /?ELS131
+	PRINTI	"Someone walks past you."
+	CRLF	
+	JUMP	?CND22
+?ELS131:	PRINTD	PERSON
+	PRINTI	" walks past you."
+	CRLF	
+	JUMP	?CND22
+?ELS115:	GETP	HERE,P?CORRIDOR >COR
+	ZERO?	COR /?CND22
+	FSET?	PERSON,INVISIBLE /?CND22
+	GETP	OL,P?CORRIDOR >PCOR
+	ZERO?	PCOR /?ELS144
+	BAND	COR,PCOR
+	ZERO?	STACK /?ELS144
+	SET	'FLG,TRUE-VALUE
+	CALL	THIS-IS-S-HE,PERSON
+	GETP	WHERE,P?CORRIDOR
+	ZERO?	STACK \?ELS149
+	EQUAL?	PERSON,STILES \?ELS152
+	ZERO?	DUFFY-WITH-STILES /?ELS152
+	SET	'SEEN-DUFFY?,TRUE-VALUE
+	PRINTI	"Sgt. Duffy"
+	JUMP	?CND150
+?ELS152:	FSET?	PERSON,TOUCHBIT /?ELS158
+	PRINTI	"Someone"
+	JUMP	?CND150
+?ELS158:	PRINTD	PERSON
+?CND150:	PRINTI	", off to "
+	CALL	COR-DIR,HERE,OL
+	CALL	DIR-PRINT,STACK
+	PRINTI	","
+	ZERO?	DR /?CND169
+	EQUAL?	PERSON,STILES /?CND169
+	PRINTI	" opens a door and"
+?CND169:	EQUAL?	PERSON,STILES \?ELS178
+	ZERO?	DUFFY-WITH-STILES /?ELS178
+	PRINTI	" leads "
+	PRINT	STI
+	JUMP	?CND176
+?ELS178:	CALL	OUTSIDE?,HERE
+	ZERO?	STACK /?ELS184
+	PRINTI	" leaves your view"
+	JUMP	?CND176
+?ELS184:	PRINTI	" ducks into a room"
+?CND176:	PRINTI	" to "
+	CALL	DIR-FROM,OL,WHERE
+	CALL	DIR-PRINT,STACK
+	ZERO?	DR /?CND193
+	FSET?	DR,LOCKED \?CND193
+	EQUAL?	PERSON,STILES /?CND193
+	PRINTI	", locking the door again"
+?CND193:	PRINTI	"."
+	CRLF	
+	JUMP	?CND142
+?ELS149:	GETP	WHERE,P?CORRIDOR
+	BAND	COR,STACK
+	ZERO?	STACK \?ELS203
+	EQUAL?	PERSON,STILES \?ELS206
+	ZERO?	DUFFY-WITH-STILES /?ELS206
+	SET	'SEEN-DUFFY?,TRUE-VALUE
+	PRINTI	"Sgt. Duffy, with "
+	PRINT	STI
+	PRINTI	" in tow"
+	JUMP	?CND204
+?ELS206:	FSET?	PERSON,TOUCHBIT /?ELS212
+	PRINTI	"Someone"
+	JUMP	?CND204
+?ELS212:	PRINTD	PERSON
+?CND204:	PRINTI	", off to "
+	CALL	COR-DIR,HERE,OL
+	CALL	DIR-PRINT,STACK
+	PRINTI	", disappears from sight to "
+	CALL	DIR-FROM,OL,WHERE >PCOR
+	CALL	DIR-PRINT,PCOR
+	PRINTI	"."
+	CRLF	
+	JUMP	?CND142
+?ELS203:	EQUAL?	PERSON,STILES \?ELS229
+	ZERO?	DUFFY-WITH-STILES /?ELS229
+	SET	'SEEN-DUFFY?,TRUE-VALUE
+	PRINTI	"Sgt. Duffy, with "
+	PRINT	STI
+	PRINTI	" in tow,"
+	JUMP	?CND227
+?ELS229:	FSET?	PERSON,TOUCHBIT /?ELS235
+	PRINTI	"Someone"
+	JUMP	?CND227
+?ELS235:	PRINTD	PERSON
+?CND227:	PRINTI	" is to "
+	CALL	COR-DIR,HERE,WHERE
+	CALL	DIR-PRINT,STACK
+	PRINTI	", heading toward "
+	CALL	DIR-FROM,OL,WHERE
+	CALL	DIR-PRINT,STACK
+	PRINTI	"."
+	CRLF	
+	JUMP	?CND142
+?ELS144:	GETP	WHERE,P?CORRIDOR >PCOR
+	ZERO?	PCOR /?CND22
+	BAND	COR,PCOR
+	ZERO?	STACK /?CND22
+	SET	'FLG,TRUE-VALUE
+	CALL	THIS-IS-S-HE,PERSON
+	PRINTI	"To "
+	CALL	COR-DIR,HERE,WHERE
+	CALL	DIR-PRINT,STACK
+	EQUAL?	PERSON,STILES \?ELS256
+	ZERO?	DUFFY-WITH-STILES /?ELS256
+	SET	'SEEN-DUFFY?,TRUE-VALUE
+	PRINTI	" Sgt. Duffy, with "
+	PRINT	STI
+	PRINTI	" in tow,"
+	JUMP	?CND254
+?ELS256:	FSET?	PERSON,TOUCHBIT /?ELS262
+	PRINTI	" someone"
+	JUMP	?CND254
+?ELS262:	PRINTI	" "
+	PRINTD	PERSON
+?CND254:	CALL	OUTSIDE?,WHERE
+	ZERO?	STACK /?ELS271
+	PRINTI	" comes into view from "
+	JUMP	?CND269
+?ELS271:	PRINTI	" enters the hallway from "
+?CND269:	EQUAL?	OL,LIMBO \?ELS280
+	PRINTI	"the south"
+	JUMP	?CND278
+?ELS280:	CALL	DIR-FROM,WHERE,OL
+	CALL	DIR-PRINT,STACK
+?CND278:	PRINTI	"."
+	CRLF	
+?CND142:	
+?CND22:	CALL	WHERE-UPDATE,PERSON,FLG
+	MOVE	PERSON,WHERE
+	GET	GT,GOAL-F
+	EQUAL?	STACK,WHERE \?CND287
+	CALL	GOAL-REACHED,PERSON >VAL
+	ZERO?	VAL \?CND287
+	EQUAL?	HERE,WHERE \?CND287
+	FSET?	PERSON,INVISIBLE /?CND287
+	CALL	THIS-IS-S-HE,PERSON
+	PRINTD	PERSON
+	CALL	OUTSIDE?,HERE
+	ZERO?	STACK /?ELS299
+	PRINTI	" stops here."
+	CRLF	
+	JUMP	?CND290
+?ELS299:	PRINTI	" steps into the room."
+	CRLF	
+?CND290:	
+?CND287:	EQUAL?	PERSON,STILES \?CND306
+	CALL	I-MEET-DUFFY?
+?CND306:	ZERO?	DEBUG /?CND309
+	PRINTI	"["
+	PRINTD	PERSON
+	PRINTI	" just went into"
+	CALL	THE?,WHERE
+	PRINTI	" "
+	PRINTD	WHERE
+	PRINTI	".]"
+	CRLF	
+?CND309:	EQUAL?	VAL,M-FATAL \?ELS321
+	RETURN	VAL
+?ELS321:	RETURN	FLG
+
+
+	.FUNCT	DIR-FROM,HERE,THERE,P=0,L,TBL,O
+?PRG1:	NEXTP	HERE,P >P
+	ZERO?	P /FALSE
+	EQUAL?	P,P?IN,P?OUT \?ELS7
+	JUMP	?PRG1
+?ELS7:	LESS?	P,LOW-DIRECTION /?PRG1
+	GETPT	HERE,P >TBL
+	PTSIZE	TBL >L
+	EQUAL?	L,DEXIT,UEXIT,CEXIT \?PRG1
+	GETB	TBL,REXIT
+	EQUAL?	STACK,THERE \?PRG1
+	RETURN	P
+
+
+	.FUNCT	TRANSFER,PERSON,IGOAL,FGOAL,V,FLG=0
+	EQUAL?	IGOAL,FRONT-PORCH \?ELS5
+	CALL	MOVE-PERSON,PERSON,ENTRY
+	JUMP	?CND1
+?ELS5:	EQUAL?	IGOAL,ENTRY \?ELS7
+	CALL	MOVE-PERSON,PERSON,FRONT-PORCH
+	JUMP	?CND1
+?ELS7:	EQUAL?	IGOAL,MONICA-ROOM \?ELS9
+	FSET	MONICA-DOOR,OPENBIT
+	CALL	MOVE-PERSON,PERSON,HALL-2
+	JUMP	?CND1
+?ELS9:	EQUAL?	IGOAL,HALL-2 \?ELS11
+	FSET	MONICA-DOOR,OPENBIT
+	CALL	MOVE-PERSON,PERSON,MONICA-ROOM
+	JUMP	?CND1
+?ELS11:	EQUAL?	IGOAL,HALL-4 \?ELS13
+	CALL	MOVE-PERSON,PERSON,HALL-3
+	JUMP	?CND1
+?ELS13:	CALL	MOVE-PERSON,PERSON,HALL-4
+?CND1:	SET	'V,STACK
+	CALL	ESTABLISH-GOAL,PERSON,FGOAL
+	RETURN	V
+
+
+	.FUNCT	WHERE-UPDATE,PERSON,FLG=0,WT,NC,CNT=0,?TMP1
+	GETP	PERSON,P?CHARACTER >NC
+	GET	WHERE-TABLES,NC >WT
+?PRG1:	GRTR?	CNT,CHARACTER-MAX /TRUE
+	EQUAL?	CNT,NC \?ELS7
+	JUMP	?CND3
+?ELS7:	ZERO?	CNT \?ELS13
+	ZERO?	FLG \?THN10
+?ELS13:	GET	CHARACTER-TABLE,CNT >?TMP1
+	LOC	PERSON
+	IN?	?TMP1,STACK \?CND3
+?THN10:	PUT	WT,CNT,PRESENT-TIME
+	GET	WHERE-TABLES,CNT
+	PUT	STACK,NC,PRESENT-TIME
+?CND3:	INC	'CNT
+	JUMP	?PRG1
+
+
+	.FUNCT	I-PHONG-UNCALLED
+	GET	GOAL-TABLES,PHONG-C
+	GET	STACK,GOAL-S
+	ZERO?	STACK \FALSE
+	CALL	ESTABLISH-GOAL,PHONG,PHONG-OLD-LOC
+	LOC	PHONG
+	EQUAL?	STACK,HERE \FALSE
+	CALL	SAID-TO,PHONG
+	PRINTI	"Inscrutably, Phong turns to leave."
+	ZERO?	PLAYER-HIDING /?THN16
+	CALL	FIND-FLAG,HERE,PERSON,PHONG
+	ZERO?	STACK /?CND13
+?THN16:	PRINTI	" ""If you need me again, just ring."""
+?CND13:	CRLF	
+	RTRUE	
+
+
+	.FUNCT	I-PHONG,GARG=0,L,MPB
+	LOC	PHONG >L
+	SET	'MPB,MONICA-PUSHED-BUTTON
+	ZERO?	GARG \?ELS5
+	CALL	IMOVEMENT,PHONG,I-PHONG
+	RSTACK	
+?ELS5:	EQUAL?	GARG,G-REACHED \FALSE
+	ZERO?	PHONG-CALLED /?ELS12
+	SET	'PHONG-CALLED,FALSE-VALUE
+	SET	'MONICA-PUSHED-BUTTON,FALSE-VALUE
+	CALL	QUEUE,I-PHONG-UNCALLED,3
+	PUT	STACK,0,1
+	EQUAL?	L,HERE \FALSE
+	ZERO?	PLAYER-HIDING /?ELS21
+	CALL	FIND-FLAG,HERE,PERSON,PHONG
+	ZERO?	STACK \?ELS21
+	PRINTI	"Suddenly Phong appears and "
+	PRINTR	"looks around to see who pushed the button."
+?ELS21:	CALL	SAID-TO,PHONG
+	PRINTI	"Suddenly Phong appears and "
+	PRINTI	"says, ""You rang?"""
+	CRLF	
+	ZERO?	MPB /TRUE
+	PRINTI	"Monica says, ""Yes, Phong, I was testing a new twist on the household wiring that I thought of during the film."
+	ZERO?	MONICA-TIED-TO /?ELS38
+	PRINTR	" Can't you talk this copper into letting me loose?"" Phong opens his eyes wide for a moment but says nothing."
+?ELS38:	PRINTI	""""
+	CRLF	
+	RTRUE	
+?ELS12:	EQUAL?	L,OFFICE \?ELS47
+	ZERO?	PHONG-SEEN-CORPSE? \?THN53
+	FSET?	CORPSE,INVISIBLE \?ELS52
+?THN53:	EQUAL?	HERE,OFFICE \FALSE
+	CALL	SAID-TO,PHONG
+	PRINTR	"Suddenly Phong enters the office. ""I believe you called for me, Detective."""
+?ELS52:	SET	'PHONG-SEEN-CORPSE?,TRUE-VALUE
+	EQUAL?	HERE,OFFICE \FALSE
+	PRINTR	"Suddenly Phong enters the office. When he sees that Linder has cashed in his chips, he turns away for a minute and bows his head."
+?ELS47:	EQUAL?	L,OFFICE-PATH \?ELS72
+	CALL	QUEUE,I-STILES-ARRIVE,4
+	PUT	STACK,0,1
+	MOVE	OUTSIDE-GUN,OFFICE-PATH
+	FCLEAR	OUTSIDE-GUN,INVISIBLE
+	FCLEAR	SIDE-FOOTPRINTS,INVISIBLE
+	CALL	ESTABLISH-GOAL,PHONG,FRONT-PORCH
+	RSTACK	
+?ELS72:	EQUAL?	L,FRONT-PORCH \?ELS74
+	EQUAL?	HERE,FRONT-PORCH \?ELS77
+	PRINTI	"The butler comes up to you, looking agitated."
+	CRLF	
+	JUMP	?CND75
+?ELS77:	PRINTI	"You hear the door bell ring."
+	CRLF	
+?CND75:	MOVE	PHONG,ENTRY
+	FCLEAR	MUDDY-SHOES,INVISIBLE
+	CALL	ESTABLISH-GOAL,PHONG,OFFICE
+	RSTACK	
+?ELS74:	EQUAL?	L,ENTRY \?ELS85
+	EQUAL?	HERE,ENTRY \?CND86
+	PRINTI	"Phong arrives and lets Sergeant Duffy in."
+	CRLF	
+?CND86:	CALL	ESTABLISH-GOAL,PHONG,LIVING-ROOM
+	CALL	ESTABLISH-GOAL,STILES,LIVING-ROOM
+	RSTACK	
+?ELS85:	EQUAL?	L,LIVING-ROOM \?ELS92
+	CALL	ESTABLISH-GOAL,PHONG,KITCHEN
+	RSTACK	
+?ELS92:	EQUAL?	L,BUTLER-ROOM \FALSE
+	CALL	META-LOC,RECURSIVE-BOOK
+	EQUAL?	STACK,BUTLER-ROOM \?CND95
+	IN?	RECURSIVE-BOOK,PLAYER /?CND95
+	MOVE	RECURSIVE-BOOK,PHONG
+?CND95:	IN?	PLAYER,BUTLER-ROOM \TRUE
+	PRINTR	"Suddenly Phong comes in, lies down, and starts reading a book."
+
+
+	.FUNCT	I-STILES,GARG=0,L
+	LOC	STILES >L
+	ZERO?	GARG \?ELS5
+	CALL	IMOVEMENT,STILES,I-STILES
+	RSTACK	
+?ELS5:	EQUAL?	GARG,G-REACHED \FALSE
+	EQUAL?	L,OFFICE-PORCH \?ELS12
+	ZERO?	WELCOMED /?ELS17
+	EQUAL?	HERE,OFFICE \FALSE
+	CRLF	
+	PRINTI	"Linder looks toward the window and says, ""I don't think Phong has answered the door bell yet."" He reaches toward the butler's button and at the same instant shouts ""Stiles!"" You turn around and dimly see a figure outside."
+	CALL	FIRE-SHOT
+	PRINTI	" The figure outside turns and runs before you can see the face. When you turn back around, you see Linder slumping down in his chair, with a bloody stain spreading across his silk shirt. He teeters on the edge of the seat, then falls onto the floor, quite dead."
+	CRLF	
+	REMOVE	LINDER
+	SET	'QCONTEXT,FALSE-VALUE
+	SET	'LINDER-FOLLOWS-YOU,FALSE-VALUE
+	CALL	ROB,LINDER,CORPSE
+	FCLEAR	CORPSE,INVISIBLE
+	SET	'LINDER-FOLLOWS-YOU,FALSE-VALUE
+	CALL	INT,I-LINDER-IN-OFFICE
+	PUT	STACK,0,0
+	CALL	INT,I-PHONG-RETIRES
+	PUT	STACK,0,0
+	CALL	INT,I-LINDER-RETIRES
+	PUT	STACK,0,0
+	CALL	QUEUE,I-AMBULANCE,150
+	PUT	STACK,0,1
+	MOVE	STILES,LIMBO
+	FSET	STILES,INVISIBLE
+	GET	GOAL-TABLES,STILES-C
+	PUT	STACK,GOAL-S,FALSE-VALUE
+	FCLEAR	BACK-FOOTPRINTS,INVISIBLE
+	CALL	QUEUE,I-DUFFY-ARRIVE,3
+	PUT	STACK,0,1
+	SET	'MURDER-TIME,PRESENT-TIME
+	RETURN	2
+?ELS17:	FCLEAR	BACK-GATE,LOCKED
+	SET	'TOO-LATE,TRUE-VALUE
+	CALL	ESTABLISH-GOAL,STILES,OFFICE-PATH
+	CALL	QUEUE,I-DUFFY-ARRIVE,5
+	PUT	STACK,0,1
+	EQUAL?	HERE,BACK-YARD,ROCK-GARDEN \?ELS36
+	FSET?	STILES,TOUCHBIT \?ELS39
+	PRINTI	"Stiles"
+	JUMP	?CND37
+?ELS39:	PRINTI	"The visitor"
+?CND37:	PRINTI	" comes up to Linder's office entrance. A tall man opens the office door and steps out. They speak briefly, then the tall man counts out some money and sends "
+	FSET?	STILES,TOUCHBIT \?ELS50
+	PRINTI	"Stiles"
+	JUMP	?CND48
+?ELS50:	PRINTI	"the person"
+?CND48:	PRINTR	" away."
+?ELS36:	EQUAL?	HERE,OFFICE-PORCH \?ELS60
+	FSET?	STILES,TOUCHBIT \?ELS63
+	PRINTI	"Stiles"
+	JUMP	?CND61
+?ELS63:	PRINTI	"The visitor"
+?CND61:	PRINTI	" pushes you out of the way and"
+	PRINTR	" knocks on the door of Linder's office. A tall man opens it, speaks to him briefly, hands him some money, and sends him away."
+?ELS60:	EQUAL?	HERE,OFFICE-PATH \FALSE
+	FSET?	STILES,TOUCHBIT \?ELS76
+	PRINTI	"Stiles"
+	JUMP	?CND74
+?ELS76:	PRINTI	"The visitor"
+?CND74:	PRINTR	" knocks on the door of Linder's office. A tall man opens it, speaks to him briefly, hands him some money, and sends him away."
+?ELS12:	EQUAL?	L,OFFICE-PATH \?ELS86
+	REMOVE	STILES
+	GET	GOAL-TABLES,STILES-C
+	PUT	STACK,GOAL-S,FALSE-VALUE
+	GETP	HERE,P?CORRIDOR
+	BAND	STACK,3
+	ZERO?	STACK /FALSE
+	FSET?	STILES,TOUCHBIT \?ELS94
+	PRINTI	"Stiles"
+	JUMP	?CND92
+?ELS94:	PRINTI	"The visitor"
+?CND92:	PRINTR	" disappears out the back gate."
+?ELS86:	EQUAL?	L,FRONT-PORCH \?ELS104
+	EQUAL?	HERE,FRONT-PORCH \?ELS107
+	CALL	I-MEET-DUFFY?
+	JUMP	?CND105
+?ELS107:	PRINTI	"You hear the door bell ring."
+	CRLF	
+?CND105:	CALL	ESTABLISH-GOAL,PHONG,ENTRY
+	RSTACK	
+?ELS104:	EQUAL?	L,LIVING-ROOM \FALSE
+	SET	'DUFFY-WITH-STILES,FALSE-VALUE
+	EQUAL?	HERE,LIVING-ROOM \?ELS118
+	ZERO?	MET-DUFFY? /?ELS123
+	PRINTI	"Duffy brings a prisoner into the room and fastens him to the davenport."
+	PRINTR	" He goes quickly to work, disappearing down the hall."
+?ELS123:	PRINTI	"Suddenly "
+	PRINTI	"Duffy brings a prisoner into the room and fastens him to the davenport."
+	PRINTI	" Then he notices you."
+	CALL	DUFFY-GREETING
+	PRINTI	""""
+	PRINTR	" He goes quickly to work, disappearing down the hall."
+?ELS118:	ZERO?	MET-DUFFY? \?ELS136
+	PRINTI	"Suddenly your assistant, Sgt. Duffy, "
+	ZERO?	SEEN-DUFFY? /?ELS141
+	PRINTI	"runs up to you."
+	JUMP	?CND139
+?ELS141:	PRINTI	"appears from out of nowhere."
+?CND139:	CALL	DUFFY-GREETING
+	PRINTR	" I've stowed him in the living room. I'll stand by to help you."" He scurries off to go about his work."
+?ELS136:	EQUAL?	HERE,HALL-1,HALL-2 /?THN153
+	EQUAL?	HERE,HALL-3,HALL-4 \FALSE
+?THN153:	PRINTR	"Duffy goes quickly to work, disappearing down the hall."
+
+
+	.FUNCT	ROB,WHAT,THIEF,PROB=0,N,X,ROBBED?=0
+	FIRST?	WHAT >X /?KLU13
+?KLU13:	
+?PRG1:	ZERO?	X \?CND3
+	RETURN	ROBBED?
+?CND3:	NEXT?	X >N /?KLU14
+?KLU14:	FSET?	X,INVISIBLE /?CND6
+	ZERO?	PROB /?THN11
+	RANDOM	100
+	GRTR?	PROB,STACK \?CND6
+?THN11:	MOVE	X,THIEF
+	SET	'ROBBED?,TRUE-VALUE
+?CND6:	SET	'X,N
+	JUMP	?PRG1
+
+
+	.FUNCT	I-MONICA,GARG=0,L,HR,?TMP1
+	LOC	MONICA >L
+	ZERO?	GARG \?ELS5
+	CALL	IMOVEMENT,MONICA,I-MONICA
+	RSTACK	
+?ELS5:	EQUAL?	GARG,G-REACHED \FALSE
+	EQUAL?	L,OFFICE \?ELS12
+	LESS?	PRESENT-TIME,540 \?ELS12
+	CALL	ESTABLISH-GOAL,MONICA,GARAGE
+	LOC	PLAYER
+	EQUAL?	OFFICE,HERE,STACK /?THN20
+	EQUAL?	HERE,OFFICE-PORCH \FALSE
+	EQUAL?	PRSA,V?LOOK-INSIDE \FALSE
+?THN20:	LOC	PLAYER
+	EQUAL?	OFFICE,HERE,STACK \?ELS26
+	PRINTI	"Monica"
+	JUMP	?CND24
+?ELS26:	EQUAL?	HERE,OFFICE-PORCH \?CND24
+	PRINTI	"A young woman"
+?CND24:	PRINTI	" bursts into the office, wearing a felt hat and wool coat, and struggling to get her driving gloves on. "
+	LOC	PLAYER
+	EQUAL?	OFFICE,HERE,STACK \?ELS39
+	CALL	QUEUE,I-MONICA-GOES,5
+	PUT	STACK,0,1
+	CALL	THIS-IS-S-HE,MONICA
+	PRINTR	"She glances icily in your direction and then back to her father. ""I'm off to the pictures with Terry, Dad. Good-bye."" She hugs him briefly but firmly, burying her head in his shoulder. He pushes her away and says, ""You're leaving now?! I thought you'd be talking to the detective here. What about the threat on my life?"" He has the hurt look of an orphan pup. She answers, ""You don't need me here. I need to get away now and then. I'm not like Mother, you know."" Tears well up in her eyes but she brushes them away before they drop. She turns to leave."
+?ELS39:	EQUAL?	HERE,OFFICE-PORCH \FALSE
+	PRINTR	"She glances quickly around the room, then turns to leave."
+?ELS12:	EQUAL?	L,GARAGE \?ELS47
+	LESS?	PRESENT-TIME,540 \?ELS47
+	CALL	UNPRIORITIZE,MONICA
+	SET	'FILM-SEEN,TRUE-VALUE
+	FSET	GARAGE-DOOR,LOCKED
+	FCLEAR	GARAGE-DOOR,OPENBIT
+	MOVE	MONICA,LIMBO
+	FSET	MONICA,INVISIBLE
+	GET	GOAL-TABLES,MONICA-C
+	PUT	STACK,GOAL-S,FALSE-VALUE
+	GET	GOAL-TABLES,MONICA-C
+	PUT	STACK,GOAL-ENABLE,FALSE-VALUE
+	FSET	MONICA-CAR,INVISIBLE
+	SUB	670,PRESENT-TIME >?TMP1
+	RANDOM	20
+	SUB	?TMP1,STACK
+	CALL	QUEUE,I-MONICA-RETURN,STACK
+	PUT	STACK,0,1
+	EQUAL?	HERE,GARAGE,DRIVEWAY /?THN55
+	EQUAL?	HERE,DRIVEWAY-ENTRANCE,WORKSHOP \?ELS54
+?THN55:	PRINTI	"Someone"
+	PRINTR	" jumps into her car, starts it up, and races out the driveway, leaving a wake of peastone behind her."
+?ELS54:	GETP	HERE,P?LINE
+	EQUAL?	OUTSIDE-LINE-C,STACK \?ELS62
+	PRINTR	"Without warning, a car roars to life and speeds out of the driveway."
+?ELS62:	PRINTR	"Outside somewhere, a car roars to life and speeds away."
+?ELS47:	EQUAL?	L,WORKSHOP \?ELS70
+	SET	'BUTTON-FIXED,TRUE-VALUE
+	CALL	ESTABLISH-GOAL,MONICA,OFFICE
+	EQUAL?	HERE,WORKSHOP \FALSE
+	CALL	SAID-TO,MONICA
+	CALL	THIS-IS-S-HE,MONICA
+	SET	'SEEN-MONICA-AT-J-BOX,TRUE-VALUE
+	PRINTI	"Suddenly Monica rushes in, goes to the junction box, and fiddles with the wires for a minute. Then she turns, sees you, gasps and grabs her throat. ""My"
+	CALL	TANDY?
+	ZERO?	STACK \?CND78
+	PRINTI	" God"
+?CND78:	PRINTR	", you gave me a start!"" Her face is ashen."
+?ELS70:	EQUAL?	L,OFFICE \?ELS86
+	ZERO?	MONICA-SEEN-CORPSE? \?ELS86
+	CALL	ESTABLISH-GOAL,MONICA,TOILET-ROOM
+	ZERO?	TOO-LATE \?THN92
+	FSET?	CORPSE,INVISIBLE /?CND89
+?THN92:	SET	'MONICA-SEEN-CORPSE?,TRUE-VALUE
+?CND89:	EQUAL?	HERE,OFFICE,OFFICE-PORCH \FALSE
+	CALL	THIS-IS-S-HE,MONICA
+	FSET?	MONICA,TOUCHBIT \?ELS101
+	PRINTI	"Monica"
+	JUMP	?CND99
+?ELS101:	PRINTI	"Someone"
+?CND99:	PRINTI	" walks gingerly into the office, "
+	FSET?	CORPSE,INVISIBLE /?ELS112
+	PRINTI	"opens her eyes wide in horror, and then puts her hand over her mouth and"
+	JUMP	?CND110
+?ELS112:	PRINTI	"looks around quickly, and then"
+?CND110:	PRINTR	" rushes toward the door."
+?ELS86:	EQUAL?	L,TOILET-ROOM \?ELS122
+	EQUAL?	HERE,TOILET-ROOM \?ELS127
+	CALL	SAID-TO,MONICA
+	CALL	THIS-IS-S-HE,MONICA
+	PRINTR	"Monica rushes in. ""Stand aside, flatfoot, I'm going to be sick."" She leans over the toilet and gives in to an attack of dry heaves."
+?ELS127:	EQUAL?	HERE,BATHROOM,TUB-ROOM /?THN132
+	EQUAL?	HERE,LINDER-ROOM,MONICA-ROOM \FALSE
+?THN132:	FCLEAR	TOILET-DOOR,OPENBIT
+	PRINTR	"The door to the toilet room slams shut. You hear sounds of dry heaving inside."
+?ELS122:	EQUAL?	L,MONICA-ROOM \?ELS137
+	ZERO?	CLOCK-FIXED \?ELS137
+	EQUAL?	HERE,MONICA-ROOM \?ELS144
+	CALL	SAID-TO,MONICA
+	CALL	THIS-IS-S-HE,MONICA
+	PRINTR	"Monica comes in, sits down on her bed, and buries her face in her hands. ""Leave me alone for a while. I'm really not well."" She begins to sob."
+?ELS144:	EQUAL?	HERE,BATHROOM /?THN149
+	EQUAL?	HERE,HALL-1,HALL-2,HALL-3 \FALSE
+?THN149:	FCLEAR	MONICA-DOOR,OPENBIT
+	FCLEAR	MONICA-BATH-DOOR,OPENBIT
+	FCLEAR	MONICA-BACK-DOOR,OPENBIT
+	PRINTR	"Monica slams shut her bedroom doors."
+?ELS137:	EQUAL?	L,OFFICE \?ELS154
+	EQUAL?	HERE,OFFICE \?ELS159
+	ZERO?	PLAYER-HIDING \?ELS159
+	GET	MOVEMENT-GOALS,MONICA-C
+	SUB	STACK,MG-LENGTH
+	PUT	MOVEMENT-GOALS,MONICA-C,STACK
+	CALL	ESTABLISH-GOAL,MONICA,MONICA-ROOM
+	CALL	THIS-IS-S-HE,MONICA
+	PRINTR	"Monica comes into the office quietly and, seeing you, steps over to the desk and shuffles some papers. Then she sighs, rubs her eyes, and turns to leave without saying a word."
+?ELS159:	MOVE	INSIDE-GUN,MONICA
+	FSET	CLOCK,LOCKED
+	FCLEAR	CLOCK,OPENBIT
+	SET	'CLOCK-FIXED,TRUE-VALUE
+	SET	'MONICA-PUSHED-BUTTON,TRUE-VALUE
+	SET	'HR,HERE
+	SET	'HERE,OFFICE
+	CALL	YOU-RANG
+	SET	'HERE,HR
+	EQUAL?	HERE,OFFICE-PORCH \?ELS174
+	EQUAL?	PRSA,V?LOOK-INSIDE /?THN171
+?ELS174:	ZERO?	PLAYER-HIDING /?ELS170
+	EQUAL?	HERE,OFFICE \?ELS170
+?THN171:	FCLEAR	CLOCK-KEY,INVISIBLE
+	SET	'SEEN-MONICA-AT-CLOCK,TRUE-VALUE
+	FSET?	MONICA,TOUCHBIT \?ELS179
+	PRINTI	"Monica"
+	JUMP	?CND177
+?ELS179:	PRINTI	"Someone"
+?CND177:	CALL	THIS-IS-S-HE,MONICA
+	PRINTR	" quietly sticks her head in the door, looks quickly around the room, and then steps over to the desk. She pushes the butler's button and seems to listen for the bell. She takes another look around, then crosses the room to the clock. Looking well rehearsed, she produces a key, opens the door of the case, takes something out and puts it in the pocket of her slacks, and then shuts and locks the case."
+?ELS170:	CRLF	
+	PRINTR	"You barely hear a bell ring in the distance."
+?ELS154:	EQUAL?	L,MONICA-ROOM \FALSE
+	EQUAL?	HERE,ROCK-GARDEN,BACK-YARD,OFFICE-PORCH \?ELS198
+	PRINTR	"The lights go out in the middle bedroom."
+?ELS198:	EQUAL?	HERE,MONICA-ROOM \?ELS202
+	CALL	THIS-IS-S-HE,MONICA
+	CALL	SAID-TO,MONICA
+	PRINTR	"Monica comes in and sits down at her dressing table. Her eyes are red from crying. ""Go peddle your cookies somewhere else. I'm going to have some Ovaltine and go to bed."""
+?ELS202:	EQUAL?	HERE,BATHROOM /?THN207
+	EQUAL?	HERE,HALL-1,HALL-2,HALL-3 \FALSE
+?THN207:	FCLEAR	MONICA-DOOR,OPENBIT
+	FCLEAR	MONICA-BATH-DOOR,OPENBIT
+	FCLEAR	MONICA-BACK-DOOR,OPENBIT
+	PRINTR	"Monica slams shut her bedroom doors."
+
+
+	.FUNCT	I-MONICA-GOES
+	IN?	MONICA,OFFICE \FALSE
+	CALL	ESTABLISH-GOAL,MONICA,GARAGE,TRUE-VALUE
+	SET	'MONICA-DASHED-OUT-DOOR,TRUE-VALUE
+	PRINTR	"Monica looks more nervous. ""I really must go now, or I'll be late for the film."" She hugs her father again and dashes out the door."
+
+
+	.FUNCT	I-MONICA-RETURN
+	FCLEAR	MONICA,INVISIBLE
+	MOVE	MONICA,GARAGE
+	MOVE	STUB,GARAGE
+	FCLEAR	MONICA-CAR,INVISIBLE
+	CALL	ESTABLISH-GOAL,MONICA,WORKSHOP
+	GET	GOAL-TABLES,MONICA-C
+	PUT	STACK,GOAL-ENABLE,TRUE-VALUE
+	EQUAL?	HERE,GARAGE,DRIVEWAY,DRIVEWAY-ENTRANCE \?ELS5
+	FSET?	MONICA,TOUCHBIT \?ELS8
+	PRINTI	"Monica"
+	JUMP	?CND6
+?ELS8:	PRINTI	"Someone"
+?CND6:	PRINTR	" drives into the garage, stops her car, jumps out, and slams the door."
+?ELS5:	PRINTR	"Suddenly you hear a car drive into the garage and stop. Its door slams."
+
+
+	.FUNCT	I-AMBULANCE
+	REMOVE	CORPSE
+	ZERO?	PLAYER-HIDING /?ELS3
+	PRINTI	"Out of the blue, "
+	PRINTI	"two"
+	PRINTI	" of the coroner's men run"
+	PRINTI	" in to the office with a stretcher and carry Linder's body out."
+	JUMP	?CND1
+?ELS3:	EQUAL?	HERE,OFFICE,OFFICE-PORCH,OFFICE-PATH \?ELS11
+	PRINTI	"Out of the blue, "
+	PRINTI	"two"
+	PRINTI	" of the coroner's men run"
+	PRINTI	" in to the office with a stretcher and carry Linder's body out. "
+	PRINTI	"One of them shouts to you, """
+	JUMP	?CND9
+?ELS11:	PRINTI	"Out of the blue, "
+	PRINTI	"one"
+	PRINTI	" of the coroner's men run"
+	PRINTI	"s up to you and says, ""We just removed the body. "
+?CND9:	PRINTI	"Haven't time to chat. Busy night at the morgue! Carry on, Detective."""
+?CND1:	ZERO?	FINGERPRINT-OBJ \?CND20
+	ZERO?	DUFFY-AT-CORONER \?CND20
+	SET	'DUFFY-AT-CORONER,TRUE-VALUE
+	CALL	QUEUE,I-DUFFY-RETURNS,69
+	PUT	STACK,0,1
+	PRINTI	" Then Duffy appears, saying, ""I'm glad they finally showed up! When I called, they seemed very busy. I think I should go along and make sure they give this autopsy top priority."
+	ZERO?	PLAYER-HIDING /?CND27
+	PRINTI	" Don't worry, I won't tell anyone you're hiding."
+?CND27:	PRINTI	" See you later!"""
+?CND20:	PRINTR	" They head for the street."
+
+
+	.FUNCT	I-DUFFY-RETURNS
+	SET	'DUFFY-AT-CORONER,FALSE-VALUE
+	PRINTI	"Without warning, Duffy comes running up to you and says, ""I just got back from the morgue. The coroner "
+	ZERO?	DUFFY-SAW-MEDICAL-REPORT /?CND3
+	CALL	META-LOC,MONICA
+	EQUAL?	STACK,HERE \?CND7
+	SET	'MONICA-SAW-CORONER-REPORT,TRUE-VALUE
+?CND7:	PRINTI	"found no evidence of the alleged stomach tumor. In fact, he could find no organic disease that would either explain the death or support the theory that Linder wanted to die. He "
+?CND3:	PRINTI	"concluded that Linder died of a single small-caliber bullet through the heart. And here's something peculiar: there were no traceable rifle marks on the bullet."
+	PRINTR	""""
+
+
+	.FUNCT	DUFFY-HINT
+	ZERO?	MET-DUFFY? \?ELS3
+	PRINTI	"You'd better wait until Duffy "
+	PRINTR	"sees you."
+?ELS3:	ZERO?	DUFFY-WITH-STILES /?CND1
+	PRINTI	"You'd better wait until Duffy "
+	PRINTR	"stows his prisoner."
+?CND1:	PRINTI	"Duffy appears and says, "
+	FSET?	CORPSE,INVISIBLE \?CND13
+	PRINTR	"""If I were you, I'd wait until some crime occurred."""
+?CND13:	INC	'DUFFY-HINT-NUM
+	PRINTI	"""I don't know if it means anything, Detective, but I noticed "
+	FSET?	PIECE-OF-WIRE,TOUCHBIT /?ELS24
+	PRINTR	"a piece of green wire on the broken office window."""
+?ELS24:	ZERO?	NO-WIRE-HINT /?ELS28
+	SET	'NO-WIRE-HINT,FALSE-VALUE
+	PRINTR	"a green spool in the workshop."""
+?ELS28:	ZERO?	BUTTON-FIXED \?ELS33
+	ZERO?	PLAYER-PUSHED-BUTTON \?ELS33
+	PRINTR	"that the butler's button in the office wasn't working right."""
+?ELS33:	ZERO?	POWDER-ANALYZED \?ELS39
+	PRINTR	"something funny about the clock in the office."""
+?ELS39:	FSET?	GUN-RECEIPT,TOUCHBIT /?ELS43
+	PRINTR	"a very interesting book in Phong's room."""
+?ELS43:	FSET?	MEDICAL-REPORT,TOUCHBIT /?ELS47
+	PRINTR	"some kind of medical report in Monica's room."""
+?ELS47:	ZERO?	MONICA-HAS-MOTIVE \?ELS51
+	PRINTR	"Monica's reaction when I asked her about her mother."""
+?ELS51:	ZERO?	SEEN-MONICA-AT-J-BOX \?ELS55
+	PRINTR	"that Monica went in the workshop right when she got home."""
+?ELS55:	PRINTR	"that I've run out of ideas on this case."""
+
+
+	.FUNCT	ARREST,PERSON,HELPER=0,FLG
+	ZERO?	HELPER /?CND1
+	EQUAL?	PERSON,MONICA \?THN10
+	EQUAL?	HELPER,PHONG /?ELS7
+?THN10:	EQUAL?	HELPER,MONICA \?THN12
+	EQUAL?	PERSON,PHONG /?ELS7
+?THN12:	PRINTR	"You think it over. You realize that this arrest is pretty far-fetched. It could only mean humiliation for you."
+?ELS7:	SET	'PERSON,MONICA
+	SET	'HELPER,PHONG
+?CND1:	EQUAL?	PERSON,MONICA \?CND18
+	IN?	MONICA,LIMBO \?CND18
+	PRINTI	"Duffy appears with a solemn look."
+	PRINTR	" He says, ""I can't find Monica around here anywhere. I guess you'll have to wait for her to return."" He disappears again."
+?CND18:	PRINTI	"(If you want to continue from this point at another time, you must ""SUSPEND"" first.) Do you want to "
+	PRINTI	"make an arrest and "
+	PRINTI	"stop your investigation now?"
+	CALL	YES?
+	ZERO?	STACK /TRUE
+	EQUAL?	PERSON,GLOBAL-LINDER,CORPSE \?ELS34
+	PRINTI	"Duffy appears, to escort you from the grounds. "
+	PRINTI	"""So you believe that Linder's death was suicide? I'm not convinced. But if you'll "
+	PRINTI	"file a deposition, we can see what the D.A. and coroner think.""
+"
+	CRLF	
+	JUMP	?CND32
+?ELS34:	ZERO?	HELPER /?ELS41
+	CALL	META-LOC,MONICA
+	EQUAL?	HERE,STACK \?ELS45
+	IN?	HELPER,HERE \?ELS45
+	PRINTI	"Duffy appears with a solemn look."
+	ZERO?	MONICA-TIED-TO /?CND50
+	PRINTI	" He unfastens Monica from the "
+	PRINTD	MONICA-TIED-TO
+	PRINTI	"."
+?CND50:	PRINTI	" He puts nippers on the wrists of both "
+	PRINTD	PERSON
+	PRINTI	" and "
+	PRINTD	HELPER
+	PRINTI	", who stand stiff and quiet."
+	JUMP	?CND39
+?ELS45:	CALL	META-LOC,MONICA
+	EQUAL?	HERE,STACK \?ELS59
+	PRINTI	"Duffy appears with "
+	PRINTD	HELPER
+	PRINTI	" in tow."
+	ZERO?	MONICA-TIED-TO /?CND62
+	PRINTI	" He unfastens Monica from the "
+	PRINTD	MONICA-TIED-TO
+	PRINTI	"."
+?CND62:	PRINTI	" He puts nippers on the wrists of "
+	PRINTD	PERSON
+	PRINTI	", who stands stiff and quiet."
+	JUMP	?CND39
+?ELS59:	IN?	HELPER,HERE \?ELS71
+	PRINTI	"Duffy appears with "
+	PRINTD	PERSON
+	PRINTI	" in tow."
+	PRINTI	" He puts nippers on the wrists of "
+	PRINTD	HELPER
+	PRINTI	", who stands stiff and quiet."
+	JUMP	?CND39
+?ELS71:	PRINTI	"Duffy seems to read your thoughts, as he appears with "
+	PRINTD	PERSON
+	PRINTI	" and "
+	PRINTD	HELPER
+	PRINTI	" in handcuffs."
+	JUMP	?CND39
+?ELS41:	CALL	META-LOC,PERSON
+	EQUAL?	HERE,STACK \?ELS81
+	PRINTI	"Duffy appears with a solemn look."
+	EQUAL?	PERSON,STILES \?ELS86
+	PRINTI	" He unfastens his nippers from the davenport and pulls Stiles to his feet."
+	JUMP	?CND39
+?ELS86:	EQUAL?	PERSON,MONICA \?ELS90
+	ZERO?	MONICA-TIED-TO /?ELS90
+	PRINTI	" He unfastens Monica from the "
+	PRINTD	MONICA-TIED-TO
+	PRINTI	", pulls her to her feet, and puts his own nippers on her wrists."
+	JUMP	?CND39
+?ELS90:	PRINTI	" He puts nippers on the wrists of "
+	PRINTD	PERSON
+	PRINTI	", who stands stiff and quiet."
+	JUMP	?CND39
+?ELS81:	PRINTI	"Duffy seems to read your thoughts, as he appears with "
+	PRINTD	PERSON
+	PRINTI	" in handcuffs."
+?CND39:	ZERO?	MONICA-TIED-TO /?CND103
+	EQUAL?	PERSON,MONICA \?CND103
+	CALL	RELEASE-MONICA
+?CND103:	PRINTI	" ""Let's not have any trouble, now,"" says Duffy, in his unique way. They head for the driveway, where a police car waits with engine purring.
+"
+	CRLF	
+?CND32:	CALL	END-HEADER,STR?201
+	ZERO?	MONICA-ADMITTED-HELPING? \?THN117
+	ZERO?	PHONG-ADMITTED-HELPING? \?THN117
+	ZERO?	PLAYER-PUSHED-BUTTON /?ELS112
+	ZERO?	POWDER-ANALYZED \?THN117
+	FSET?	INSIDE-GUN,TOUCHBIT \?ELS112
+?THN117:	PRINTI	"The elaborate set-up in Mr. Linder's office was ingenious. You deserve congratulations for your work in detecting it.
+"
+	CRLF	
+	EQUAL?	PERSON,STILES \?ELS123
+	PRINTI	"I am sorry to report that the trial jury acquitted Ralph Stiles of the murder of his rival, Freeman Linder. In view of the available evidence, they apparently believed that his lack of access to the Linder house made it doubtful that he could construct the hidden gun mechanism."
+	JUMP	?CND110
+?ELS123:	EQUAL?	PERSON,GLOBAL-LINDER \?ELS127
+	FSET?	MEDICAL-REPORT,TOUCHBIT \?ELS130
+	PRINTI	"At the inquest, the coroner ruled that "
+	PRINTI	"Mr. Linder's death was suicide, based on all the available evidence. However, my knowledge of Linder's personality makes me doubt that, knowing he would be killed, he would devise such an elaborate scheme to try to punish Mr. Stiles for the affair with Mrs. Linder. "
+	JUMP	?CND128
+?ELS130:	PRINTI	"At the inquest, the coroner ruled that "
+	PRINTI	"the available evidence was inconclusive, in that Linder appears to have had no motive for suicide. "
+?CND128:	PRINTI	"I think that, if you had been more careful in observing the people in Linder's household, you would have discovered that he had an accomplice, at least.
+"
+	JUMP	?CND110
+?ELS127:	ZERO?	HELPER /?ELS140
+	FSET?	GUN-RECEIPT,TOUCHBIT \?ELS140
+	ZERO?	MONICA-HAS-MOTIVE /?ELS140
+	ZERO?	SEEN-MONICA-AT-CLOCK \?THN143
+	ZERO?	USED-CLOCK-KEY /?ELS140
+?THN143:	PRINTI	"The web of evidence certainly seems to implicate both Monica Linder and Mr. Phong. During interrogation, Phong admitted helping Mr. Linder carry out the plan to frame Mr. Stiles for attempted murder, but he repeatedly denied that Linder's death was intended. He bargained with the District Attorney and entered a plea of guilty to charges of conspiracy and extortion. After a short trial, the judge gave him a suspended sentence and recommended him for deportation to his home country.
+"
+	CRLF	
+	PRINTI	"Monica turned out to be a tougher nut to crack. She refused to talk during interrogation, and she was awaiting trial when she heard about Phong's suspended sentence. She then made a plea like his, and the judge had little choice but to give her the same sentence. Instead of deportation, she will be on probation for five years.
+"
+	CRLF	
+	PRINTI	"I can't help thinking that everyone in the Linder household conspired in the original plan, but that Monica acted alone in turning the plan into murder. I suppose we'll never know the real truth now."
+	JUMP	?CND110
+?ELS140:	EQUAL?	PHONG,PERSON,HELPER \?ELS148
+	PRINTI	"I am sorry to report that the trial jury acquitted Mr. Phong of the murder of his employer. Apparently they believed that "
+	FSET?	GUN-RECEIPT,TOUCHBIT /?CND151
+	PRINTI	"the available evidence against him was circumstantial, since there was no definite link between him and the murder weapon. In addition, it seems that "
+?CND151:	PRINTI	"he lacks the mechanical skills necessary to construct the hidden gun mechanism.
+"
+	CRLF	
+	ZERO?	HELPER /?CND110
+	PRINTI	"While Monica could have conspired with him and aided him, she too was acquitted of conspiracy, because "
+	FSET?	GUN-RECEIPT,TOUCHBIT /?ELS166
+	PRINTI	"he was. If only we had tried her for plain murder instead of conspiracy!
+"
+	CRLF	
+	JUMP	?CND110
+?ELS166:	ZERO?	MONICA-HAS-MOTIVE /?ELS170
+	PRINTI	"the available evidence against her was circumstantial, since there was no definite link between her and the hidden gun mechanism.
+"
+	CRLF	
+	JUMP	?CND110
+?ELS170:	ZERO?	SEEN-MONICA-AT-CLOCK \?THN176
+	ZERO?	USED-CLOCK-KEY /?CND110
+?THN176:	PRINTI	"she had no apparent motive.
+"
+	CRLF	
+	JUMP	?CND110
+?ELS148:	EQUAL?	PERSON,MONICA \?CND110
+	ZERO?	MONICA-HAS-MOTIVE /?ELS184
+	ZERO?	SEEN-MONICA-AT-CLOCK \?THN189
+	ZERO?	USED-CLOCK-KEY /?ELS188
+?THN189:	PRINTI	"I am glad to report that the trial jury, based on your testimony and her confession in court, convicted Monica Linder of the murder of her father in revenge for the death of her mother. Congratulations "
+	ZERO?	DUFFY-HINT-NUM \?ELS197
+	PUSH	STR?202
+	JUMP	?CND193
+?ELS197:	GRTR?	3,DUFFY-HINT-NUM \?ELS199
+	PUSH	STR?203
+	JUMP	?CND193
+?ELS199:	PUSH	STR?204
+?CND193:	PRINT	STACK
+	CRLF	
+	PRINTI	"Which reminds me of another fascinating case I would like to assign you to...
+
+Coming soon: Another INTERLOGIC Mystery from Infocom.
+"
+	CALL	EPILOGUE
+	JUMP	?CND110
+?ELS188:	PRINTI	"I am sorry to report that the trial jury acquitted Monica Linder of the murder of her father. Apparently they believed that "
+	PRINTI	"the available evidence against her was circumstantial, since there was no definite link between her and the hidden gun mechanism.
+"
+	CRLF	
+	JUMP	?CND110
+?ELS184:	PRINTI	"I am sorry to report that the trial jury acquitted Monica Linder of the murder of her father, because "
+	PRINTI	"she had no apparent motive.
+"
+	CRLF	
+	JUMP	?CND110
+?ELS112:	EQUAL?	PERSON,GLOBAL-LINDER \?CND212
+	PRINTI	"According to your report and deposition and the available physical evidence, you seem to believe that Mr. Linder shot himself through the window of his office. If you continue to come up with such odd conclusions, I will be forced to transfer you to the traffic-control department.
+"
+	CRLF	
+	CALL	CASE-OVER
+?CND212:	PRINTI	"According to your report and deposition, the only question in this case is who shot Mr. Linder through the window of his office. However, I believe that the real story is not so simple.
+"
+	CRLF	
+	EQUAL?	PERSON,STILES /?CND219
+	PRINTI	"In fact, in view of the flimsy evidence available, the District Attorney has decided not to indict "
+	PRINTD	PERSON
+	ZERO?	HELPER /?CND224
+	PRINTI	" and "
+	PRINTD	HELPER
+?CND224:	PRINTI	" in this case."
+?CND219:	EQUAL?	PERSON,STILES \?ELS234
+	SET	'STILES-CONVICTED,TRUE-VALUE
+	PRINTI	"But, despite my reservations, the trial jury did convict Mr. Stiles of the murder. Through plea-bargaining, his sentence was reduced from execution to twenty years."
+	JUMP	?CND110
+?ELS234:	EQUAL?	PERSON,MONICA \?ELS238
+	ZERO?	SEEN-MONICA-AT-J-BOX \?THN241
+	ZERO?	HELPER /?ELS238
+?THN241:	ZERO?	HELPER /?ELS245
+	SET	'FLG,TRUE-VALUE
+	ZERO?	SIDE-FOOTPRINTS-MATCHED /?CND247
+	SET	'FLG,FALSE-VALUE
+	PRINTI	" In his opinion, Phong's foot prints outside are not incriminating, even though they were apparently made at the time of the shooting. After all, Phong's household duties could easily have taken him there for any number of reasons. In Phong's own deposition, he claimed to have heard noises outside, which could have been made by Mr. Stiles."
+?CND247:	ZERO?	SEEN-MONICA-AT-J-BOX /?ELS255
+	ZERO?	FLG /?CND257
+	PRINTI	" There is no evidence that "
+	PRINTI	"Phong"
+	PRINTI	" was at the scene of the shooting."
+?CND257:	PRINTI	" Monica's actions in the workshop may be suspicious, but she claimed that she thought of a new twist on the household wiring during the film, and she seems to be enough of a tinkerer to make that believable."
+	JUMP	?CND110
+?ELS255:	ZERO?	FLG /?ELS266
+	PRINTI	" There is no evidence that "
+	PRINTI	"either one"
+	PRINTI	" was at the scene of the shooting."
+	JUMP	?CND110
+?ELS266:	PRINTI	" There is no evidence that "
+	PRINTI	"Monica"
+	PRINTI	" was at the scene of the shooting."
+	JUMP	?CND110
+?ELS245:	ZERO?	SEEN-MONICA-AT-J-BOX /?CND232
+	PRINTI	" Monica's actions in the workshop may be suspicious, but she claimed that she thought of a new twist on the household wiring during the film, and she seems to be enough of a tinkerer to make that believable."
+	JUMP	?CND232
+?ELS238:	EQUAL?	PERSON,PHONG \?ELS280
+	ZERO?	SIDE-FOOTPRINTS-MATCHED /?ELS280
+	PRINTI	" In his opinion, Phong's foot prints outside are not incriminating, even though they were apparently made at the time of the shooting. After all, Phong's household duties could easily have taken him there for any number of reasons. In Phong's own deposition, he claimed to have heard noises outside, which could have been made by Mr. Stiles."
+	JUMP	?CND110
+?ELS280:	PRINTI	" There is no evidence that "
+	EQUAL?	PERSON,MONICA \?CND289
+	PRINTI	"s"
+?CND289:	PRINTI	"he"
+	PRINTI	" was at the scene of the shooting."
+?CND232:	
+?CND110:	CALL	CASE-OVER
+	RSTACK	
+
+
+	.FUNCT	END-HEADER,STR
+	PRINTI	"Text of a letter from Police Chief Klutz dated "
+	PRINT	STR
+	PRINTI	":
+
+Dear Detective:
+
+    "
+	RTRUE	
+
+
+	.FUNCT	CASE-OVER
+	ZERO?	STILES-CONVICTED /?CND1
+	PRINTI	"
+
+Post script: A few months later, after you are transferred to another department, you get a memo from your former boss. It says that new evidence was discovered in the Linder case, causing the court to reverse Stiles's conviction and set him free. Let's hope he doesn't come around bent on revenge!"
+	CRLF	
+?CND1:	PRINTI	"
+
+The case has come to an end. Would you like to start your investigation over from scratch?"
+	CALL	YES?
+	ZERO?	STACK /?CND9
+	RESTART	
+?CND9:	QUIT	
+	RTRUE	
+
+
+	.FUNCT	EPILOGUE
+	PRINTI	"
+You have reached a complete solution to the story. If you like, you may see the author's summary of the case. Of course, you should come up with your own first! Would you like to see the author's summary?"
+	CALL	YES?
+	ZERO?	STACK /?CND3
+	PRINTI	"
+Freeman Linder discovered about a year ago that his wife had taken a lover, Ralph Stiles. This discovery made their marriage deteriorate, with growing bitterness and belligerence, until Mrs. Linder recently took her own life with a gun. Linder planned to take revenge on Stiles by framing him for attempted murder. He enlisted the help of his butler, Phong, and his daughter, Monica.
+"
+	CRLF	
+	PRINTI	"Linder simultaneously sent two messages, a telegram to you and a phone call to Stiles. He wanted you to come to the house, witness the alleged crime, and then arrest Stiles. In the phone call he told Stiles to come discreetly to the office door at 9:00 to get some pay-off money.
+"
+	CRLF	
+	PRINTI	"Linder planned an elaborate set-up inside the office. A gun was put in the clock, aiming through the keyhole toward him, who would be sitting behind his desk on the opposite side of the room. Using the butler's button, he would trigger both the gun and the detonation of some explosive attached to the window, thus simulating a shot fired through the window at him.
+"
+	CRLF	
+	PRINTI	"Monica bought two identical small handguns for this plan. She hid one in the clock, and Phong planted the other, which was fired in secret beforehand, in the back yard just before 9:00, where you could find it later.
+"
+	CRLF	
+	PRINTI	"When Stiles's car appeared, Phong went to the front door, rang the door bell as a signal to Linder, and sneaked into the house. Linder kept an eye on the window and, when Stiles appeared, pushed the button to fire the shot. Stiles panicked and fled out the back of the yard but was brought back inside by Sgt. Duffy.
+"
+	CRLF	
+	PRINTI	"The plot thickened, however, because Monica decided to take this opportunity to murder her father. Her mother and she were very close. Mr. Linder was often away on business during Monica's childhood, and Mrs. Linder imbued her daughter with a love/hatred for him, saying that he abandoned them. Monica helped her father construct the remote-controlled gun, but she also blamed him for her mother's death and had lost all love for him. She therefore aimed the gun to kill her father when fired. Her idea was to convict Stiles of the murder and go free herself.
+"
+	CRLF	
+	PRINTI	"Phong had no idea of Monica's plan until he saw Linder's corpse. He did not spill the beans on Linder's plan, since he also had reason to want Linder removed from the scene. Monica, as a last resort, may have attempted to convince you that her father was dying of a stomach tumor and had planned his own death. But Monica is the only one who could have twisted Linder's plan into murder: the key to the clock was hidden on her person, so she had final control of the gun's aim.
+"
+?CND3:	QUIT	
+	RTRUE	
+
+
+	.FUNCT	TOO-LATE-F
+	PRINTI	"
+A few days pass, and you don't hear from Linder. But a small item in the newspaper catches your eye: a grifter named Stiles was found dead on the beach one morning, with a cheap handgun lying near and a single small bullet wound through his heart. Does this death have anything to do with Linder and your visit? Well, no need to lose sleep over it. Everyone sleeps the big sleep sooner or later.
+"
+	RTRUE	
+
+	.ENDI

@@ -1,0 +1,29 @@
+Assembling WITNESS.XZAP.3
+Release: 23
+
+64	Inserting WITNESSFREQ.XZAP.1	(  646 bytes)
+710	Inserting WITNESSDAT.ZAP.1	(18375 bytes)
+19085	Inserting MACROS.ZAP.1	(   17 bytes)
+19102	Inserting PLACES.ZAP.1	(11087 bytes)
+30189	Inserting PEOPLE.ZAP.1	(16997 bytes)
+47186	Inserting THINGS.ZAP.1	( 5572 bytes)
+52758	Inserting SYNTAX.ZAP.1	(    0 bytes)
+52758	Inserting CLOCK.ZAP.1	(  215 bytes)
+52973	Inserting MAIN.ZAP.1	( 1431 bytes)
+54404	Inserting PARSER.ZAP.2	( 5793 bytes)
+60197	Inserting VERBS.ZAP.1	(16169 bytes)
+76366	Inserting EVENTS.ZAP.1	(21477 bytes)
+97843	Inserting WITNESSSTR.ZAP.1	( 6417 bytes)
+
+Symbols unused:
+PRE-THROUGH
+PRE-DROP
+ALWAYS-LIT
+
+18591 bytes of preload.
+
+104260 bytes (102K).
+19268 bytes too large for one-disk game on ATARI.
+250 objects.
+174 globals.
+

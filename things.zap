@@ -1,0 +1,712 @@
+
+
+	.FUNCT	RANDOM-PSEUDO
+	PRINTR	"You can't do anything useful with that."
+
+
+	.FUNCT	NOT-HERE-OBJECT-F,TBL,PRSO?=1,OBJ
+	EQUAL?	PRSO,NOT-HERE-OBJECT \?ELS3
+	EQUAL?	PRSI,NOT-HERE-OBJECT \?ELS3
+	PRINTR	"(Those things aren't here!)"
+?ELS3:	EQUAL?	PRSO,NOT-HERE-OBJECT \?ELS9
+	SET	'TBL,P-PRSO
+	JUMP	?CND1
+?ELS9:	SET	'TBL,P-PRSI
+	SET	'PRSO?,FALSE-VALUE
+?CND1:	ZERO?	PRSO? /?ELS14
+	EQUAL?	PRSA,V?WALK-TO,V?THROUGH,V?MAKE /?THN19
+	EQUAL?	PRSA,V?GIVE,V?$WHERE,V?WHAT /?THN19
+	EQUAL?	PRSA,V?SEARCH,V?LOOK-OUTSIDE,V?LOOK-INSIDE /?THN19
+	EQUAL?	PRSA,V?FOLLOW,V?FIND,V?EXAMINE /?THN19
+	EQUAL?	PRSA,V?CLIMB-UP,V?ASK-CONTEXT-FOR,V?ASK-CONTEXT-ABOUT \?CND12
+?THN19:	CALL	FIND-NOT-HERE,TBL,PRSO? >OBJ
+	ZERO?	OBJ /FALSE
+	EQUAL?	OBJ,NOT-HERE-OBJECT \TRUE
+	JUMP	?CND12
+?ELS14:	EQUAL?	PRSA,V?TELL-ME,V?SGIVE /?THN34
+	EQUAL?	PRSA,V?SEARCH-OBJECT-FOR,V?ASK-FOR,V?ASK-ABOUT \?CND12
+?THN34:	CALL	FIND-NOT-HERE,TBL,PRSO? >OBJ
+	ZERO?	OBJ /FALSE
+	EQUAL?	OBJ,NOT-HERE-OBJECT \TRUE
+?CND12:	SET	'P-WON,FALSE-VALUE
+	PRINTI	"(You can't see any"
+	CALL	NOT-HERE-PRINT
+	PRINTR	" here!)"
+
+
+	.FUNCT	FIND-NOT-HERE,TBL,PRSO?,M-F,OBJ
+	CALL	MOBY-FIND,TBL >M-F
+	ZERO?	DEBUG /?CND1
+	PRINTI	"[Moby-found "
+	PRINTN	M-F
+	PRINTI	" objects"
+	PRINTI	"]"
+	CRLF	
+?CND1:	EQUAL?	1,M-F \?ELS11
+	ZERO?	DEBUG /?CND12
+	PRINTI	"[Namely: "
+	PRINTD	P-MOBY-FOUND
+	PRINTI	"]"
+	CRLF	
+?CND12:	ZERO?	PRSO? /?ELS20
+	SET	'PRSO,P-MOBY-FOUND
+	RFALSE	
+?ELS20:	SET	'PRSI,P-MOBY-FOUND
+	RFALSE	
+?ELS11:	LESS?	1,M-F \?ELS25
+	GET	TBL,1 >OBJ
+	GETP	OBJ,P?GENERIC
+	CALL	STACK,OBJ >OBJ
+	ZERO?	OBJ /?ELS25
+	ZERO?	DEBUG /?CND28
+	PRINTI	"[Generic: "
+	PRINTD	OBJ
+	PRINTI	"]"
+	CRLF	
+?CND28:	EQUAL?	OBJ,NOT-HERE-OBJECT /TRUE
+	ZERO?	PRSO? /?ELS38
+	SET	'PRSO,OBJ
+	RFALSE	
+?ELS38:	SET	'PRSI,OBJ
+	RFALSE	
+?ELS25:	ZERO?	PRSO? \?ELS47
+	EQUAL?	PRSA,V?TELL-ME,V?ASK-FOR,V?ASK-ABOUT /?THN52
+?ELS47:	ZERO?	PRSO? /?ELS49
+	EQUAL?	PRSA,V?ASK-CONTEXT-FOR,V?ASK-CONTEXT-ABOUT /?THN52
+?ELS49:	EQUAL?	WINNER,PLAYER /?ELS43
+	EQUAL?	PRSA,V?SGIVE /?THN52
+	EQUAL?	PRSA,V?GIVE,V?WHAT,V?FIND \?ELS43
+?THN52:	EQUAL?	PRSA,V?ASK-FOR,V?ASK-ABOUT \?ELS56
+	PRINTD	PRSO
+	JUMP	?CND54
+?ELS56:	ZERO?	QCONTEXT /?ELS67
+	EQUAL?	HERE,QCONTEXT-ROOM \?ELS67
+	CALL	META-LOC,QCONTEXT
+	EQUAL?	HERE,STACK \?ELS67
+	PUSH	QCONTEXT
+	JUMP	?CND63
+?ELS67:	EQUAL?	WINNER,PLAYER /?ELS71
+	PUSH	WINNER
+	JUMP	?CND63
+?ELS71:	CALL	FIND-FLAG,HERE,PERSON
+?CND63:	PRINTD	STACK
+?CND54:	PRINTI	" looks confused. ""I don't know anything about any"
+	CALL	NOT-HERE-PRINT
+	PRINTR	"!"""
+?ELS43:	ZERO?	PRSO? \?ELS79
+	PRINTI	"You wouldn't find any"
+	CALL	NOT-HERE-PRINT
+	PRINTR	" there."
+?ELS79:	RETURN	NOT-HERE-OBJECT
+
+
+	.FUNCT	NOT-HERE-PRINT,?TMP1
+	ZERO?	P-OFLAG \?THN6
+	ZERO?	P-MERGED /?ELS5
+?THN6:	ZERO?	P-XADJ /?CND8
+	PRINTI	" "
+	PRINTB	P-XADJN
+?CND8:	ZERO?	P-XNAM /FALSE
+	PRINTI	" "
+	PRINTB	P-XNAM
+	RTRUE	
+?ELS5:	EQUAL?	PRSO,NOT-HERE-OBJECT \?ELS23
+	GET	P-ITBL,P-NC1 >?TMP1
+	GET	P-ITBL,P-NC1L
+	CALL	BUFFER-PRINT,?TMP1,STACK,FALSE-VALUE
+	RSTACK	
+?ELS23:	GET	P-ITBL,P-NC2 >?TMP1
+	GET	P-ITBL,P-NC2L
+	CALL	BUFFER-PRINT,?TMP1,STACK,FALSE-VALUE
+	RSTACK	
+
+
+	.FUNCT	IT-F
+	EQUAL?	PRSI,IT \?THN10
+	EQUAL?	PRSA,V?TELL-ME /?THN10
+	EQUAL?	PRSA,V?SEARCH-OBJECT-FOR,V?ASK-FOR,V?ASK-ABOUT /?THN14
+?THN10:	EQUAL?	PRSO,IT \FALSE
+	EQUAL?	PRSA,V?WHAT /?THN14
+	EQUAL?	PRSA,V?FIND,V?ASK-CONTEXT-FOR,V?ASK-CONTEXT-ABOUT \FALSE
+?THN14:	PRINTR	"""I'm not sure what you're talking about."""
+
+
+	.FUNCT	THE?,NOUN
+	EQUAL?	NOUN,MONICA-ROOM,LINDER-ROOM,LIMBO /TRUE
+	EQUAL?	NOUN,PHONG,LINDER,STILES /TRUE
+	EQUAL?	NOUN,GLOBAL-PHONG,GLOBAL-LINDER,GLOBAL-STILES /TRUE
+	EQUAL?	NOUN,MONICA,GLOBAL-MONICA,GLOBAL-TERRY /TRUE
+	EQUAL?	NOUN,IT,YOU,HIM-HER /TRUE
+	EQUAL?	NOUN,LINDER-WINDOW,GLOBAL-DUFFY /TRUE
+	PRINTI	" the"
+	RTRUE	
+
+
+	.FUNCT	THIS-IS-IT,OBJ
+	SET	'P-IT-OBJECT,OBJ
+	SET	'P-IT-LOC,HERE
+	RETURN	P-IT-LOC
+
+
+	.FUNCT	RECURSIVE-BOOK-F
+	EQUAL?	PRSA,V?ASK-FOR \?ELS5
+	EQUAL?	PRSO,PHONG \?ELS5
+	FCLEAR	PRSI,NDESCBIT
+	RFALSE	
+?ELS5:	EQUAL?	PRSA,V?TAKE,V?GIVE \?ELS9
+	IN?	RECURSIVE-BOOK,PHONG \?ELS9
+	FCLEAR	PRSO,NDESCBIT
+	RFALSE	
+?ELS9:	EQUAL?	PRSA,V?DROP \?ELS13
+	IN?	PHONG,BUTLER-ROOM \?ELS13
+	MOVE	RECURSIVE-BOOK,PHONG
+	PRINTR	"Phong picks up the book and starts to read."
+?ELS13:	EQUAL?	PRSA,V?EXAMINE \?ELS19
+	PRINTR	"This is a mystery story called 'Deadline,' just now published as a book."
+?ELS19:	EQUAL?	PRSA,V?LOOK-INSIDE /?THN24
+	EQUAL?	PRSA,V?OPEN,V?READ,V?SEARCH \FALSE
+?THN24:	FSET	RECURSIVE-BOOK,OPENBIT
+	PRINTI	"The book is a novel-length version of 'Deadline,' a whodunit set in the future in Connecticut. You start to read it, and it seems oddly familiar, as if you might live through it yourself some day."
+	IN?	GUN-RECEIPT,RECURSIVE-BOOK \?CND28
+	FCLEAR	GUN-RECEIPT,INVISIBLE
+	PRINTI	" A receipt of some kind is being used as a bookmark."
+?CND28:	CRLF	
+	RTRUE	
+
+
+	.FUNCT	GUN-RECEIPT-F
+	EQUAL?	PRSA,V?READ,V?EXAMINE \FALSE
+	GET	0,8
+	BOR	STACK,2
+	PUT	0,8,STACK
+	PRINTI	"""            FRITZI'S
+   fine merchandise - quick loans
+        Cabeza Plana, Calif.
+                        Number: 69105
+                        Date: 12/1/37
+Sold to: Nemo Newbourne
+Address: 137 E. Second Street
+
+Two handguns - - - - - - - - - $ 8.00
+
+[PAID]"""
+	GET	0,8
+	BAND	STACK,-3
+	PUT	0,8,STACK
+	RTRUE	
+
+
+	.FUNCT	MATCHBOOK-F
+	EQUAL?	PRSA,V?SLAP,V?LAMP-ON \?ELS5
+	PRINTR	"The matches don't seem to work."
+?ELS5:	EQUAL?	PRSA,V?OPEN,V?LOOK-INSIDE \?ELS9
+	PRINTR	"(You'll find the match book in your game package.)"
+?ELS9:	EQUAL?	PRSA,V?LOOK-UP \FALSE
+	CALL	PHONE-IN?,HERE
+	ZERO?	STACK /FALSE
+	PRINTR	"The listing for Stiles in the phone book is the same as the number written in the match book."
+
+
+	.FUNCT	HANDCUFFS-F
+	EQUAL?	PRSA,V?TAKE \FALSE
+	EQUAL?	PRSO,HANDCUFFS \FALSE
+	EQUAL?	HANDCUFFS,MONICA-TIED-WITH \FALSE
+	ZERO?	PRSI /?THN15
+	EQUAL?	PRSI,MONICA \FALSE
+?THN15:	CALL	PERFORM,V?UNTIE,MONICA
+	RTRUE	
+
+
+	.FUNCT	HOUSE-F
+	EQUAL?	PRSA,V?FIND \?ELS5
+	PRINTR	"It's right here. Some detective you are."
+?ELS5:	EQUAL?	PRSA,V?WALK-TO \?ELS9
+	EQUAL?	HERE,DRIVEWAY-ENTRANCE,DRIVEWAY \?ELS9
+	CALL	PERFORM,V?WALK,P?NORTH
+	RTRUE	
+?ELS9:	EQUAL?	PRSA,V?THROUGH \?ELS13
+	EQUAL?	HERE,FRONT-YARD \?ELS18
+	FSET?	DINING-DOOR,OPENBIT \?ELS18
+	CALL	GOTO,DINING-ROOM
+	RSTACK	
+?ELS18:	EQUAL?	HERE,FRONT-PORCH \?ELS22
+	FSET?	FRONT-DOOR,OPENBIT \?ELS22
+	CALL	GOTO,ENTRY
+	RSTACK	
+?ELS22:	EQUAL?	HERE,OFFICE-PORCH \?ELS26
+	FSET?	OFFICE-BACK-DOOR,OPENBIT \?ELS26
+	CALL	GOTO,OFFICE
+	RSTACK	
+?ELS26:	EQUAL?	HERE,BACK-YARD \?ELS30
+	FSET?	MONICA-BACK-DOOR,OPENBIT \?ELS30
+	CALL	GOTO,MONICA-ROOM
+	RSTACK	
+?ELS30:	EQUAL?	HERE,ROCK-GARDEN \?ELS34
+	FSET?	LINDER-BACK-DOOR,OPENBIT \?ELS34
+	CALL	GOTO,LINDER-ROOM
+	RSTACK	
+?ELS34:	PRINTR	"You might try the front door."
+?ELS13:	EQUAL?	PRSA,V?EXAMINE \FALSE
+	PRINTR	"The house looks like a mixture of a California bungalow and East Asian influences."
+
+
+	.FUNCT	FENCE-F
+	EQUAL?	PRSA,V?CLIMB-UP,V?CLIMB-ON,V?CLIMB-FOO \?ELS5
+	PRINTR	"You can't leave the property yet. It would mean your job."
+?ELS5:	EQUAL?	PRSA,V?LOOK-OUTSIDE,V?LOOK-INSIDE,V?LOOK-BEHIND \?ELS9
+	PRINTR	"It's too dark to see anything."
+?ELS9:	EQUAL?	PRSA,V?FIND \?ELS13
+	PRINTR	"It's right here. Some detective you are."
+?ELS13:	EQUAL?	PRSA,V?EXAMINE \FALSE
+	PRINTR	"This is a Japanese-style ""shadow fence"" made of wooden slats, opaque from most angles but designed to let breezes through."
+
+
+	.FUNCT	GROUND-F
+	EQUAL?	PRSO,GROUND \?ELS5
+	EQUAL?	PRSA,V?WHAT /FALSE
+	EQUAL?	PRSA,V?FIND,V?ASK-CONTEXT-FOR,V?ASK-CONTEXT-ABOUT /FALSE
+?ELS5:	EQUAL?	PRSI,GROUND \?ELS11
+	EQUAL?	PRSA,V?TELL-ME /FALSE
+	EQUAL?	PRSA,V?SEARCH-OBJECT-FOR,V?ASK-FOR,V?ASK-ABOUT /FALSE
+?ELS11:	GETP	HERE,P?LINE
+	EQUAL?	STACK,OUTSIDE-LINE-C /?ELS17
+	SET	'P-WON,FALSE-VALUE
+	PRINTI	"(You can't see any"
+	CALL	PRSO-PRINT
+	PRINTR	" here!)"
+?ELS17:	EQUAL?	PRSA,V?PUT \?ELS21
+	EQUAL?	PRSI,GROUND \?ELS21
+	CALL	PERFORM,V?DROP,PRSO
+	RTRUE	
+?ELS21:	EQUAL?	PRSA,V?SEARCH,V?EXAMINE \FALSE
+	PRINTR	"You don't find anything new there."
+
+
+	.FUNCT	FLOOR-F
+	EQUAL?	PRSO,FLOOR \?ELS5
+	EQUAL?	PRSA,V?WHAT /FALSE
+	EQUAL?	PRSA,V?FIND,V?ASK-CONTEXT-FOR,V?ASK-CONTEXT-ABOUT /FALSE
+?ELS5:	EQUAL?	PRSI,FLOOR \?ELS11
+	EQUAL?	PRSA,V?TELL-ME /FALSE
+	EQUAL?	PRSA,V?SEARCH-OBJECT-FOR,V?ASK-FOR,V?ASK-ABOUT /FALSE
+?ELS11:	GETP	HERE,P?LINE
+	EQUAL?	STACK,OUTSIDE-LINE-C \?ELS17
+	SET	'P-WON,FALSE-VALUE
+	PRINTI	"(You can't see any"
+	CALL	PRSO-PRINT
+	PRINTR	" here!)"
+?ELS17:	EQUAL?	PRSA,V?PUT \?ELS21
+	EQUAL?	PRSI,FLOOR \?ELS21
+	CALL	PERFORM,V?DROP,PRSO
+	RTRUE	
+?ELS21:	EQUAL?	PRSA,V?SEARCH,V?EXAMINE \FALSE
+	PRINTR	"You don't find anything new there."
+
+
+	.FUNCT	MUSIC-F
+	EQUAL?	PRSA,V?LISTEN \FALSE
+	ZERO?	RADIO-ON /?ELS10
+	PRINTR	"You're too far away to make out what it is."
+?ELS10:	PRINTR	"You'd enjoy it more if you turned on the radio."
+
+
+	.FUNCT	LIQUOR-F
+	ZERO?	LINDER-FOLLOWS-YOU /?ELS5
+	EQUAL?	PRSA,V?EXAMINE \?ELS5
+	PRINTR	"Linder is drinking something that looks like whisky, straight up."
+?ELS5:	EQUAL?	PRSA,V?GIVE \?ELS15
+	EQUAL?	PRSI,PLAYER \?ELS15
+	EQUAL?	WINNER,PLAYER \?THN22
+?ELS15:	EQUAL?	PRSA,V?SGIVE \?ELS17
+	EQUAL?	PRSO,PLAYER \?ELS17
+	EQUAL?	WINNER,PLAYER \?THN22
+?ELS17:	EQUAL?	PRSA,V?ASK-FOR \?ELS19
+	FSET?	PRSO,PERSON /?THN22
+?ELS19:	EQUAL?	PRSA,V?TAKE \?ELS11
+	CALL	FIND-FLAG,HERE,PERSON
+	ZERO?	STACK \?THN22
+	ZERO?	PRSI /?ELS11
+	FSET?	PRSI,PERSON \?ELS11
+?THN22:	ZERO?	DRUNK-FLAG /?CND24
+	CALL	NO-DRINK
+	RTRUE	
+?CND24:	SET	'DRUNK-FLAG,TRUE-VALUE
+	EQUAL?	MONICA,WINNER,PRSO,PRSI \?ELS32
+	PRINTR	"""So you want to dip your beak? Go ahead."""
+?ELS32:	MOVE	DRINK,PLAYER
+	FSET	DRINK,TAKEBIT
+	PRINTR	"""I think we both need one.""  And so you both have one."
+?ELS11:	EQUAL?	PRSA,V?DRINK /?THN41
+	EQUAL?	PRSA,V?OPEN \FALSE
+	EQUAL?	PRSO,BOURBON,SCOTCH \FALSE
+?THN41:	ZERO?	DRUNK-FLAG /?ELS49
+	CALL	NO-DRINK
+	RTRUE	
+?ELS49:	SET	'DRUNK-FLAG,TRUE-VALUE
+	MOVE	DRINK,PLAYER
+	FSET	DRINK,TAKEBIT
+	PRINTR	"You take a belt of the stuff and roll it on your tongue before swallowing. It's good whisky."
+
+
+	.FUNCT	NO-DRINK
+	PRINTR	"You could drink this stuff all night, but you have work to do."
+
+
+	.FUNCT	CIGARETTE-F
+	EQUAL?	PRSA,V?SEARCH-OBJECT-FOR,V?SEARCH,V?FIND \?ELS5
+	PRINTR	"Like any hard-boiled police detective, you must have a pack on you somewhere."
+?ELS5:	EQUAL?	PRSA,V?EXAMINE \?ELS9
+	EQUAL?	HERE,KITCHEN \?ELS14
+	PRINTR	"Phong's cigarettes are Lucky Strikes."
+?ELS14:	PRINTR	"All you can see is an ashtray full of butts."
+?ELS9:	EQUAL?	PRSA,V?SMOKE \?ELS22
+	PRINTR	"You light up a Camel, take a deep drag, and watch the smoke drift through the air. A few more puffs, and you're ready to go to work again."
+?ELS22:	EQUAL?	PRSA,V?TURN,V?GIVE \?ELS30
+	EQUAL?	PRSI,PLAYER \?ELS30
+	EQUAL?	WINNER,PLAYER \?THN37
+?ELS30:	EQUAL?	PRSA,V?SGIVE \?ELS32
+	EQUAL?	PRSO,PLAYER \?ELS32
+	EQUAL?	WINNER,PLAYER \?THN37
+?ELS32:	EQUAL?	PRSA,V?ASK-FOR \?ELS34
+	FSET?	PRSO,PERSON /?THN37
+?ELS34:	EQUAL?	PRSA,V?TAKE \FALSE
+	CALL	FIND-FLAG,HERE,PERSON,WINNER
+	ZERO?	STACK \?THN37
+	FSET?	PRSI,PERSON \FALSE
+?THN37:	PRINTR	"""I think we both need one."" And so you both have one."
+
+
+	.FUNCT	BROKEN-GLASS-F
+	EQUAL?	PRSA,V?TAKE \FALSE
+	PRINTR	"You'd probably cut yourself on the sharp edges."
+
+
+	.FUNCT	INSIDE-GUN-F
+	EQUAL?	PRSA,V?COMPARE \?ELS5
+	EQUAL?	PRSO,OUTSIDE-GUN /?THN8
+	EQUAL?	PRSI,OUTSIDE-GUN \?ELS5
+?THN8:	EQUAL?	P-ADVERB,W?CAREFULLY \?ELS14
+	SET	'GUNS-MATCHED,TRUE-VALUE
+	PRINTI	"The two guns are virtually identical,"
+	PRINTR	" except that one has a very short barrel."
+?ELS14:	PRINTI	"The two guns appear to be very similar,"
+	PRINTR	" except that one has a very short barrel."
+?ELS5:	EQUAL?	PRSA,V?EXAMINE \?ELS22
+	PRINTI	"Y"
+	PRINTI	"ou can see it's just a cheap low-quality handgun."
+	PRINTR	" The barrel is very short, as if someone sawed it off."
+?ELS22:	EQUAL?	PRSA,V?OPEN \?ELS26
+	PRINTR	"You open the gun, find no spare bullets inside, and close it again."
+?ELS26:	EQUAL?	PRSA,V?SMELL \FALSE
+	PRINTR	"It smells as though it's recently been fired."
+
+
+	.FUNCT	OUTSIDE-GUN-F
+	EQUAL?	PRSA,V?EXAMINE \?ELS5
+	PRINTI	"The gun is muddy from the ground, but y"
+	PRINTR	"ou can see it's just a cheap low-quality handgun."
+?ELS5:	EQUAL?	PRSA,V?OPEN \?ELS9
+	PRINTR	"You open the gun, find no spare bullets inside, and close it again."
+?ELS9:	EQUAL?	PRSA,V?SMELL \FALSE
+	PRINTR	"It smells as though it's recently been fired."
+
+
+	.FUNCT	GENERIC-GUN-F,OBJ
+	EQUAL?	PRSA,V?TAKE,V?SEARCH-OBJECT-FOR /?THN6
+	EQUAL?	PRSA,V?SGIVE,V?GIVE,V?WHAT /?THN6
+	EQUAL?	PRSA,V?TELL-ME,V?FIND,V?ASK-CONTEXT-FOR /?THN6
+	EQUAL?	PRSA,V?ASK-FOR,V?ASK-CONTEXT-ABOUT,V?ASK-ABOUT \?ELS5
+?THN6:	RETURN	GENERIC-GUN
+?ELS5:	LOC	PISTOL
+	EQUAL?	STACK,PLAYER,HERE /FALSE
+	SET	'P-WON,FALSE-VALUE
+	PRINTI	"(You can't see any "
+	PRINTI	"gun"
+	PRINTI	" here!)"
+	CRLF	
+	RETURN	NOT-HERE-OBJECT
+
+
+	.FUNCT	PHONG-KEYS-F
+	EQUAL?	PRSA,V?GIVE \?ELS9
+	EQUAL?	PRSI,PLAYER \?ELS9
+	EQUAL?	WINNER,PHONG /?THN6
+?ELS9:	EQUAL?	PRSA,V?TAKE \FALSE
+	IN?	PHONG-KEYS,PHONG \FALSE
+?THN6:	ZERO?	PHONG-SEEN-CORPSE? /?ELS16
+	MOVE	PHONG-KEYS,PLAYER
+	FCLEAR	PHONG-KEYS,NDESCBIT
+	PRINTR	"""Here, you may as well take them. I don't see how Mr. Linder can object now."""
+?ELS16:	PRINTR	"""I don't think Mr. Linder would like that."""
+
+
+	.FUNCT	GENERIC-KEY-F,OBJ
+	EQUAL?	PRSA,V?TAKE,V?SEARCH-OBJECT-FOR /?THN6
+	EQUAL?	PRSA,V?SGIVE,V?GIVE,V?WHAT /?THN6
+	EQUAL?	PRSA,V?TELL-ME,V?FIND,V?ASK-CONTEXT-FOR /?THN6
+	EQUAL?	PRSA,V?ASK-FOR,V?ASK-CONTEXT-ABOUT,V?ASK-ABOUT \?ELS5
+?THN6:	RETURN	GENERIC-KEY
+?ELS5:	LOC	PHONG-KEYS
+	EQUAL?	STACK,PLAYER,HERE /FALSE
+	SET	'P-WON,FALSE-VALUE
+	PRINTI	"(You can't see any "
+	PRINTI	"key"
+	PRINTI	" here!)"
+	CRLF	
+	RETURN	NOT-HERE-OBJECT
+
+
+	.FUNCT	HANDWRITING-F,?TMP1
+	EQUAL?	PRSA,V?ANALYZE \FALSE
+	EQUAL?	PRSO,HANDWRITING \FALSE
+	ZERO?	PRSI \FALSE
+	LOC	MATCHBOOK >?TMP1
+	LOC	THREAT-NOTE
+	EQUAL?	PLAYER,?TMP1,STACK \FALSE
+	PRINTR	"You didn't say what to analyze the handwriting on."
+
+
+	.FUNCT	GLOBAL-FINGERPRINTS-F
+	EQUAL?	PRSA,V?TAKE \FALSE
+	EQUAL?	PRSO,GLOBAL-FINGERPRINTS \FALSE
+	ZERO?	PRSI \?ELS12
+	PRINTR	"You didn't say what to take the fingerprints from."
+?ELS12:	CALL	PERFORM,V?FINGERPRINT,PRSI
+	RTRUE	
+
+
+	.FUNCT	GLOBAL-SUICIDE-F,STR
+	EQUAL?	PRSA,V?FIND \FALSE
+	EQUAL?	WINNER,PLAYER /FALSE
+	PRINTR	"""She shot herself in the bathtub."""
+
+
+	.FUNCT	TELEPHONE-F
+	EQUAL?	PRSA,V?PHONE \?ELS5
+	PRINTR	"You should type what number to call, for example ""DIAL HYACINTH 1031."""
+?ELS5:	EQUAL?	PRSA,V?REPLY \?ELS9
+	PRINTR	"Don't bother unless it rings."
+?ELS9:	EQUAL?	PRSA,V?TAKE,V?RAISE \FALSE
+	PRINTR	"You lift the receiver and get a dial tone. Well done!"
+
+
+	.FUNCT	CORONER-F
+	EQUAL?	PRSA,V?PHONE \FALSE
+	CALL	PHONE-IN?,HERE
+	ZERO?	STACK /FALSE
+	RANDOM	100
+	GRTR?	69,STACK \?ELS12
+	PRINTR	"You dial the number and wait a long time for someone to answer. Finally you hear a voice: ""We're awful busy here. Call back in ten minutes."" He hangs up before you can say a word."
+?ELS12:	PRINTR	"You dial the number and get a busy signal."
+
+
+	.FUNCT	BUTTON-F
+	EQUAL?	HERE,FRONT-PORCH \?ELS5
+	EQUAL?	PRSI,BUTTON \?ELS8
+	CALL	PERFORM,PRSA,PRSO,DOORBELL
+	RTRUE	
+?ELS8:	EQUAL?	PRSO,BUTTON \FALSE
+	CALL	PERFORM,PRSA,DOORBELL,PRSI
+	RTRUE	
+?ELS5:	CALL	OUTSIDE?,HERE
+	ZERO?	STACK /?ELS12
+	PRINTR	"There's no button here."
+?ELS12:	EQUAL?	PRSA,V?RING,V?PUSH \FALSE
+	IN?	PHONG,HERE \?ELS21
+	PRINTR	"Phong looks annoyed. ""You needn't ring for me. I'm right here."""
+?ELS21:	CALL	YOU-RANG
+	PRINTR	"You barely hear a bell ring in the distance."
+
+
+	.FUNCT	YOU-RANG
+	GET	GOAL-TABLES,PHONG-C
+	GET	STACK,GOAL-S
+	ZERO?	STACK \FALSE
+	SET	'PHONG-CALLED,TRUE-VALUE
+	LOC	PHONG >PHONG-OLD-LOC
+	CALL	ESTABLISH-GOAL,PHONG,HERE
+	RSTACK	
+
+
+	.FUNCT	BLACK-WIRE-F
+	GETP	HERE,P?LINE
+	EQUAL?	STACK,OUTSIDE-LINE-C \?ELS5
+	PRINTR	"There's no wire here."
+?ELS5:	EQUAL?	PRSO,WHITE-WIRE \?ELS9
+	EQUAL?	HERE,WORKSHOP /?ELS9
+	CALL	WINDOW-IN?,HERE
+	ZERO?	STACK \?ELS9
+	PRINTR	"There's no white wire here."
+?ELS9:	EQUAL?	PRSA,V?EXAMINE \?ELS15
+	EQUAL?	PRSO,BLACK-WIRE \?ELS20
+	EQUAL?	HERE,WORKSHOP \?ELS25
+	PRINTI	"You can see several kinds of "
+	PRINTI	"black"
+	PRINTR	" wire on spools, not to mention the snarl in the junction box."
+?ELS25:	PRINTR	"A pair of black wires goes from the butler's button into the floor."
+?ELS20:	EQUAL?	HERE,WORKSHOP \?ELS33
+	PRINTI	"You can see several kinds of "
+	PRINTI	"white"
+	PRINTR	" wire on spools, not to mention the snarl in the junction box."
+?ELS33:	PRINTI	"A pair of white wires goes from some sort of electric switch on the "
+	EQUAL?	HERE,ENTRY,GARAGE \?ELS44
+	PUSH	STR?128
+	JUMP	?CND40
+?ELS44:	PUSH	STR?129
+?CND40:	PRINT	STACK
+	PRINTR	" into the frame."
+?ELS15:	EQUAL?	PRSA,V?FOLLOW \?ELS48
+	EQUAL?	PRSO,BLACK-WIRE \?ELS53
+	PRINTR	"The wire goes into the floor and disappears."
+?ELS53:	EQUAL?	HERE,WORKSHOP \?ELS57
+	PRINTR	"It just goes around and around the spools."
+?ELS57:	PRINTR	"The wire goes into the wall and disappears."
+?ELS48:	EQUAL?	PRSA,V?TAKE \FALSE
+	PRINTR	"You don't really want to do that."
+
+
+	.FUNCT	MUDDY-SHOES-F
+	EQUAL?	PRSA,V?PUT,V?COMPARE \?ELS5
+	EQUAL?	PRSO,BACK-FOOTPRINTS-CAST,BACK-FOOTPRINTS /?THN8
+	EQUAL?	PRSI,BACK-FOOTPRINTS-CAST,BACK-FOOTPRINTS \?ELS5
+?THN8:	PRINTI	"The boots don't seem to match "
+	PRINTI	"the foot prints that you found in the "
+	PRINTR	"back yard."
+?ELS5:	EQUAL?	PRSA,V?PUT,V?COMPARE \?ELS13
+	EQUAL?	PRSO,SIDE-FOOTPRINTS-CAST,SIDE-FOOTPRINTS /?THN16
+	EQUAL?	PRSI,SIDE-FOOTPRINTS-CAST,SIDE-FOOTPRINTS \?ELS13
+?THN16:	EQUAL?	PRSA,V?PUT /?THN23
+	EQUAL?	P-ADVERB,W?CAREFULLY \?ELS22
+?THN23:	SET	'SIDE-FOOTPRINTS-MATCHED,TRUE-VALUE
+	PRINTR	"The boots and the foot prints match each other perfectly."
+?ELS22:	PRINTI	"The boots appear to be similar to "
+	PRINTI	"the foot prints that you found in the "
+	PRINTR	"side yard."
+?ELS13:	EQUAL?	PRSA,V?EXAMINE \?ELS32
+	PRINTR	"They're just ordinary gardening boots, with some fresh adobe mud around the bottom."
+?ELS32:	EQUAL?	PRSA,V?TAKE \FALSE
+	FCLEAR	MUDDY-SHOES,NDESCBIT
+	RFALSE	
+
+
+	.FUNCT	BED-F,RARG=100
+	EQUAL?	RARG,100 \FALSE
+	EQUAL?	PRSA,V?LOOK-ON,V?LOOK-INSIDE,V?EXAMINE \?ELS7
+	EQUAL?	HERE,MONICA-ROOM \?ELS7
+	IN?	MONICA,MONICA-ROOM \?ELS7
+	PRINTR	"Monica is lying on her bed, softly sobbing."
+?ELS7:	EQUAL?	PRSA,V?LOOK-UNDER \FALSE
+	PRINTR	"If you wanted to find the bogey man, you're out of luck."
+
+
+	.FUNCT	GLOBAL-CALL-F
+	EQUAL?	PRSA,V?WALK,V?TURN \FALSE
+	PRINTR	"(Use compass directions to move around here.)"
+
+
+	.FUNCT	CORPSE-F,ARG=0,T
+	SUB	PRESENT-TIME,MURDER-TIME >T
+	EQUAL?	ARG,M-OBJDESC \?ELS5
+	PRINTR	"The body of Mr. Linder is still crumpled in a heap on the floor."
+?ELS5:	EQUAL?	PRSA,V?ANALYZE \?ELS9
+	EQUAL?	PRSO,CORPSE \?ELS9
+	EQUAL?	PRSI,TUMOR \?CND12
+	SET	'DUFFY-SAW-MEDICAL-REPORT,TRUE-VALUE
+?CND12:	PRINTR	"Only the coroner can do that."
+?ELS9:	EQUAL?	PRSA,V?ARREST \?ELS18
+	EQUAL?	PRSO,CORPSE \?ELS18
+	CALL	ARREST,GLOBAL-LINDER
+	RSTACK	
+?ELS18:	EQUAL?	PRSA,V?$CALL,V?PHONE /?THN25
+	EQUAL?	PRSA,V?TELL,V?ASK-FOR,V?ASK-ABOUT \?ELS22
+?THN25:	EQUAL?	PRSO,CORPSE \?ELS22
+	PRINTI	"Talking to corpses will get you nowhere."
+	CRLF	
+	RETURN	M-FATAL
+?ELS22:	EQUAL?	PRSA,V?TAKEOUT \?ELS30
+	EQUAL?	PRSI,LINDER-BACK-DOOR,MONICA-BACK-DOOR,OFFICE-BACK-DOOR \?ELS30
+	PRINTI	"You can't move"
+	CALL	THE-PRSO-PRINT
+	PRINTR	"."
+?ELS30:	EQUAL?	PRSA,V?TIE-WITH,V?TIE-TO \?ELS36
+	PRINTR	"Don't tell me you think the body's going to run away!"
+?ELS36:	EQUAL?	PRSA,V?RUB,V?EXAMINE \FALSE
+	LESS?	T,10 \?ELS45
+	PRINTR	"The blood is still spreading on Linder's shirt."
+?ELS45:	LESS?	T,60 \?ELS49
+	PRINTR	"The blood on Linder's shirt has clotted and turned dark."
+?ELS49:	LESS?	T,180 \?ELS53
+	PRINTR	"Linder's body is getting stiff."
+?ELS53:	PRINTR	"The corpse is pretty stiff now."
+
+
+	.FUNCT	GLOBAL-WARRANT-F
+	EQUAL?	PRSA,V?FIND,V?TAKE \FALSE
+	PRINTR	"Knowing the courts, it would probably take days to get one."
+
+
+	.FUNCT	STUB-F
+	EQUAL?	PRSA,V?READ,V?EXAMINE \FALSE
+	GET	0,8
+	BOR	STACK,2
+	PUT	0,8,STACK
+	PRINTI	"
+   #570716
+
+BIJOU THEATRE
+
+  ADMIT ONE
+
+   25 CENTS
+
+-^-^-^-^-^-^-
+"
+	GET	0,8
+	BAND	STACK,-3
+	PUT	0,8,STACK
+	RTRUE	
+
+
+	.FUNCT	MIRROR-F
+	EQUAL?	PRSA,V?MUNG \?ELS5
+	PRINTR	"According to superstition, it's bad luck to break mirrors."
+?ELS5:	EQUAL?	PRSA,V?LOOK-INSIDE \FALSE
+	PRINTR	"A harried and weary police detective looks back at you, with a look that seems to say, ""Look what the cat dragged in."""
+
+
+	.FUNCT	CLOSET-F
+	EQUAL?	HERE,MONICA-ROOM,LINDER-ROOM,BUTLER-ROOM /?ELS5
+	EQUAL?	HERE,ENTRY /?ELS5
+	SET	'P-WON,FALSE-VALUE
+	PRINTI	"(You can't see any "
+	PRINTI	"closet"
+	PRINTR	" here!)"
+?ELS5:	EQUAL?	PRSA,V?OPEN /?THN12
+	EQUAL?	PRSA,V?SEARCH,V?LOOK-INSIDE,V?EXAMINE \?ELS11
+?THN12:	PRINTR	"You open the closet and find a bunch of stylish clothes, but nothing in your size."
+?ELS11:	EQUAL?	PRSA,V?THROUGH \FALSE
+	PRINTR	"The closet's too crowded to get in."
+
+
+	.FUNCT	GLOBAL-CAN-OF-WORMS-F
+	EQUAL?	PHONG,PRSO,WINNER /FALSE
+	EQUAL?	PRSA,V?FIND \?ELS7
+	PRINTR	"In a sense, they're all around you!"
+?ELS7:	EQUAL?	PRSA,V?WHAT \?ELS11
+	PRINTR	"That would be telling!"
+?ELS11:	EQUAL?	HERE,KITCHEN \FALSE
+	PRINTR	"This case is tangled enough already."
+
+
+	.FUNCT	RANDOM-MEAL-F
+	EQUAL?	PRSA,V?FIND /?THN6
+	EQUAL?	PRSA,V?EAT,V?ASK-FOR,V?ASK-ABOUT \?ELS5
+?THN6:	PRINTR	"The blue-plate special at the diner was enough for you."
+?ELS5:	PRINTR	"What a strange notion!"
+
+
+	.FUNCT	GLOBAL-HOUSE-F
+	EQUAL?	PRSA,V?WALK-AROUND \FALSE
+	PRINTR	"(Use compass directions to move around here.)"
+
+	.ENDI

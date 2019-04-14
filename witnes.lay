@@ -1,0 +1,36 @@
+.lm 0
+.rm 80
+.c
+LAYOUT OF "WITNESS"
+.s 5
+.lit
+Key:	(D) = door
+	*** = corridor
+	+++ = transit line
+	(T) = transfer point
+
+
+	/
+	----- NORTH
+	\
+
+
+ROCK-GARDEN*+*+*+*+*+*+*BACK-YARD+*+OFFICE-PORCH*+*+*+*+*+*+STONE-PATH(D=gate)
+    !         (window)      !             !                         +
+   (D)        TUB-ROOM     (D)        (D,window)                    *
+    !            (D)        !             !                         +
+LINDER-ROOM(D)BATHROOM(D)MONICA-ROOM  OFFICE(D)W.C.   WORKSHOP      *
+    +            (D)        !             +              !          +
+    +       TOILET-ROOM     !             +              !          *
+   (D)                     (D)           (D)            (D)         +
+    +                       !             +              !          *
+LIVING-ROOM+*+*+HALL-1*+*+HALL-2+HALL-3*(T)HALL-4+(D)++GARAGE       +
+    *           (D)        (D)      +    (D)             *      SIDE-YARD
+DINING-ROOM(D)KITCHEN       !       +     !              *          *
+    !        (window)       !       +  STORAGE-CLOSET    *          +
+   (D)            BUTLER(D)BUTLER   +                    *          *
+    !             -BATH    -ROOM  ENTRY (closet)         *          +
+    !                   (window)   (D)                   *          *
+    !                              (T)                   *          +
+FRONT-YARD+++++++++++++++(D=gate)+FRONT-PORCH+*+*+*+*DRIVEWAY+*+*DRIVEWAY-GATE
+.eli
